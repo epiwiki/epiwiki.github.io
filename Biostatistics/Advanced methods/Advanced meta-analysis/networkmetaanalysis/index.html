@@ -1,0 +1,770 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        
+        
+        <link rel="shortcut icon" href="../../../../img/favicon.ico">
+        <title>Network meta-analysis - ClinEpi Wiki</title>
+        <link href="../../../../css/bootstrap.min.css" rel="stylesheet">
+        <link href="../../../../css/font-awesome.min.css" rel="stylesheet">
+        <link href="../../../../css/base.css" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/styles/color-brewer.min.css">
+
+        <script src="../../../../js/jquery-1.10.2.min.js" defer></script>
+        <script src="../../../../js/bootstrap.min.js" defer></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/highlight.min.js"></script>
+        <script>hljs.initHighlightingOnLoad();</script> 
+    </head>
+
+    <body>
+        <div class="navbar fixed-top navbar-expand-lg navbar-dark bg-primary">
+            <div class="container">
+                <a class="navbar-brand" href="../../../..">ClinEpi Wiki</a>
+                <!-- Expander button -->
+                <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbar-collapse">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <!-- Expanded navigation -->
+                <div id="navbar-collapse" class="navbar-collapse collapse">
+                        <!-- Main navigation -->
+                        <ul class="nav navbar-nav">
+                            <li class="navitem">
+                                <a href="../../../.." class="nav-link">Clinical Epidemiology Wiki</a>
+                            </li>
+                            <li class="navitem">
+                                <a href="../../../../about/" class="nav-link">About the ClinEpi Wiki</a>
+                            </li>
+                            <li class="dropdown active">
+                                <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">Biostatistics <b class="caret"></b></a>
+                                <ul class="dropdown-menu">
+                                    
+<li>
+    <a href="../../../" class="dropdown-item">Biostatistics</a>
+</li>
+                                    
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">Advanced methods</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../../" class="dropdown-item">Index</a>
+</li>
+            
+<li>
+    <a href="../../Data%20imputation/" class="dropdown-item">Data imputation</a>
+</li>
+            
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">Advanced biostatistical modelling</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../../Advanced%20biostatistical%20modelling/" class="dropdown-item">Index</a>
+</li>
+    </ul>
+  </li>
+            
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">Advanced meta analysis</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../" class="dropdown-item">Advanced methods in meta-analysis</a>
+</li>
+            
+<li>
+    <a href="../Meta-Regression/" class="dropdown-item">Meta Regression</a>
+</li>
+            
+<li>
+    <a href="../ipdmetaanalysis/" class="dropdown-item">Ipdmetaanalysis</a>
+</li>
+            
+<li>
+    <a href="../livingmetaanalysis/" class="dropdown-item">Livingmetaanalysis</a>
+</li>
+            
+<li>
+    <a href="./" class="dropdown-item active">Network meta-analysis</a>
+</li>
+    </ul>
+  </li>
+            
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">Forecasting methods</a>
+    <ul class="dropdown-menu">
+            
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">Time Series Analysis</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../../Forecasting%20methods/Time%20Series%20Analysis/Introduction%20to%20Time%20Series%20Analysis/" class="dropdown-item">Introduction to Time Series Analysis</a>
+</li>
+            
+<li>
+    <a href="../../Forecasting%20methods/Time%20Series%20Analysis/AutoRegressive%20Models/" class="dropdown-item">AutoRegressive models</a>
+</li>
+            
+<li>
+    <a href="../../Forecasting%20methods/Time%20Series%20Analysis/Moving%20Average%20Models/" class="dropdown-item">Moving Average Models</a>
+</li>
+            
+<li>
+    <a href="../../Forecasting%20methods/Time%20Series%20Analysis/References%20for%20TSA/" class="dropdown-item">References for TSA</a>
+</li>
+    </ul>
+  </li>
+    </ul>
+  </li>
+            
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">Machine Learning</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../../Machine%20Learning/" class="dropdown-item">Machine Learning methods</a>
+</li>
+            
+<li>
+    <a href="../../Machine%20Learning/Big%20Data/" class="dropdown-item">Big Data</a>
+</li>
+            
+<li>
+    <a href="../../Machine%20Learning/Decision%20Trees/" class="dropdown-item">Decision Trees</a>
+</li>
+            
+<li>
+    <a href="../../Machine%20Learning/Generalised%20Additive%20Models/" class="dropdown-item">Generalised Additive Models</a>
+</li>
+            
+<li>
+    <a href="../../Machine%20Learning/K%20Nearest%20Neighbours/" class="dropdown-item">K Nearest Neighbours</a>
+</li>
+            
+<li>
+    <a href="../../Machine%20Learning/Linear%20Discriminant%20Analysis/" class="dropdown-item">Linear Discriminant Analysis</a>
+</li>
+            
+<li>
+    <a href="../../Machine%20Learning/Neural%20Networks/" class="dropdown-item">Neural Networks</a>
+</li>
+            
+<li>
+    <a href="../../Machine%20Learning/Principal%20Components%20Analysis/" class="dropdown-item">Principal Components Analysis</a>
+</li>
+            
+<li>
+    <a href="../../Machine%20Learning/Quadratic%20Discriminant%20Analysis/" class="dropdown-item">Quadratic Discriminant Analysis</a>
+</li>
+            
+<li>
+    <a href="../../Machine%20Learning/Support%20Vector%20Machines/" class="dropdown-item">Support Vector Machines</a>
+</li>
+    </ul>
+  </li>
+    </ul>
+  </li>
+                                    
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">Biostatistical modelling</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../../../Biostatistical%20modelling/" class="dropdown-item">Index</a>
+</li>
+            
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">Epimodels</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../../../Biostatistical%20modelling/Epimodels/" class="dropdown-item">Index</a>
+</li>
+    </ul>
+  </li>
+            
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">Predmodels</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../../../Biostatistical%20modelling/Predmodels/" class="dropdown-item">Index</a>
+</li>
+            
+<li>
+    <a href="../../../Biostatistical%20modelling/Predmodels/training%20models/" class="dropdown-item">Training models</a>
+</li>
+            
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">Classification</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../../../Biostatistical%20modelling/Predmodels/classification/DNN/" class="dropdown-item">DNN</a>
+</li>
+    </ul>
+  </li>
+            
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">Evaluation</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../../../Biostatistical%20modelling/Predmodels/evaluation/" class="dropdown-item">Index</a>
+</li>
+            
+<li>
+    <a href="../../../Biostatistical%20modelling/Predmodels/evaluation/NRI/" class="dropdown-item">NRI</a>
+</li>
+            
+<li>
+    <a href="../../../Biostatistical%20modelling/Predmodels/evaluation/calibration/" class="dropdown-item">Calibration</a>
+</li>
+            
+<li>
+    <a href="../../../Biostatistical%20modelling/Predmodels/evaluation/data%20science%20metrics/" class="dropdown-item">Data science metrics</a>
+</li>
+            
+<li>
+    <a href="../../../Biostatistical%20modelling/Predmodels/evaluation/discrimination/" class="dropdown-item">Discrimination</a>
+</li>
+            
+<li>
+    <a href="../../../Biostatistical%20modelling/Predmodels/evaluation/internal%20and%20external%20validation/" class="dropdown-item">Internal and external validation</a>
+</li>
+            
+<li>
+    <a href="../../../Biostatistical%20modelling/Predmodels/evaluation/medical%20evaluation%20metrics/" class="dropdown-item">Medical evaluation metrics</a>
+</li>
+    </ul>
+  </li>
+            
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">Regression</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../../../Biostatistical%20modelling/Predmodels/regression/coxph/" class="dropdown-item">Coxph</a>
+</li>
+            
+<li>
+    <a href="../../../Biostatistical%20modelling/Predmodels/regression/linear%20regression/" class="dropdown-item">Linear regression</a>
+</li>
+            
+<li>
+    <a href="../../../Biostatistical%20modelling/Predmodels/regression/logistic%20regression/" class="dropdown-item">Logistic regression</a>
+</li>
+    </ul>
+  </li>
+    </ul>
+  </li>
+    </ul>
+  </li>
+                                    
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">Data Visualisation</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../../../Data%20Visualisation/Frequency%20tables/" class="dropdown-item">Frequency tables</a>
+</li>
+            
+<li>
+    <a href="../../../Data%20Visualisation/Plots/" class="dropdown-item">Plots</a>
+</li>
+            
+<li>
+    <a href="../../../Data%20Visualisation/References%20for%20Data%20Visualisation/" class="dropdown-item">References for Data Visualisation</a>
+</li>
+    </ul>
+  </li>
+                                    
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">Medical Statistics</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../../../Medical%20Statistics/" class="dropdown-item">Medical statistics</a>
+</li>
+            
+<li>
+    <a href="../../../Medical%20Statistics/Binomial%20Distribution/" class="dropdown-item">Binomial Distribution</a>
+</li>
+            
+<li>
+    <a href="../../../Medical%20Statistics/Central%20Limit%20Theorem/" class="dropdown-item">Central Limit Theorem</a>
+</li>
+            
+<li>
+    <a href="../../../Medical%20Statistics/Confidence%20Intervals/" class="dropdown-item">Confidence Intervals</a>
+</li>
+            
+<li>
+    <a href="../../../Medical%20Statistics/Descriptive%20statistics/" class="dropdown-item">Descriptive statistics</a>
+</li>
+            
+<li>
+    <a href="../../../Medical%20Statistics/Hypothesis%20testing/" class="dropdown-item">Hypothesis testing</a>
+</li>
+            
+<li>
+    <a href="../../../Medical%20Statistics/Multivariable%20Models/" class="dropdown-item">Multivariable Models</a>
+</li>
+            
+<li>
+    <a href="../../../Medical%20Statistics/Non-Parametric%20Tests/" class="dropdown-item">Non Parametric Tests</a>
+</li>
+            
+<li>
+    <a href="../../../Medical%20Statistics/Normal%20Distribution/" class="dropdown-item">Normal (Gaussian) Distribution</a>
+</li>
+            
+<li>
+    <a href="../../../Medical%20Statistics/Sample%20Size%20and%20Power/" class="dropdown-item">Sample Size and Power</a>
+</li>
+            
+<li>
+    <a href="../../../Medical%20Statistics/Simple%20Linear%20Regression/" class="dropdown-item">Simple Linear Regression</a>
+</li>
+            
+<li>
+    <a href="../../../Medical%20Statistics/Small%20Sample%20Tests/" class="dropdown-item">Small Sample Tests</a>
+</li>
+    </ul>
+  </li>
+                                </ul>
+                            </li>
+                            <li class="dropdown">
+                                <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">Clinical Epidemiology <b class="caret"></b></a>
+                                <ul class="dropdown-menu">
+                                    
+<li>
+    <a href="../../../../Clinical%20Epidemiology/" class="dropdown-item">Clinical Epidemiology</a>
+</li>
+                                    
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">Research Appraisal</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../../../../Clinical%20Epidemiology/Research%20Appraisal/" class="dropdown-item">Research Appraisal</a>
+</li>
+    </ul>
+  </li>
+                                    
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">Research Design</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../../../../Clinical%20Epidemiology/Research%20Design/" class="dropdown-item">Research Design</a>
+</li>
+            
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">Qualitative research</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../../../../Clinical%20Epidemiology/Research%20Design/Qualitative%20research/Qualitative%20research/" class="dropdown-item">Qualitative research</a>
+</li>
+    </ul>
+  </li>
+    </ul>
+  </li>
+                                </ul>
+                            </li>
+                            <li class="dropdown">
+                                <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">EBM podcast <b class="caret"></b></a>
+                                <ul class="dropdown-menu">
+                                    
+<li>
+    <a href="../../../../EBM%20podcast/" class="dropdown-item">Index</a>
+</li>
+                                </ul>
+                            </li>
+                            <li class="dropdown">
+                                <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">Practical Biostatistics <b class="caret"></b></a>
+                                <ul class="dropdown-menu">
+                                    
+<li>
+    <a href="../../../../Practical%20Biostatistics/Data%20checking/" class="dropdown-item">Data checking</a>
+</li>
+                                    
+<li>
+    <a href="../../../../Practical%20Biostatistics/Exploratory%20data%20analysis/" class="dropdown-item">Exploratory data analysis</a>
+</li>
+                                    
+<li>
+    <a href="../../../../Practical%20Biostatistics/Quick%20Intro%20to%20R/" class="dropdown-item">Quick intro to R and R-studio</a>
+</li>
+                                    
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">Advanced R</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../../../../Practical%20Biostatistics/Advanced%20R/If-else%20statement/" class="dropdown-item">If-statement</a>
+</li>
+            
+<li>
+    <a href="../../../../Practical%20Biostatistics/Advanced%20R/Logical%20operators/" class="dropdown-item">Logical operators</a>
+</li>
+            
+<li>
+    <a href="../../../../Practical%20Biostatistics/Advanced%20R/R%20functions/" class="dropdown-item">R functions</a>
+</li>
+    </ul>
+  </li>
+                                </ul>
+                            </li>
+                        </ul>
+
+                    <ul class="nav navbar-nav ml-auto">
+                        <li class="nav-item">
+                            <a href="#" class="nav-link" data-toggle="modal" data-target="#mkdocs_search_modal">
+                                <i class="fa fa-search"></i> Search
+                            </a>
+                        </li>
+                            <li class="nav-item">
+                                <a rel="prev" href="../livingmetaanalysis/" class="nav-link">
+                                    <i class="fa fa-arrow-left"></i> Previous
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a rel="next" href="../../Forecasting%20methods/Time%20Series%20Analysis/Introduction%20to%20Time%20Series%20Analysis/" class="nav-link">
+                                    Next <i class="fa fa-arrow-right"></i>
+                                </a>
+                            </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="container">
+            <div class="row">
+                    <div class="col-md-3"><div class="navbar-light navbar-expand-md bs-sidebar hidden-print affix" role="complementary">
+    <div class="navbar-header">
+        <button type="button" class="navbar-toggler collapsed" data-toggle="collapse" data-target="#toc-collapse" title="Table of Contents">
+            <span class="fa fa-angle-down"></span>
+        </button>
+    </div>
+
+    
+    <div id="toc-collapse" class="navbar-collapse collapse card bg-secondary">
+        <ul class="nav flex-column">
+            
+            <li class="nav-item" data-level="1"><a href="#network-meta-analysis" class="nav-link">Network meta-analysis</a>
+              <ul class="nav flex-column">
+            <li class="nav-item" data-level="2"><a href="#terminology" class="nav-link">Terminology</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#data-extraction" class="nav-link">Data extraction</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#assumptions-of-indirect-comparisons" class="nav-link">Assumptions of indirect comparisons</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#statistical-approaches-for-indirect-treatment-comparisons-itc" class="nav-link">Statistical approaches for Indirect Treatment Comparisons (ITC)</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#assumptions-for-each-level-of-multiple-treatment-comparison" class="nav-link">Assumptions for each level of multiple treatment comparison</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#what-if-i-have-multiple-interventions-not-in-a-loop" class="nav-link">What if I have multiple interventions NOT in a loop?</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#other-statistical-approaches-to-network-meta-analysis" class="nav-link">Other statistical approaches to network meta-analysis</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#references" class="nav-link">References</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+              </ul>
+            </li>
+        </ul>
+    </div>
+</div></div>
+                    <div class="col-md-9" role="main">
+
+<h1 id="network-meta-analysis">Network meta-analysis</h1>
+<h2 id="terminology">Terminology</h2>
+<p>Terminology for meta-analysis:</p>
+<ol>
+<li>
+<p>Order</p>
+<p>The order of the network meta-analysis indicates the number of treatment arms included in this meta-analysis. For example, an order <span class="arithmatex">\(N\)</span> meta-analysis has <span class="arithmatex">\(N+2\)</span> treatment arms.</p>
+<p>A 'triangular meta-analysis' is of order <span class="arithmatex">\(1\)</span>. This means there are 3 treatment arms (A, B and C).</p>
+</li>
+</ol>
+<h2 id="data-extraction">Data extraction</h2>
+<ul>
+<li>DECiMAL (Data Extration for Complex Meta-analysis)<ul>
+<li>Example data extraction</li>
+<li>For multivariate, and network meta-analysis information</li>
+</ul>
+</li>
+</ul>
+<h3 id="key-items-for-data-extraction">Key items for data extraction</h3>
+<ol>
+<li>Bibliographic information (e.g. study ID)</li>
+<li>Trial characteristics</li>
+<li>Patient characteristics (for study level and arm level)</li>
+<li>Intervention and comparator(s)</li>
+<li>Outcomes (continuous vs. binary, aggregate measures vs. 2x2 table, end of study vs. change values)</li>
+<li>Risk of Bias<ul>
+<li>Don't use covidence, etc. if you are trying to pool a network meta-analysis</li>
+</ul>
+</li>
+</ol>
+<p>Notes:</p>
+<ul>
+<li>Quality control and data cleaning are critical (e.g. incorrectly placed decimals could stop the whole process!)</li>
+<li>Network meta-analyses could end up with hundreds of data points - you NEED to systematically look for mistakes</li>
+<li>Do descriptive statistics (e.g. Mean, IQR, etc.) to make sure your numbers aren't off</li>
+<li>If you are not sure between SD and SE, contact the authors to make sure - SE is typically very small compared to SD - unless it is specified, take care!</li>
+</ul>
+<h3 id="data-extraction-formats">Data extraction formats</h3>
+<p>Conventional vs. network meta-analysis</p>
+<ul>
+<li>Conventional:<ul>
+<li>Wide format (one row per study), multiple worksheets (for each study)</li>
+<li>Wide format (one row per study), one worksheet</li>
+<li>Compact wide format (one row per study), one worksheet </li>
+<li>Long format (one row per arm) - preferred format for NMA </li>
+</ul>
+</li>
+</ul>
+<h3 id="preparing-data-for-nma">Preparing data for NMA</h3>
+<ol>
+<li>
+<p>Count data</p>
+<p>Command in Stata: <code>network setup eventvar nvar [if] [in], studyvar(varname) trtvar(varname) [or|rr|rd|hr zeroadd(#)] ref(string)</code></p>
+<p>Default is OR</p>
+</li>
+<li>
+<p>Continuous data:</p>
+<p>Command in Stata: <code>network setup meanvar sdvar nvar [if] [in], trtvar(varname) studyvar(varname) [md|smd] ref(string)</code></p>
+<p>Default is SMD</p>
+</li>
+</ol>
+<p>Software will automatically do continuity corrections (e.g. 0 in certain arms). You can also tell the study which study is your reference - whilst different results should give the same result, choosing a reference treatment to be central in the network (the better-connected treatment) may improve numerical stability. Usually placebo/no treatment is the reference, but you might want to pick a treatment arm.</p>
+<h2 id="assumptions-of-indirect-comparisons">Assumptions of indirect comparisons</h2>
+<ol>
+<li>
+<p>Homogeneity assumption</p>
+<p>Undertaken using <span class="arithmatex">\(I^2\)</span>, Cochran Q test, P-value for signifiance. An <span class="arithmatex">\(I^2 = 0\)</span> means there is no statistical heterogeneity, but there might be a conceptual heterogeneity.</p>
+</li>
+<li>
+<p>Transivity Assumption (Similarity assumption) - extra for NMA</p>
+<p>Similar to conceptual heterogeneity. If you have drug A having a common comparator to B and C - if AB is cross-over and AC is parallel design, this violates transivity assumption of methodology. If A vs B uses Visual analogue scale, and A vs C uses a McGill pain questionnaire, this could violate transivity assumption. </p>
+<p>If A is 'weight watcher' and B is 'Dash diet' and C is 'Mediterranean diet', and every study in A vs B receieves counseling, but all studies A vs C didn't use counseling - this cointervention can change the treatment, and so it is a violation of the transivitity assumption. </p>
+<p>Transivity assumption applies to:</p>
+<ol>
+<li>
+<p>Patients - e.g. patients of different ages between interventions</p>
+<p>Be careful when considering patients - you shouldn't rely on Table 1 patient distributions to determine transivity (e.g. consideration of age). Transitivity isn't black and white - there will always be differences in patient backgrounds. It is up to you to determine HOW MUCH and HOW MUCH WILL IT MATTER, rather than yes/no.</p>
+</li>
+<li>
+<p>Co-interventions</p>
+</li>
+<li>Outcomes</li>
+<li>Methodology</li>
+</ol>
+<p>Note there is <em>NO WAY</em> to test for transivity, it depends on your own judgement (do you think there is a fundamental difference between the trials?)</p>
+</li>
+<li>
+<p>Coherence assumption (Similarity assumption)</p>
+<p>Can be assessed pairwise, loop-specific, and in-network. The assumption is STATISTIC (p-value attached to it). </p>
+</li>
+</ol>
+<h2 id="statistical-approaches-for-indirect-treatment-comparisons-itc">Statistical approaches for Indirect Treatment Comparisons (ITC)</h2>
+<p>ITCs are not new.</p>
+<p>Bucher et al. (1997) demonstrated the simplest form. The process is as follows:</p>
+<p>Given odds ratio of study 1) (A vs B) and study 2) (A vs C), and you want to determine how B compares against C:A vs. C and number of studies B vs. C:</p>
+<ol>
+<li>Calculate the log(OR(A vs B)) and log(OR(A vs C))</li>
+<li>Calculate log(OR(A vs B)) : log(OR(A vs C))</li>
+<li>If this ratio &gt; 1 <span class="arithmatex">\(\rightarrow\)</span>, B is better than C.</li>
+</ol>
+<p>This method is the simpliest approach to a triangular meta-analysis.</p>
+<p>If you are going over loop of 3, and don't construct a connected network, it becomes a adjusted indirect treatment comparison (rather than simply ITC). </p>
+<h2 id="assumptions-for-each-level-of-multiple-treatment-comparison">Assumptions for each level of multiple treatment comparison</h2>
+<ol>
+<li>
+<p>Homogeneity assumption <em>in pairwise function</em></p>
+<p>Ensure there is no considerable heterogeneity in each pairwise comparison</p>
+</li>
+<li>
+<p>Homogeneity and similarity of trial</p>
+<p>Check similarity or transitivity assumption in loops.</p>
+</li>
+</ol>
+<h2 id="what-if-i-have-multiple-interventions-not-in-a-loop">What if I have multiple interventions NOT in a loop?</h2>
+<p>Consider the following study - imagine we were assessing the effect of different interventions on smoking cessation. In our first order loop ('triangle' loop), we:</p>
+<ol>
+<li>
+<p>Directly compare the effect of NRT vs Anti-depressants</p>
+<p>The meta-analysis here involves 3 trials, demonstrating OR of 1.34 (0.71 - 2.56) with <span class="arithmatex">\(I^2 = 0.437\)</span></p>
+</li>
+<li>
+<p>Indirectly compare NRT to control and Anti-depressants to control</p>
+<ul>
+<li>The meta-analysis of NRT vs control is equal to 1.85, <span class="arithmatex">\(I^2 = 0.13\)</span> involving 67 comparisons.</li>
+<li>The meta-analysis of Antidepressants vs control is equal to 1.88, <span class="arithmatex">\(I^2 = 0.19\)</span>, involving 29 comparisons.</li>
+<li>When undertaking simple ITC, we get the indirect score of 1.01 (0.81 - 0.127).</li>
+</ul>
+</li>
+</ol>
+<p>This network actually has another second order loop which compares antidepressant vs NRT as well. For this, we can ALSO calculate the direct and indirect comparisons. In fact, there are a NUMBER of different loops involving NRT and Anti-depressants. In this example, there are <strong>five</strong> separate loops involving anti-depressants vs NRT.</p>
+<p><strong>How do we then calculate the network effect? </strong></p>
+<p>The network effect is calculated by <strong> undertaking a simple meta-analysis </strong> of the calculated <strong>indirect loops</strong>. This will be affected by:</p>
+<ol>
+<li>The order of the loop - lower loops have higher weight</li>
+<li>The standard error of the indirect effect (<span class="arithmatex">\(weight = \frac{1}{SE}\)</span>)</li>
+</ol>
+<p>By pooling the direct and pooled-indirect estimates, you can calculate the network estimate. The relative weighting of the direct and pool-indirect estimates is calculated on a contribution table (or contribution plot). Useful to check when doing GRADE assessments.</p>
+<h2 id="other-statistical-approaches-to-network-meta-analysis">Other statistical approaches to network meta-analysis</h2>
+<ol>
+<li>Frequentist framework</li>
+<li>Bayestian framework - more popular for analysis of published networks </li>
+</ol>
+<p>Philosophically, frequentist and bayesian approaches are different statistical approaches. Both are concerned with parameter estimation (inference of something about a population taken from a sample). From a probabilistic perspective, we don't know what the parameter is - as we can't find a point estimate, we also need to come up with a distribution (i.e. the 95% confidence interval). </p>
+<p>These frameworks approach distributions differently. However, Empirical and simulation studies have shown NMAs from frequentist models <strong>do not</strong> differ from Bayesian models with vague(flat/uninformative) priors. </p>
+<h3 id="bayesian-framework-for-nma">Bayesian framework for NMA</h3>
+<p>Look at probability in a general way - yes the probability is unknown, but we can use a probability to represent the uncertainty in this value. </p>
+<p>Example - looking at height:</p>
+<ul>
+<li>I agree that the mean is a fixed and known value, but i know it is not 0 and it is not 50cm, I know it cannot be &gt;3m. </li>
+<li>I know there is no issue with calculating the uncertainty through a probabilistic means.</li>
+<li>I can come up with a probability but imaginative distribution of height in this population.</li>
+<li>I will use 1+ samples from this population, have an estimate and 95% CI, and also a probability distribution regarding what comes out of the sample.</li>
+</ul>
+<p><strong>Bayesian models have more flexibility:</strong>
+- informative vs. vague priors for effect estimates
+    - Vague prior = very wide normal distribution, which captures every possibility in a priori distribution/parameter. Very wide distribution from 0 to infinity, but we know it is normally distributed
+    - semi-informative prior = noting the probability that the distribution is going to be from 20cm to 1000cm in height - there is still a wide range of values, but our approach is still semi-informative (not 0 to infinity). We still assume a normal shaped distribution
+    - Fully-informative priors = still attached to a credible interval, but the values are more informed by previous studies (i.e. there is evidence to support the range of values/intervals)
+        - Informative priors requires justification
+- Arm-based model vs. Contrast-based model
+    - Able to look into effect modifications at arm-level covariates in arm-based models compared to contrast-based models
+    - Arm based model advantage - covariate/intervention/effect modifier affecting arm-level estimates, and I want to adjust for that arm-level value. 
+    - Assumption: Prognostic factors are distributed equally if randomisation is done correctly between trial arms - usually, it is unrealistic to think there is effect modification for a prognostic factor at arm level - as a result, Arm-level NMA is not usually different from Contrast-based models
+- Variable between-study variances (heterogeneity) vs. common between-study variance
+    - frequentists normally use common between-study variance for heterogeneity. 
+    - Say you have 13 intervention and 25 comparisons, 
+        - each comparison has a heterogeneity estimate (<span class="arithmatex">\(I^2\)</span> estimate) - the estimate of heterogeneity is different
+        - In frequentist NMA, there is typically a single heterogeneity estimate for the whole network
+- DIC (deviance information criteria) and <span class="arithmatex">\(D_{hat}\)</span> statistics (model fit) provide information regarding whether you picked the right model. This is only available to Bayesian models, and is a benefit of the flexibility. 
+    - Fixed vs. Random effects
+    - Consistency vs. inconsistence
+        - Network meta-regression vs NMA</p>
+<h3 id="frequentist-framework-for-nma">Frequentist framework for NMA</h3>
+<p>Do not attach a-priori probability to hypothesis regarding parameter in the population. We know it is a fixed value, but we don't know <em>what</em> it is. </p>
+<p>Example - looking at height</p>
+<ul>
+<li>I don't know the mean value of height in the female population</li>
+<li>I know this value is FIXED and NOT RANDOM - I can use a sample population and estimate the mean from the sample, which will give me a probability distribution of this mean.</li>
+<li>I will use 1+ samples from this population and come up with an estimate and 95% CI around the estimate</li>
+</ul>
+<h2 id="references">References</h2>
+<p>These notes were made based on:</p>
+<ul>
+<li>Behnam Sadeghirad's youtube videos <a href="https://www.youtube.com/watch?v=GL4FPPzRplg">Video 1</a>, <a href="https://www.youtube.com/watch?v=SYUCGIurAAE">Video 2</a>, <a href="https://www.youtube.com/watch?v=nwcoJtYGCmk">Video 3</a> and <a href="https://www.youtube.com/watch?v=ZZeW2ZO6eTk">Video 4</a></li>
+<li>Cochrane handbook chapter 11 (Network meta-analysis) <a href="https://training.cochrane.org/handbook/current/chapter-11">here</a></li>
+<li>Cochrane network meta-analysis learning modules <a href="https://training.cochrane.org/online-learning/cochrane-methodology/network-meta-analysis-nma">here</a></li>
+</ul></div>
+            </div>
+        </div>
+
+        <footer class="col-md-12">
+            <hr>
+                <p>Copyright &copy; 2021 Weber Liu</p>
+            <p>Documentation built with <a href="https://www.mkdocs.org/">MkDocs</a>.</p>
+        </footer>
+        <script>
+            var base_url = "../../../..",
+                shortcuts = {"help": 191, "next": 78, "previous": 80, "search": 83};
+        </script>
+        <script src="../../../../js/base.js" defer></script>
+        <script src="../../../../javascripts/mathjax.js" defer></script>
+        <script src="https://polyfill.io/v3/polyfill.min.js?features=es6" defer></script>
+        <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js" defer></script>
+        <script src="../../../../search/main.js" defer></script>
+
+        <div class="modal" id="mkdocs_search_modal" tabindex="-1" role="dialog" aria-labelledby="searchModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title" id="searchModalLabel">Search</h4>
+                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+            </div>
+            <div class="modal-body">
+                <p>From here you can search these documents. Enter your search terms below.</p>
+                <form>
+                    <div class="form-group">
+                        <input type="search" class="form-control" placeholder="Search..." id="mkdocs-search-query" title="Type search term here">
+                    </div>
+                </form>
+                <div id="mkdocs-search-results" data-no-results-text="No results found"></div>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div><div class="modal" id="mkdocs_keyboard_modal" tabindex="-1" role="dialog" aria-labelledby="keyboardModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title" id="keyboardModalLabel">Keyboard Shortcuts</h4>
+                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+            </div>
+            <div class="modal-body">
+              <table class="table">
+                <thead>
+                  <tr>
+                    <th style="width: 20%;">Keys</th>
+                    <th>Action</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td class="help shortcut"><kbd>?</kbd></td>
+                    <td>Open this help</td>
+                  </tr>
+                  <tr>
+                    <td class="next shortcut"><kbd>n</kbd></td>
+                    <td>Next page</td>
+                  </tr>
+                  <tr>
+                    <td class="prev shortcut"><kbd>p</kbd></td>
+                    <td>Previous page</td>
+                  </tr>
+                  <tr>
+                    <td class="search shortcut"><kbd>s</kbd></td>
+                    <td>Search</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div>
+
+    </body>
+</html>
