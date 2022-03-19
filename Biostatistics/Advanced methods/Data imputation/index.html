@@ -242,6 +242,10 @@
     <a href="./" class="dropdown-item active">Data imputation</a>
 </li>
             
+<li>
+    <a href="../Missing%20Data/" class="dropdown-item">Missing Data</a>
+</li>
+            
   <li class="dropdown-submenu">
     <a href="#" class="dropdown-item">Advanced biostatistical modelling</a>
     <ul class="dropdown-menu">
@@ -446,7 +450,7 @@
                                 </a>
                             </li>
                             <li class="nav-item">
-                                <a rel="next" href="../Advanced%20biostatistical%20modelling/" class="nav-link">
+                                <a rel="next" href="../Missing%20Data/" class="nav-link">
                                     Next <i class="fa fa-arrow-right"></i>
                                 </a>
                             </li>
@@ -467,12 +471,32 @@
     
     <div id="toc-collapse" class="navbar-collapse collapse card bg-secondary">
         <ul class="nav flex-column">
+            
+            <li class="nav-item" data-level="1"><a href="#data-imputation" class="nav-link">Data imputation</a>
+              <ul class="nav flex-column">
+            <li class="nav-item" data-level="2"><a href="#background" class="nav-link">Background</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+              </ul>
+            </li>
         </ul>
     </div>
 </div></div>
                     <div class="col-md-9" role="main">
 
-</div>
+<h1 id="data-imputation">Data imputation</h1>
+<h2 id="background">Background</h2>
+<p>Data imputation is used to deal with missing values - it is a method of filling missing data. Imputation can be undertaken as <strong>single imputation</strong> (the simplest form of imputation), as well as more complex methods.</p>
+<p>Simple imputation methods include:</p>
+<ol>
+<li>Mean imputation</li>
+<li>Regression imputation</li>
+<li>Regression imputation with noise</li>
+</ol>
+<p>Multiple imputation accounts for the fact that some data has been imputed, and aims to generate plausible imputed values. 
+- Multiple imputation imputes multiple datasets with slightly different missing (imputed) values. This adds a level of uncertainty to the final dataset, reflecting the fact that we have imputed this data. </p>
+<p><img alt="Pasted image 20220319170631.png" src="....\images\Pasted image 20220319170631.png" /></p></div>
             </div>
         </div>
 
