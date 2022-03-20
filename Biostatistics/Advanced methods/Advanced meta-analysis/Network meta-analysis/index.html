@@ -6,7 +6,7 @@
 <meta content="IE=edge" http-equiv="X-UA-Compatible"/>
 <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
 <link href="../../../../img/favicon.ico" rel="shortcut icon"/>
-<title>Meta Regression - ClinEpi Wiki</title>
+<title>Network meta-analysis - ClinEpi Wiki</title>
 <link href="../../../../css/bootstrap.min.css" rel="stylesheet"/>
 <link href="../../../../css/font-awesome.min.css" rel="stylesheet"/>
 <link href="../../../../css/base.css" rel="stylesheet"/>
@@ -227,10 +227,10 @@
 <a class="dropdown-item" href="../Living%20meta-analysis/">Living meta analysis</a>
 </li>
 <li>
-<a class="dropdown-item active" href="./">Meta Regression</a>
+<a class="dropdown-item" href="../Meta-Regression/">Meta Regression</a>
 </li>
 <li>
-<a class="dropdown-item" href="../Network%20meta-analysis/">Network meta-analysis</a>
+<a class="dropdown-item active" href="./">Network meta-analysis</a>
 </li>
 </ul>
 </li>
@@ -365,12 +365,12 @@
                             </a>
 </li>
 <li class="nav-item">
-<a class="nav-link" href="../Living%20meta-analysis/" rel="prev">
+<a class="nav-link" href="../Meta-Regression/" rel="prev">
 <i class="fa fa-arrow-left"></i> Previous
                                 </a>
 </li>
 <li class="nav-item">
-<a class="nav-link" href="../Network%20meta-analysis/" rel="next">
+<a class="nav-link" href="../../Forecasting%20methods/Time%20Series%20Analysis/Introduction%20to%20Time%20Series%20Analysis/" rel="next">
                                     Next <i class="fa fa-arrow-right"></i>
 </a>
 </li>
@@ -388,11 +388,233 @@
 </div>
 <div class="navbar-collapse collapse card bg-secondary" id="toc-collapse">
 <ul class="nav flex-column">
+<li class="nav-item" data-level="1"><a class="nav-link" href="#network-meta-analysis">Network meta-analysis</a>
+<ul class="nav flex-column">
+<li class="nav-item" data-level="2"><a class="nav-link" href="#terminology">Terminology</a>
+<ul class="nav flex-column">
+</ul>
+</li>
+<li class="nav-item" data-level="2"><a class="nav-link" href="#data-extraction">Data extraction</a>
+<ul class="nav flex-column">
+</ul>
+</li>
+<li class="nav-item" data-level="2"><a class="nav-link" href="#assumptions-of-indirect-comparisons">Assumptions of indirect comparisons</a>
+<ul class="nav flex-column">
+</ul>
+</li>
+<li class="nav-item" data-level="2"><a class="nav-link" href="#statistical-approaches-for-indirect-treatment-comparisons-itc">Statistical approaches for Indirect Treatment Comparisons (ITC)</a>
+<ul class="nav flex-column">
+</ul>
+</li>
+<li class="nav-item" data-level="2"><a class="nav-link" href="#assumptions-for-each-level-of-multiple-treatment-comparison">Assumptions for each level of multiple treatment comparison</a>
+<ul class="nav flex-column">
+</ul>
+</li>
+<li class="nav-item" data-level="2"><a class="nav-link" href="#what-if-i-have-multiple-interventions-not-in-a-loop">What if I have multiple interventions NOT in a loop?</a>
+<ul class="nav flex-column">
+</ul>
+</li>
+<li class="nav-item" data-level="2"><a class="nav-link" href="#other-statistical-approaches-to-network-meta-analysis">Other statistical approaches to network meta-analysis</a>
+<ul class="nav flex-column">
+</ul>
+</li>
+<li class="nav-item" data-level="2"><a class="nav-link" href="#references">References</a>
+<ul class="nav flex-column">
+</ul>
+</li>
+</ul>
+</li>
 </ul>
 </div>
 </div></div>
 <div class="col-md-9" role="main">
-</div>
+<h1 id="network-meta-analysis">Network meta-analysis</h1>
+<h2 id="terminology">Terminology</h2>
+<p>Terminology for meta-analysis:</p>
+<ol>
+<li>
+<p>Order</p>
+<p>The order of the network meta-analysis indicates the number of treatment arms included in this meta-analysis. For example, an order <span class="arithmatex">\(N\)</span> meta-analysis has <span class="arithmatex">\(N+2\)</span> treatment arms.</p>
+<p>A 'triangular meta-analysis' is of order <span class="arithmatex">\(1\)</span>. This means there are 3 treatment arms (A, B and C).</p>
+</li>
+</ol>
+<h2 id="data-extraction">Data extraction</h2>
+<ul>
+<li>DECiMAL (Data Extration for Complex Meta-analysis)<ul>
+<li>Example data extraction</li>
+<li>For multivariate, and network meta-analysis information</li>
+</ul>
+</li>
+</ul>
+<h3 id="key-items-for-data-extraction">Key items for data extraction</h3>
+<ol>
+<li>Bibliographic information (e.g. study ID)</li>
+<li>Trial characteristics</li>
+<li>Patient characteristics (for study level and arm level)</li>
+<li>Intervention and comparator(s)</li>
+<li>Outcomes (continuous vs. binary, aggregate measures vs. 2x2 table, end of study vs. change values)</li>
+<li>Risk of Bias<ul>
+<li>Don't use covidence, etc. if you are trying to pool a network meta-analysis</li>
+</ul>
+</li>
+</ol>
+<p>Notes:</p>
+<ul>
+<li>Quality control and data cleaning are critical (e.g. incorrectly placed decimals could stop the whole process!)</li>
+<li>Network meta-analyses could end up with hundreds of data points - you NEED to systematically look for mistakes</li>
+<li>Do descriptive statistics (e.g. Mean, IQR, etc.) to make sure your numbers aren't off</li>
+<li>If you are not sure between SD and SE, contact the authors to make sure - SE is typically very small compared to SD - unless it is specified, take care!</li>
+</ul>
+<h3 id="data-extraction-formats">Data extraction formats</h3>
+<p>Conventional vs. network meta-analysis</p>
+<ul>
+<li>Conventional:<ul>
+<li>Wide format (one row per study), multiple worksheets (for each study)</li>
+<li>Wide format (one row per study), one worksheet</li>
+<li>Compact wide format (one row per study), one worksheet </li>
+<li>Long format (one row per arm) - preferred format for NMA </li>
+</ul>
+</li>
+</ul>
+<h3 id="preparing-data-for-nma">Preparing data for NMA</h3>
+<ol>
+<li>
+<p>Count data</p>
+<p>Command in Stata: <code>network setup eventvar nvar [if] [in], studyvar(varname) trtvar(varname) [or|rr|rd|hr zeroadd(#)] ref(string)</code></p>
+<p>Default is OR</p>
+</li>
+<li>
+<p>Continuous data:</p>
+<p>Command in Stata: <code>network setup meanvar sdvar nvar [if] [in], trtvar(varname) studyvar(varname) [md|smd] ref(string)</code></p>
+<p>Default is SMD</p>
+</li>
+</ol>
+<p>Software will automatically do continuity corrections (e.g. 0 in certain arms). You can also tell the study which study is your reference - whilst different results should give the same result, choosing a reference treatment to be central in the network (the better-connected treatment) may improve numerical stability. Usually placebo/no treatment is the reference, but you might want to pick a treatment arm.</p>
+<h2 id="assumptions-of-indirect-comparisons">Assumptions of indirect comparisons</h2>
+<ol>
+<li>
+<p>Homogeneity assumption</p>
+<p>Undertaken using <span class="arithmatex">\(I^2\)</span>, Cochran Q test, P-value for signifiance. An <span class="arithmatex">\(I^2 = 0\)</span> means there is no statistical heterogeneity, but there might be a conceptual heterogeneity.</p>
+</li>
+<li>
+<p>Transivity Assumption (Similarity assumption) - extra for NMA</p>
+<p>Similar to conceptual heterogeneity. If you have drug A having a common comparator to B and C - if AB is cross-over and AC is parallel design, this violates transivity assumption of methodology. If A vs B uses Visual analogue scale, and A vs C uses a McGill pain questionnaire, this could violate transivity assumption. </p>
+<p>If A is 'weight watcher' and B is 'Dash diet' and C is 'Mediterranean diet', and every study in A vs B receieves counseling, but all studies A vs C didn't use counseling - this cointervention can change the treatment, and so it is a violation of the transivitity assumption. </p>
+<p>Transivity assumption applies to:</p>
+<ol>
+<li>
+<p>Patients - e.g. patients of different ages between interventions</p>
+<p>Be careful when considering patients - you shouldn't rely on Table 1 patient distributions to determine transivity (e.g. consideration of age). Transitivity isn't black and white - there will always be differences in patient backgrounds. It is up to you to determine HOW MUCH and HOW MUCH WILL IT MATTER, rather than yes/no.</p>
+</li>
+<li>
+<p>Co-interventions</p>
+</li>
+<li>Outcomes</li>
+<li>Methodology</li>
+</ol>
+<p>Note there is <em>NO WAY</em> to test for transivity, it depends on your own judgement (do you think there is a fundamental difference between the trials?)</p>
+</li>
+<li>
+<p>Coherence assumption (Similarity assumption)</p>
+<p>Can be assessed pairwise, loop-specific, and in-network. The assumption is STATISTIC (p-value attached to it). </p>
+</li>
+</ol>
+<h2 id="statistical-approaches-for-indirect-treatment-comparisons-itc">Statistical approaches for Indirect Treatment Comparisons (ITC)</h2>
+<p>ITCs are not new.</p>
+<p>Bucher et al. (1997) demonstrated the simplest form. The process is as follows:</p>
+<p>Given odds ratio of study 1) (A vs B) and study 2) (A vs C), and you want to determine how B compares against C:A vs. C and number of studies B vs. C:</p>
+<ol>
+<li>Calculate the log(OR(A vs B)) and log(OR(A vs C))</li>
+<li>Calculate log(OR(A vs B)) : log(OR(A vs C))</li>
+<li>If this ratio &gt; 1 <span class="arithmatex">\(\rightarrow\)</span>, B is better than C.</li>
+</ol>
+<p>This method is the simpliest approach to a triangular meta-analysis.</p>
+<p>If you are going over loop of 3, and don't construct a connected network, it becomes a adjusted indirect treatment comparison (rather than simply ITC). </p>
+<h2 id="assumptions-for-each-level-of-multiple-treatment-comparison">Assumptions for each level of multiple treatment comparison</h2>
+<ol>
+<li>
+<p>Homogeneity assumption <em>in pairwise function</em></p>
+<p>Ensure there is no considerable heterogeneity in each pairwise comparison</p>
+</li>
+<li>
+<p>Homogeneity and similarity of trial</p>
+<p>Check similarity or transitivity assumption in loops.</p>
+</li>
+</ol>
+<h2 id="what-if-i-have-multiple-interventions-not-in-a-loop">What if I have multiple interventions NOT in a loop?</h2>
+<p>Consider the following study - imagine we were assessing the effect of different interventions on smoking cessation. In our first order loop ('triangle' loop), we:</p>
+<ol>
+<li>
+<p>Directly compare the effect of NRT vs Anti-depressants</p>
+<p>The meta-analysis here involves 3 trials, demonstrating OR of 1.34 (0.71 - 2.56) with <span class="arithmatex">\(I^2 = 0.437\)</span></p>
+</li>
+<li>
+<p>Indirectly compare NRT to control and Anti-depressants to control</p>
+<ul>
+<li>The meta-analysis of NRT vs control is equal to 1.85, <span class="arithmatex">\(I^2 = 0.13\)</span> involving 67 comparisons.</li>
+<li>The meta-analysis of Antidepressants vs control is equal to 1.88, <span class="arithmatex">\(I^2 = 0.19\)</span>, involving 29 comparisons.</li>
+<li>When undertaking simple ITC, we get the indirect score of 1.01 (0.81 - 0.127).</li>
+</ul>
+</li>
+</ol>
+<p>This network actually has another second order loop which compares antidepressant vs NRT as well. For this, we can ALSO calculate the direct and indirect comparisons. In fact, there are a NUMBER of different loops involving NRT and Anti-depressants. In this example, there are <strong>five</strong> separate loops involving anti-depressants vs NRT.</p>
+<p><strong>How do we then calculate the network effect? </strong></p>
+<p>The network effect is calculated by <strong> undertaking a simple meta-analysis </strong> of the calculated <strong>indirect loops</strong>. This will be affected by:</p>
+<ol>
+<li>The order of the loop - lower loops have higher weight</li>
+<li>The standard error of the indirect effect (<span class="arithmatex">\(weight = \frac{1}{SE}\)</span>)</li>
+</ol>
+<p>By pooling the direct and pooled-indirect estimates, you can calculate the network estimate. The relative weighting of the direct and pool-indirect estimates is calculated on a contribution table (or contribution plot). Useful to check when doing GRADE assessments.</p>
+<h2 id="other-statistical-approaches-to-network-meta-analysis">Other statistical approaches to network meta-analysis</h2>
+<ol>
+<li>Frequentist framework</li>
+<li>Bayestian framework - more popular for analysis of published networks </li>
+</ol>
+<p>Philosophically, frequentist and bayesian approaches are different statistical approaches. Both are concerned with parameter estimation (inference of something about a population taken from a sample). From a probabilistic perspective, we don't know what the parameter is - as we can't find a point estimate, we also need to come up with a distribution (i.e. the 95% confidence interval). </p>
+<p>These frameworks approach distributions differently. However, Empirical and simulation studies have shown NMAs from frequentist models <strong>do not</strong> differ from Bayesian models with vague(flat/uninformative) priors. </p>
+<h3 id="bayesian-framework-for-nma">Bayesian framework for NMA</h3>
+<p>Look at probability in a general way - yes the probability is unknown, but we can use a probability to represent the uncertainty in this value. </p>
+<p>Example - looking at height:</p>
+<ul>
+<li>I agree that the mean is a fixed and known value, but i know it is not 0 and it is not 50cm, I know it cannot be &gt;3m. </li>
+<li>I know there is no issue with calculating the uncertainty through a probabilistic means.</li>
+<li>I can come up with a probability but imaginative distribution of height in this population.</li>
+<li>I will use 1+ samples from this population, have an estimate and 95% CI, and also a probability distribution regarding what comes out of the sample.</li>
+</ul>
+<p><strong>Bayesian models have more flexibility:</strong>
+- informative vs. vague priors for effect estimates
+    - Vague prior = very wide normal distribution, which captures every possibility in a priori distribution/parameter. Very wide distribution from 0 to infinity, but we know it is normally distributed
+    - semi-informative prior = noting the probability that the distribution is going to be from 20cm to 1000cm in height - there is still a wide range of values, but our approach is still semi-informative (not 0 to infinity). We still assume a normal shaped distribution
+    - Fully-informative priors = still attached to a credible interval, but the values are more informed by previous studies (i.e. there is evidence to support the range of values/intervals)
+        - Informative priors requires justification
+- Arm-based model vs. Contrast-based model
+    - Able to look into effect modifications at arm-level covariates in arm-based models compared to contrast-based models
+    - Arm based model advantage - covariate/intervention/effect modifier affecting arm-level estimates, and I want to adjust for that arm-level value. 
+    - Assumption: Prognostic factors are distributed equally if randomisation is done correctly between trial arms - usually, it is unrealistic to think there is effect modification for a prognostic factor at arm level - as a result, Arm-level NMA is not usually different from Contrast-based models
+- Variable between-study variances (heterogeneity) vs. common between-study variance
+    - frequentists normally use common between-study variance for heterogeneity. 
+    - Say you have 13 intervention and 25 comparisons, 
+        - each comparison has a heterogeneity estimate (<span class="arithmatex">\(I^2\)</span> estimate) - the estimate of heterogeneity is different
+        - In frequentist NMA, there is typically a single heterogeneity estimate for the whole network
+- DIC (deviance information criteria) and <span class="arithmatex">\(D_{hat}\)</span> statistics (model fit) provide information regarding whether you picked the right model. This is only available to Bayesian models, and is a benefit of the flexibility. 
+    - Fixed vs. Random effects
+    - Consistency vs. inconsistence
+        - Network meta-regression vs NMA</p>
+<h3 id="frequentist-framework-for-nma">Frequentist framework for NMA</h3>
+<p>Do not attach a-priori probability to hypothesis regarding parameter in the population. We know it is a fixed value, but we don't know <em>what</em> it is. </p>
+<p>Example - looking at height</p>
+<ul>
+<li>I don't know the mean value of height in the female population</li>
+<li>I know this value is FIXED and NOT RANDOM - I can use a sample population and estimate the mean from the sample, which will give me a probability distribution of this mean.</li>
+<li>I will use 1+ samples from this population and come up with an estimate and 95% CI around the estimate</li>
+</ul>
+<h2 id="references">References</h2>
+<p>These notes were made based on:</p>
+<ul>
+<li>Behnam Sadeghirad's youtube videos <a href="https://www.youtube.com/watch?v=GL4FPPzRplg">Video 1</a>, <a href="https://www.youtube.com/watch?v=SYUCGIurAAE">Video 2</a>, <a href="https://www.youtube.com/watch?v=nwcoJtYGCmk">Video 3</a> and <a href="https://www.youtube.com/watch?v=ZZeW2ZO6eTk">Video 4</a></li>
+<li>Cochrane handbook chapter 11 (Network meta-analysis) <a href="https://training.cochrane.org/handbook/current/chapter-11">here</a></li>
+<li>Cochrane network meta-analysis learning modules <a href="https://training.cochrane.org/online-learning/cochrane-methodology/network-meta-analysis-nma">here</a></li>
+</ul></div>
 </div>
 </div>
 <footer class="col-md-12">

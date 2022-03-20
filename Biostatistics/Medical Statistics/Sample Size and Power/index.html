@@ -6,7 +6,7 @@
 <meta content="IE=edge" http-equiv="X-UA-Compatible"/>
 <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
 <link href="../../../img/favicon.ico" rel="shortcut icon"/>
-<title>Sample Size and Power - ClinEpi Wiki</title>
+<title>Sample size and power - ClinEpi Wiki</title>
 <link href="../../../css/bootstrap.min.css" rel="stylesheet"/>
 <link href="../../../css/font-awesome.min.css" rel="stylesheet"/>
 <link href="../../../css/base.css" rel="stylesheet"/>
@@ -106,7 +106,7 @@
 <a class="dropdown-item" href="../Probability/">Probability</a>
 </li>
 <li>
-<a class="dropdown-item active" href="./">Sample Size and Power</a>
+<a class="dropdown-item active" href="./">Sample size and power</a>
 </li>
 <li>
 <a class="dropdown-item" href="../Simple%20Linear%20Regression/">Simple Linear Regression</a>
@@ -218,19 +218,19 @@
 <a class="dropdown-item" href="#">Advanced meta analysis</a>
 <ul class="dropdown-menu">
 <li>
-<a class="dropdown-item" href="../../Advanced%20methods/Advanced%20meta-analysis/">Advanced methods in meta-analysis</a>
+<a class="dropdown-item" href="../../Advanced%20methods/Advanced%20meta-analysis/Advanced%20methods%20in%20meta-analysis/">Advanced methods in meta-analysis</a>
+</li>
+<li>
+<a class="dropdown-item" href="../../Advanced%20methods/Advanced%20meta-analysis/Individual%20Participant%20Data%20Meta-analysis/">Individual Participant Data Meta analysis</a>
+</li>
+<li>
+<a class="dropdown-item" href="../../Advanced%20methods/Advanced%20meta-analysis/Living%20meta-analysis/">Living meta analysis</a>
 </li>
 <li>
 <a class="dropdown-item" href="../../Advanced%20methods/Advanced%20meta-analysis/Meta-Regression/">Meta Regression</a>
 </li>
 <li>
-<a class="dropdown-item" href="../../Advanced%20methods/Advanced%20meta-analysis/ipdmetaanalysis/">Ipdmetaanalysis</a>
-</li>
-<li>
-<a class="dropdown-item" href="../../Advanced%20methods/Advanced%20meta-analysis/livingmetaanalysis/">Livingmetaanalysis</a>
-</li>
-<li>
-<a class="dropdown-item" href="../../Advanced%20methods/Advanced%20meta-analysis/networkmetaanalysis/">Network meta-analysis</a>
+<a class="dropdown-item" href="../../Advanced%20methods/Advanced%20meta-analysis/Network%20meta-analysis/">Network meta-analysis</a>
 </li>
 </ul>
 </li>
@@ -388,11 +388,33 @@
 </div>
 <div class="navbar-collapse collapse card bg-secondary" id="toc-collapse">
 <ul class="nav flex-column">
+<li class="nav-item" data-level="1"><a class="nav-link" href="#sample-size-and-power">Sample size and power</a>
+<ul class="nav flex-column">
+<li class="nav-item" data-level="2"><a class="nav-link" href="#background">Background</a>
+<ul class="nav flex-column">
+</ul>
+</li>
+<li class="nav-item" data-level="2"><a class="nav-link" href="#approach">Approach</a>
+<ul class="nav flex-column">
+</ul>
+</li>
+</ul>
+</li>
 </ul>
 </div>
 </div></div>
 <div class="col-md-9" role="main">
-</div>
+<h1 id="sample-size-and-power">Sample size and power</h1>
+<h2 id="background">Background</h2>
+<p>Sample sizes are important in determining the expected cost of studies - they need to be calculated prior to starting studies (otherwise you could end up with lots of data which is meaningless - a massive waste of money!)</p>
+<h2 id="approach">Approach</h2>
+<ol>
+<li>We need to already have available: <ul>
+<li>Standard error (estimate) in the population</li>
+<li>If we wish to estimate population mean, we can use the formula for <strong>standard error of the mean</strong>: <span class="arithmatex">\(\text{SE}_{mean} = \frac{s}{\sqrt(n)}\)</span>, where <span class="arithmatex">\(s\)</span> is the standard deviation of the population</li>
+</ul>
+</li>
+</ol></div>
 </div>
 </div>
 <footer class="col-md-12">
