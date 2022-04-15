@@ -473,7 +473,14 @@
 <p>The Table 2 fallacy describes an issue in interpretability in table 2 (summary effects table) when the individual risk/odds ratios (derived fromthe beta coefficients) of multivariate models are all presented in the same table.</p>
 <p>This issue arises as the original analysis does not aim to look at the effect sizes of the included secondary variables. The presentation of these associatiates is post-hoc and statistically meaningless. </p>
 <h2 id="an-issue-in-interpretation">An issue in interpretation</h2>
-<p>Using the example from Westreich et al, we first consider a study looking at the effect of HIV on stroke. To calculate its direct effect, we control for confounders (the most prominent of which are smok)</p>
+<p>Using the example from Westreich et al, we first consider a study looking at the effect of HIV on stroke. To calculate its direct effect, we control for confounders (the most prominent of which are smoking and age in this scenario).</p>
+<p>The mathematical model would therefore be:</p>
+<div class="arithmatex">\[ln(\frac{\text{Stroke}}{1-\text{Stroke}}) = \beta_0 + \beta_1\times\text{HIV Status} + \beta_2 \times Age + \beta_3 \times \text{Smoking Status} \]</div>
+<p>Now if we intepret the <span class="arithmatex">\(\beta_1\)</span> value we can understand this the relative risk of HIV status on Stroke when controlling for Age and Smoking Status. </p>
+<p><img alt="Pasted image 20220415171509" src="../../../../images/Pasted%20image%2020220415171509.png"/></p>
+<p>However can we interpret the <span class="arithmatex">\(\beta_3\)</span> value as the relative risk of Smoking Status on Stroke (when controlling for HIV status and Age)?</p>
+<p>No - as the relationship between smoking status and stroke might have <strong>other</strong> relevant and important confounders. </p>
+<p><img alt="Pasted image 20220415171501" src="../../../../images/Pasted%20image%2020220415171501.png"/></p>
 <h2 id="references">References</h2>
 <ol>
 <li><a href="https://cran.r-project.org/web/packages/simstudy/vignettes/simstudy.html">Westreich and Greenland (2013)</a></li>
