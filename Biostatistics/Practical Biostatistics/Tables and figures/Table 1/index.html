@@ -6,7 +6,7 @@
 <meta content="IE=edge" http-equiv="X-UA-Compatible"/>
 <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
 <link href="../../../../img/favicon.ico" rel="shortcut icon"/>
-<title>Reasonable variable ranges - ClinEpi Wiki</title>
+<title>Table 1 - ClinEpi Wiki</title>
 <link href="../../../../css/bootstrap.min.css" rel="stylesheet"/>
 <link href="../../../../css/font-awesome.min.css" rel="stylesheet"/>
 <link href="../../../../css/base.css" rel="stylesheet"/>
@@ -377,12 +377,12 @@
                             </a>
 </li>
 <li class="nav-item">
-<a class="nav-link" href="../Approach%20to%20missing%20values/" rel="prev">
+<a class="nav-link" href="../../Cleaning%20data/Reasonable%20variable%20ranges/" rel="prev">
 <i class="fa fa-arrow-left"></i> Previous
                                 </a>
 </li>
 <li class="nav-item">
-<a class="nav-link" href="../../Tables%20and%20figures/Table%201/" rel="next">
+<a class="nav-link" href="../../../../Clinical%20Epidemiology/" rel="next">
                                     Next <i class="fa fa-arrow-right"></i>
 </a>
 </li>
@@ -400,13 +400,17 @@
 </div>
 <div class="navbar-collapse collapse card bg-secondary" id="toc-collapse">
 <ul class="nav flex-column">
-<li class="nav-item" data-level="1"><a class="nav-link" href="#reasonable-variable-ranges">Reasonable variable ranges</a>
+<li class="nav-item" data-level="1"><a class="nav-link" href="#table-1">Table 1</a>
 <ul class="nav flex-column">
 <li class="nav-item" data-level="2"><a class="nav-link" href="#background">Background</a>
 <ul class="nav flex-column">
 </ul>
 </li>
-<li class="nav-item" data-level="2"><a class="nav-link" href="#common-variables">Common variables</a>
+<li class="nav-item" data-level="2"><a class="nav-link" href="#features-of-a-table-1">Features of a Table 1</a>
+<ul class="nav flex-column">
+</ul>
+</li>
+<li class="nav-item" data-level="2"><a class="nav-link" href="#relevant-packages">Relevant packages</a>
 <ul class="nav flex-column">
 </ul>
 </li>
@@ -416,18 +420,34 @@
 </div>
 </div></div>
 <div class="col-md-9" role="main">
-<h1 id="reasonable-variable-ranges">Reasonable variable ranges</h1>
+<h1 id="table-1">Table 1</h1>
 <h2 id="background">Background</h2>
-<p>When cleaning data, you will come across data which is not feasible - these can be outliers, or mistyped variables, etc. </p>
-<h2 id="common-variables">Common variables</h2>
+<p>Table 1 is the characteristics table of the study population. This is used in all cohort studies (Prospective and retrospective) as well as Clinical trials as it demonstrates the initiating (baseline) characteristics of the included participants.</p>
+<p>Table 1 gives us information of the characteristics of the sample(s) being compared.</p>
+<h2 id="features-of-a-table-1">Features of a Table 1</h2>
+<p>Table 1: Baseline characteristics of patients</p>
+<p>These tables should have the following columns:</p>
 <ol>
-<li>Blood pressure (Systolic)</li>
-<li>Blood pressure (Diastolic)</li>
-<li>Age</li>
-<li>Height</li>
-<li>Weight</li>
+<li>The characteristic/variable column (i.e. what the characteristic is)<ol>
+<li>You can further subgroup each of the characteristics if you'd like - e.g. 'Age group' can be subgrouped into &lt;50, 50-69, 60-69, &gt;70, etc.</li>
+</ol>
+</li>
+<li>The group(s) of interest<ol>
+<li>e.g. the 'comparator' and the 'intervention' would be two separate columns</li>
+<li>alteratively you can have a single 'total' column</li>
+</ol>
+</li>
 <li></li>
-</ol></div>
+</ol>
+<h2 id="relevant-packages">Relevant packages</h2>
+<h3 id="r-and-rstudio">R and RStudio</h3>
+<ul>
+<li>TableOne<ul>
+<li>https://cran.r-project.org/web/packages/tableone/tableone.pdf</li>
+</ul>
+</li>
+<li></li>
+</ul></div>
 </div>
 </div>
 <footer class="col-md-12">
