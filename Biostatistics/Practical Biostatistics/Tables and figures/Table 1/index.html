@@ -354,6 +354,14 @@
 </li>
 </ul>
 </li>
+<li class="dropdown-submenu">
+<a class="dropdown-item" href="#">Tables and figures</a>
+<ul class="dropdown-menu">
+<li>
+<a class="dropdown-item active" href="./">Table 1</a>
+</li>
+</ul>
+</li>
 </ul>
 </li>
 </ul>
@@ -377,12 +385,12 @@
                             </a>
 </li>
 <li class="nav-item">
-<a class="nav-link" href="../../Cleaning%20data/Reasonable%20variable%20ranges/" rel="prev">
+<a class="nav-link" href="../../Advanced%20R/Vector%20operations/" rel="prev">
 <i class="fa fa-arrow-left"></i> Previous
                                 </a>
 </li>
 <li class="nav-item">
-<a class="nav-link" href="../../../../Clinical%20Epidemiology/" rel="next">
+<a class="nav-link" href="../../../../EBM%20podcast/" rel="next">
                                     Next <i class="fa fa-arrow-right"></i>
 </a>
 </li>
@@ -410,7 +418,15 @@
 <ul class="nav flex-column">
 </ul>
 </li>
+<li class="nav-item" data-level="2"><a class="nav-link" href="#dealing-with-missing-data">Dealing with Missing Data</a>
+<ul class="nav flex-column">
+</ul>
+</li>
 <li class="nav-item" data-level="2"><a class="nav-link" href="#relevant-packages">Relevant packages</a>
+<ul class="nav flex-column">
+</ul>
+</li>
+<li class="nav-item" data-level="2"><a class="nav-link" href="#references">References</a>
 <ul class="nav flex-column">
 </ul>
 </li>
@@ -423,7 +439,12 @@
 <h1 id="table-1">Table 1</h1>
 <h2 id="background">Background</h2>
 <p>Table 1 is the characteristics table of the study population. This is used in all cohort studies (Prospective and retrospective) as well as Clinical trials as it demonstrates the initiating (baseline) characteristics of the included participants.</p>
-<p>Table 1 gives us information of the characteristics of the sample(s) being compared.</p>
+<p>Table 1 helps the reader identify issues in internal validity including:</p>
+<ol>
+<li>Confounding</li>
+<li>Selection bias</li>
+<li>Measurement errors</li>
+</ol>
 <h2 id="features-of-a-table-1">Features of a Table 1</h2>
 <p>Table 1: Baseline characteristics of patients</p>
 <p>These tables should have the following columns:</p>
@@ -433,21 +454,46 @@
 </ol>
 </li>
 <li>The group(s) of interest<ol>
-<li>e.g. the 'comparator' and the 'intervention' would be two separate columns</li>
-<li>alteratively you can have a single 'total' column</li>
+<li>e.g. the 'comparator' and the 'intervention' would be two separate columns<ol>
+<li>Stratifying by this 'exposure' can identify confounders</li>
 </ol>
 </li>
-<li></li>
+<li>alteratively you can have a single 'total' column</li>
+<li>This data is provided typically as n(%) for categorical variables, mean(SD) or mean(IQR) for continuous variables</li>
+<li>Additional columns can be used e.g. values for an external population - this can be used to support the external validity if your  data</li>
+<li>Additional tips<ol>
+<li>Include (N) in the column header</li>
+<li>Round percentages to whole numbers</li>
+<li>Mean(SD) is good for continuous variables when the data is <strong>normally distributed</strong>, however showing range/IQR is better if not</li>
+<li>Consider shading/crossing out a cell if the value is absent - otherwise the reader might confuse it with a missing cell</li>
 </ol>
+</li>
+</ol>
+</li>
+<li>(OPTIONAL) The P-test value<ol>
+<li>Occasionally you may present the P-test value<ol>
+<li>theoretically this is used for assessment of confounders</li>
+<li>However, confounders should only really be when there is a hypothesized confounding role using causal theory</li>
+</ol>
+</li>
+<li>However note that in a randomised clinical trial, the baseline assumption is that the randomisation is undertaken appropriately and therefore any differences in distribution are due to chance - therefore the P-test would be meaningless (as the P-value is an indication for how likely the difference is <strong>due</strong> to chance, of which that difference is <strong>completely</strong> due to change due to the nature of randomisation).</li>
+</ol>
+</li>
+</ol>
+<h2 id="dealing-with-missing-data">Dealing with <a href="....\Advanced methods\Missing Data.md">Missing Data</a></h2>
 <h2 id="relevant-packages">Relevant packages</h2>
 <h3 id="r-and-rstudio">R and RStudio</h3>
 <ul>
-<li>TableOne<ul>
+<li><code>tableone</code><ul>
 <li>https://cran.r-project.org/web/packages/tableone/tableone.pdf</li>
 </ul>
 </li>
-<li></li>
-</ul></div>
+</ul>
+<h2 id="references">References</h2>
+<ol>
+<li><a href="https://thomaselove.github.io/432-notes/index.html">Thomas Love's course notes for Data Science for Biological, Medical and Health Research</a></li>
+<li><a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6773463/">Hayes-Larson et al (2019) - Who is in this study, anyway? Guidelines for a useful Table 1</a></li>
+</ol></div>
 </div>
 </div>
 <footer class="col-md-12">
