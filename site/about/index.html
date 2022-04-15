@@ -1,0 +1,565 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="IE=edge" http-equiv="X-UA-Compatible"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<link href="../img/favicon.ico" rel="shortcut icon"/>
+<title>About - ClinEpi Wiki</title>
+<link href="../css/bootstrap.min.css" rel="stylesheet"/>
+<link href="../css/font-awesome.min.css" rel="stylesheet"/>
+<link href="../css/base.css" rel="stylesheet"/>
+<link href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/styles/color-brewer.min.css" rel="stylesheet"/>
+<script defer="" src="../js/jquery-1.10.2.min.js"></script>
+<script defer="" src="../js/bootstrap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/highlight.min.js"></script>
+<script>hljs.initHighlightingOnLoad();</script>
+</head>
+<body>
+<div class="navbar fixed-top navbar-expand-lg navbar-dark bg-primary">
+<div class="container">
+<a class="navbar-brand" href="..">ClinEpi Wiki</a>
+<!-- Expander button -->
+<button class="navbar-toggler" data-target="#navbar-collapse" data-toggle="collapse" type="button">
+<span class="navbar-toggler-icon"></span>
+</button>
+<!-- Expanded navigation -->
+<div class="navbar-collapse collapse" id="navbar-collapse">
+<!-- Main navigation -->
+<ul class="nav navbar-nav">
+<li class="dropdown">
+<a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#">Clinical Epidemiology <b class="caret"></b></a>
+<ul class="dropdown-menu">
+<li>
+<a class="dropdown-item" href="../Clinical%20Epidemiology/">Introduction</a>
+</li>
+<li class="dropdown-submenu">
+<a class="dropdown-item" href="#">Research Design</a>
+<ul class="dropdown-menu">
+<li>
+<a class="dropdown-item" href="../Clinical%20Epidemiology/Research%20Design/">Research Design</a>
+</li>
+<li>
+<a class="dropdown-item" href="../Clinical%20Epidemiology/Research%20Design/Observational%20studies/">Observational studies</a>
+</li>
+<li class="dropdown-submenu">
+<a class="dropdown-item" href="#">Qualitative research</a>
+<ul class="dropdown-menu">
+<li>
+<a class="dropdown-item" href="../Clinical%20Epidemiology/Research%20Design/Qualitative%20research/Qualitative%20research/">Qualitative research</a>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="dropdown-submenu">
+<a class="dropdown-item" href="#">Research Appraisal</a>
+<ul class="dropdown-menu">
+<li>
+<a class="dropdown-item" href="../Clinical%20Epidemiology/Research%20Appraisal/">Research Appraisal</a>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="dropdown">
+<a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#">Biostatistics <b class="caret"></b></a>
+<ul class="dropdown-menu">
+<li>
+<a class="dropdown-item" href="../Biostatistics/">Introduction</a>
+</li>
+<li class="dropdown-submenu">
+<a class="dropdown-item" href="#">Medical Statistics</a>
+<ul class="dropdown-menu">
+<li>
+<a class="dropdown-item" href="../Biostatistics/Medical%20Statistics/Binomial%20Distribution/">Binomial Distribution</a>
+</li>
+<li>
+<a class="dropdown-item" href="../Biostatistics/Medical%20Statistics/Central%20Limit%20Theorem/">Central Limit Theorem</a>
+</li>
+<li>
+<a class="dropdown-item" href="../Biostatistics/Medical%20Statistics/Confidence%20Intervals/">Confidence Intervals</a>
+</li>
+<li>
+<a class="dropdown-item" href="../Biostatistics/Medical%20Statistics/Data%20types/">Data types</a>
+</li>
+<li>
+<a class="dropdown-item" href="../Biostatistics/Medical%20Statistics/Descriptive%20statistics/">Descriptive statistics</a>
+</li>
+<li>
+<a class="dropdown-item" href="../Biostatistics/Medical%20Statistics/Hypothesis%20testing/">Hypothesis testing</a>
+</li>
+<li>
+<a class="dropdown-item" href="../Biostatistics/Medical%20Statistics/Kendall%27s%20rank%20correlation%20coefficient/">Kendall's rank correlation coefficient</a>
+</li>
+<li>
+<a class="dropdown-item" href="../Biostatistics/Medical%20Statistics/Mann-Whitney%20U%20test/">Mann-Whitney U test</a>
+</li>
+<li>
+<a class="dropdown-item" href="../Biostatistics/Medical%20Statistics/Medical%20Statistics/">Medical statistics</a>
+</li>
+<li>
+<a class="dropdown-item" href="../Biostatistics/Medical%20Statistics/Multivariable%20Models/">Multivariable Models</a>
+</li>
+<li>
+<a class="dropdown-item" href="../Biostatistics/Medical%20Statistics/Non-Parametric%20Tests/">Non-Parametric test</a>
+</li>
+<li>
+<a class="dropdown-item" href="../Biostatistics/Medical%20Statistics/Normal%20Distribution/">Normal (Gaussian) Distribution</a>
+</li>
+<li>
+<a class="dropdown-item" href="../Biostatistics/Medical%20Statistics/Probability/">Probability</a>
+</li>
+<li>
+<a class="dropdown-item" href="../Biostatistics/Medical%20Statistics/Sample%20Size%20and%20Power/">Sample size and power</a>
+</li>
+<li>
+<a class="dropdown-item" href="../Biostatistics/Medical%20Statistics/Simple%20Linear%20Regression/">Simple Linear Regression</a>
+</li>
+<li>
+<a class="dropdown-item" href="../Biostatistics/Medical%20Statistics/Small%20Sample%20Tests/">Small Sample Tests</a>
+</li>
+<li>
+<a class="dropdown-item" href="../Biostatistics/Medical%20Statistics/Spearman%27s%20rank%20correlation%20coefficient/">Spearman's rank correlation coefficient</a>
+</li>
+<li>
+<a class="dropdown-item" href="../Biostatistics/Medical%20Statistics/Wilcoxon%20matched%20pairs%20test/">Wilcoxon matched pairs test</a>
+</li>
+</ul>
+</li>
+<li class="dropdown-submenu">
+<a class="dropdown-item" href="#">Biostatistical modelling</a>
+<ul class="dropdown-menu">
+<li>
+<a class="dropdown-item" href="../Biostatistics/Biostatistical%20modelling/">Index</a>
+</li>
+<li class="dropdown-submenu">
+<a class="dropdown-item" href="#">Epimodels</a>
+<ul class="dropdown-menu">
+<li>
+<a class="dropdown-item" href="../Biostatistics/Biostatistical%20modelling/Epimodels/">Index</a>
+</li>
+</ul>
+</li>
+<li class="dropdown-submenu">
+<a class="dropdown-item" href="#">Predmodels</a>
+<ul class="dropdown-menu">
+<li>
+<a class="dropdown-item" href="../Biostatistics/Biostatistical%20modelling/Predmodels/">Index</a>
+</li>
+<li>
+<a class="dropdown-item" href="../Biostatistics/Biostatistical%20modelling/Predmodels/training%20models/">Training models</a>
+</li>
+<li class="dropdown-submenu">
+<a class="dropdown-item" href="#">Classification</a>
+<ul class="dropdown-menu">
+<li>
+<a class="dropdown-item" href="../Biostatistics/Biostatistical%20modelling/Predmodels/classification/DNN/">DNN</a>
+</li>
+</ul>
+</li>
+<li class="dropdown-submenu">
+<a class="dropdown-item" href="#">Evaluation</a>
+<ul class="dropdown-menu">
+<li>
+<a class="dropdown-item" href="../Biostatistics/Biostatistical%20modelling/Predmodels/evaluation/">Index</a>
+</li>
+<li>
+<a class="dropdown-item" href="../Biostatistics/Biostatistical%20modelling/Predmodels/evaluation/NRI/">NRI</a>
+</li>
+<li>
+<a class="dropdown-item" href="../Biostatistics/Biostatistical%20modelling/Predmodels/evaluation/calibration/">Calibration</a>
+</li>
+<li>
+<a class="dropdown-item" href="../Biostatistics/Biostatistical%20modelling/Predmodels/evaluation/data%20science%20metrics/">Data science metrics</a>
+</li>
+<li>
+<a class="dropdown-item" href="../Biostatistics/Biostatistical%20modelling/Predmodels/evaluation/discrimination/">Discrimination</a>
+</li>
+<li>
+<a class="dropdown-item" href="../Biostatistics/Biostatistical%20modelling/Predmodels/evaluation/internal%20and%20external%20validation/">Internal and external validation</a>
+</li>
+<li>
+<a class="dropdown-item" href="../Biostatistics/Biostatistical%20modelling/Predmodels/evaluation/medical%20evaluation%20metrics/">Medical evaluation metrics</a>
+</li>
+</ul>
+</li>
+<li class="dropdown-submenu">
+<a class="dropdown-item" href="#">Regression</a>
+<ul class="dropdown-menu">
+<li>
+<a class="dropdown-item" href="../Biostatistics/Biostatistical%20modelling/Predmodels/regression/coxph/">Coxph</a>
+</li>
+<li>
+<a class="dropdown-item" href="../Biostatistics/Biostatistical%20modelling/Predmodels/regression/linear%20regression/">Linear regression</a>
+</li>
+<li>
+<a class="dropdown-item" href="../Biostatistics/Biostatistical%20modelling/Predmodels/regression/logistic%20regression/">Logistic regression</a>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="dropdown-submenu">
+<a class="dropdown-item" href="#">Advanced methods</a>
+<ul class="dropdown-menu">
+<li>
+<a class="dropdown-item" href="../Biostatistics/Advanced%20methods/">Index</a>
+</li>
+<li>
+<a class="dropdown-item" href="../Biostatistics/Advanced%20methods/Data%20imputation/">Data imputation</a>
+</li>
+<li>
+<a class="dropdown-item" href="../Biostatistics/Advanced%20methods/Missing%20Data/">Missing Data</a>
+</li>
+<li>
+<a class="dropdown-item" href="../Biostatistics/Advanced%20methods/Missing%20values/">Missing values</a>
+</li>
+<li class="dropdown-submenu">
+<a class="dropdown-item" href="#">Advanced biostatistical modelling</a>
+<ul class="dropdown-menu">
+<li>
+<a class="dropdown-item" href="../Biostatistics/Advanced%20methods/Advanced%20biostatistical%20modelling/">Index</a>
+</li>
+</ul>
+</li>
+<li class="dropdown-submenu">
+<a class="dropdown-item" href="#">Advanced meta analysis</a>
+<ul class="dropdown-menu">
+<li>
+<a class="dropdown-item" href="../Biostatistics/Advanced%20methods/Advanced%20meta-analysis/Advanced%20methods%20in%20meta-analysis/">Advanced methods in meta-analysis</a>
+</li>
+<li>
+<a class="dropdown-item" href="../Biostatistics/Advanced%20methods/Advanced%20meta-analysis/Individual%20Participant%20Data%20Meta-analysis/">Individual Participant Data Meta analysis</a>
+</li>
+<li>
+<a class="dropdown-item" href="../Biostatistics/Advanced%20methods/Advanced%20meta-analysis/Living%20meta-analysis/">Living meta analysis</a>
+</li>
+<li>
+<a class="dropdown-item" href="../Biostatistics/Advanced%20methods/Advanced%20meta-analysis/Meta-Regression/">Meta Regression</a>
+</li>
+<li>
+<a class="dropdown-item" href="../Biostatistics/Advanced%20methods/Advanced%20meta-analysis/Network%20meta-analysis/">Network meta-analysis</a>
+</li>
+</ul>
+</li>
+<li class="dropdown-submenu">
+<a class="dropdown-item" href="#">Forecasting methods</a>
+<ul class="dropdown-menu">
+<li class="dropdown-submenu">
+<a class="dropdown-item" href="#">Time Series Analysis</a>
+<ul class="dropdown-menu">
+<li>
+<a class="dropdown-item" href="../Biostatistics/Advanced%20methods/Forecasting%20methods/Time%20Series%20Analysis/Introduction%20to%20Time%20Series%20Analysis/">Introduction to Time Series Analysis</a>
+</li>
+<li>
+<a class="dropdown-item" href="../Biostatistics/Advanced%20methods/Forecasting%20methods/Time%20Series%20Analysis/AutoRegressive%20Models/">AutoRegressive models</a>
+</li>
+<li>
+<a class="dropdown-item" href="../Biostatistics/Advanced%20methods/Forecasting%20methods/Time%20Series%20Analysis/Moving%20Average%20Models/">Moving Average Models</a>
+</li>
+<li>
+<a class="dropdown-item" href="../Biostatistics/Advanced%20methods/Forecasting%20methods/Time%20Series%20Analysis/References%20for%20TSA/">References for TSA</a>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="dropdown-submenu">
+<a class="dropdown-item" href="#">Machine Learning</a>
+<ul class="dropdown-menu">
+<li>
+<a class="dropdown-item" href="../Biostatistics/Advanced%20methods/Machine%20Learning/">Machine Learning methods</a>
+</li>
+<li>
+<a class="dropdown-item" href="../Biostatistics/Advanced%20methods/Machine%20Learning/Big%20Data/">Big Data</a>
+</li>
+<li>
+<a class="dropdown-item" href="../Biostatistics/Advanced%20methods/Machine%20Learning/Decision%20Trees/">Decision Trees</a>
+</li>
+<li>
+<a class="dropdown-item" href="../Biostatistics/Advanced%20methods/Machine%20Learning/Generalised%20Additive%20Models/">Generalised Additive Models</a>
+</li>
+<li>
+<a class="dropdown-item" href="../Biostatistics/Advanced%20methods/Machine%20Learning/K%20Nearest%20Neighbours/">K Nearest Neighbours</a>
+</li>
+<li>
+<a class="dropdown-item" href="../Biostatistics/Advanced%20methods/Machine%20Learning/Linear%20Discriminant%20Analysis/">Linear Discriminant Analysis</a>
+</li>
+<li>
+<a class="dropdown-item" href="../Biostatistics/Advanced%20methods/Machine%20Learning/Neural%20Networks/">Neural Networks</a>
+</li>
+<li>
+<a class="dropdown-item" href="../Biostatistics/Advanced%20methods/Machine%20Learning/Principal%20Components%20Analysis/">Principal Components Analysis</a>
+</li>
+<li>
+<a class="dropdown-item" href="../Biostatistics/Advanced%20methods/Machine%20Learning/Quadratic%20Discriminant%20Analysis/">Quadratic Discriminant Analysis</a>
+</li>
+<li>
+<a class="dropdown-item" href="../Biostatistics/Advanced%20methods/Machine%20Learning/Support%20Vector%20Machines/">Support Vector Machines</a>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="dropdown-submenu">
+<a class="dropdown-item" href="#">Data Visualisation</a>
+<ul class="dropdown-menu">
+<li>
+<a class="dropdown-item" href="../Biostatistics/Data%20Visualisation/Frequency%20tables/">Frequency tables</a>
+</li>
+<li>
+<a class="dropdown-item" href="../Biostatistics/Data%20Visualisation/Plots/">Plots</a>
+</li>
+<li>
+<a class="dropdown-item" href="../Biostatistics/Data%20Visualisation/References%20for%20Data%20Visualisation/">References for Data Visualisation</a>
+</li>
+</ul>
+</li>
+<li class="dropdown-submenu">
+<a class="dropdown-item" href="#">Practical Biostatistics</a>
+<ul class="dropdown-menu">
+<li>
+<a class="dropdown-item" href="../Biostatistics/Practical%20Biostatistics/Quick%20Intro%20to%20R/">Introduction to R</a>
+</li>
+<li>
+<a class="dropdown-item" href="../Biostatistics/Practical%20Biostatistics/Exploratory%20data%20analysis/">Exploratory Data Analysis</a>
+</li>
+<li>
+<a class="dropdown-item" href="../Biostatistics/Practical%20Biostatistics/Data%20checking/">Data checking</a>
+</li>
+<li class="dropdown-submenu">
+<a class="dropdown-item" href="#">Advanced R</a>
+<ul class="dropdown-menu">
+<li>
+<a class="dropdown-item" href="../Biostatistics/Practical%20Biostatistics/Advanced%20R/For%20loop/">For loop</a>
+</li>
+<li>
+<a class="dropdown-item" href="../Biostatistics/Practical%20Biostatistics/Advanced%20R/If-else%20statement/">If-statement</a>
+</li>
+<li>
+<a class="dropdown-item" href="../Biostatistics/Practical%20Biostatistics/Advanced%20R/Logical%20operators/">Logical operators</a>
+</li>
+<li>
+<a class="dropdown-item" href="../Biostatistics/Practical%20Biostatistics/Advanced%20R/R%20functions/">R functions</a>
+</li>
+<li>
+<a class="dropdown-item" href="../Biostatistics/Practical%20Biostatistics/Advanced%20R/Saving%20serialised%20data/">Saving serialised data</a>
+</li>
+<li>
+<a class="dropdown-item" href="../Biostatistics/Practical%20Biostatistics/Advanced%20R/Vector%20operations/">Vector operations</a>
+</li>
+</ul>
+</li>
+<li class="dropdown-submenu">
+<a class="dropdown-item" href="#">Tables and figures</a>
+<ul class="dropdown-menu">
+<li>
+<a class="dropdown-item" href="../Biostatistics/Practical%20Biostatistics/Tables%20and%20figures/Table%201/">Table 1</a>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="dropdown">
+<a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#">EBM podcast <b class="caret"></b></a>
+<ul class="dropdown-menu">
+<li>
+<a class="dropdown-item" href="../EBM%20podcast/">Index</a>
+</li>
+</ul>
+</li>
+<li class="navitem active">
+<a class="nav-link" href="./">About</a>
+</li>
+</ul>
+<ul class="nav navbar-nav ml-auto">
+<li class="nav-item">
+<a class="nav-link" data-target="#mkdocs_search_modal" data-toggle="modal" href="#">
+<i class="fa fa-search"></i> Search
+                            </a>
+</li>
+<li class="nav-item">
+<a class="nav-link" href="../EBM%20podcast/" rel="prev">
+<i class="fa fa-arrow-left"></i> Previous
+                                </a>
+</li>
+<li class="nav-item">
+<a class="nav-link disabled" rel="next">
+                                    Next <i class="fa fa-arrow-right"></i>
+</a>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="container">
+<div class="row">
+<div class="col-md-3"><div class="navbar-light navbar-expand-md bs-sidebar hidden-print affix" role="complementary">
+<div class="navbar-header">
+<button class="navbar-toggler collapsed" data-target="#toc-collapse" data-toggle="collapse" title="Table of Contents" type="button">
+<span class="fa fa-angle-down"></span>
+</button>
+</div>
+<div class="navbar-collapse collapse card bg-secondary" id="toc-collapse">
+<ul class="nav flex-column">
+<li class="nav-item" data-level="1"><a class="nav-link" href="#about-the-clinepi-wiki">About the ClinEpi Wiki</a>
+<ul class="nav flex-column">
+<li class="nav-item" data-level="2"><a class="nav-link" href="#about-this-project">About this project</a>
+<ul class="nav flex-column">
+</ul>
+</li>
+<li class="nav-item" data-level="2"><a class="nav-link" href="#about-the-author">About the author</a>
+<ul class="nav flex-column">
+</ul>
+</li>
+<li class="nav-item" data-level="2"><a class="nav-link" href="#further-reading">Further reading</a>
+<ul class="nav flex-column">
+</ul>
+</li>
+<li class="nav-item" data-level="2"><a class="nav-link" href="#disclaimer">Disclaimer</a>
+<ul class="nav flex-column">
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</div>
+</div></div>
+<div class="col-md-9" role="main">
+<h1 id="about-the-clinepi-wiki">About the ClinEpi Wiki</h1>
+<h2 id="about-this-project">About this project</h2>
+<p>This website and project was designed for a few reasons:   </p>
+<ol>
+<li>To improve access to education in Evidence Based Medicine and Clinical Epidemiology</li>
+<li>To provide an easily navigatable directory for biostatistics information</li>
+<li>As a way for me to personally organise my thoughts around clinical epidemiology and biostatistics, and record things that I have learnt</li>
+<li>To act as a portfolio in Clin Epi teaching</li>
+<li>As a place to organise information for the EBM-based podcast</li>
+</ol>
+<h2 id="about-the-author">About the author</h2>
+<p>Weber Liu<br/>
+<em>BSc(Adv) MD MSci(Clin Epid)</em></p>
+<h2 id="further-reading">Further reading</h2>
+<p>The following resources were used to develop the content for this website:  </p>
+<ol>
+<li>University of Sydney: Masters of Science in Medicine (Clinical Epidemiology) degree</li>
+<li>Kenneth Rothman: Modern Epidemiology</li>
+<li>Martin Bland: Introduction to Medical Statistics</li>
+</ol>
+<hr/>
+<p> </p>
+<h2 id="disclaimer">Disclaimer</h2>
+<p>By using this site you are agreeing to the following disclaimer - it was stolen from <a href="">LITFL</a> because it is a relevant FOAM-like blog, similar to what I am building here:</p>
+<p>This blog pro­vides gen­eral infor­ma­tion and dis­cus­sion about med­i­cine, health and related sub­jects.  The words and other con­tent pro­vided in this blog, and in any linked mate­ri­als, are not intended and should not be con­strued as med­ical advice. If the reader or any other per­son has a med­ical con­cern, he or she should con­sult with an appropriately-licensed physi­cian or other health care worker.</p>
+<p>Never dis­re­gard pro­fes­sional med­ical advice or delay in seek­ing it because of some­thing you have read on this blog or in any linked materials. If you think you may have a med­ical emer­gency, call your doc­tor or 000 immediately.</p>
+<p>The views expressed on this blog and web­site have no rela­tion to those of any academic, hospital, practice or other insti­tu­tion with which the authors are  affiliated.</p>
+<h3 id="terms-of-use-agreement">TERMS OF USE AGREEMENT:</h3>
+<p>This Terms of Use Agree­ment (“agree­ment”) is entered between and by “you” (the reader or any other user of this weblog, also known as EpiWiki, the “Site”), Dr Weber Liu  (the “Principal author”) and the EpiWiki team (the ‘team’).  Access to the Site, and any use thereof, is sub­ject to the terms and con­di­tions set forth herein.  By access­ing, read­ing or oth­er­wise using the Site, you hereby agree to these terms and conditions.</p>
+<p>This agree­ment con­tains dis­claimers and other pro­vi­sions that limit the Author’s lia­bil­ity to you.  Please read these terms and con­di­tions fully and care­fully.  If you do not agree to be bound to each and every term and con­di­tion set forth herein, please exit the Site and do not access, read or oth­er­wise use infor­ma­tion pro­vided herein.</p>
+<p>By access­ing the Site and/or read­ing its con­tent, and/or using it to find infor­ma­tion on any other web­site or infor­ma­tional resource, you acknowl­edge and agree that you have read and under­stand these terms and con­di­tions, that the pro­vi­sions, dis­clo­sures and dis­claimers set forth herein are fair and rea­son­able, and that your agree­ment to fol­low and be bound by these terms and con­di­tions is vol­un­tary and is not the result of fraud, duress or undue influ­ence exer­cised upon you by any per­son or entity.</p>
+<h3 id="disclaimer-regarding-medical-advice">DISCLAIMER REGARDING MEDICAL ADVICE</h3>
+<p>The Principal author pro­vides the Site and anyser­vices, infor­ma­tion, opinions, con­tent, ref­er­ences and links to other knowl­edge resources (col­lec­tively, “Con­tent”) for infor­ma­tional pur­poses only. The Author does not pro­vide any med­ical advice on the Site.</p>
+<p>Access­ing, read­ing or oth­er­wise using the Site does not cre­ate a physician-patient rela­tion­ship between you and the Principal author.  Pro­vid­ing per­sonal or med­ical infor­ma­tion to the Principal author does not cre­ate a physician-patient rela­tion­ship between you and the Principal author or authors.</p>
+<p>Noth­ing con­tained in the Site is intended to estab­lish a physician-patient rela­tion­ship, to replace the ser­vices of a trained physi­cian or health care pro­fes­sional, or oth­er­wise to be a sub­sti­tute for pro­fes­sional med­ical advice, diag­no­sis, or treatment.</p>
+<p>You hereby agree that you shall not make any med­ical or health-related deci­sion based in whole or in part on any­thing con­tained in the Site.  You should not rely on any infor­ma­tion con­tained in the Site and related mate­ri­als in mak­ing med­ical, health-related or other deci­sions.  You should con­sult a licensed physi­cian or appropriately-credentialed health care worker in your com­mu­nity in all mat­ters relat­ing to your health.</p>
+<h3 id="disclaimer-regarding-site-content-and-related-materials">DISCLAIMER REGARDING SITE CONTENT AND RELATED MATERIALS</h3>
+<p>The Con­tent may be changed with­out notice and is not guar­an­teed to be com­plete, cor­rect, timely, cur­rent or up-to-date.  Sim­i­lar to any printed mate­ri­als, the Con­tent may become out-of-date. The Author under­takes no oblig­a­tion to update any Con­tent on the Site.  The Principal author may update the Con­tent at any time with­out notice, based on the Principal author’s sole and absolute dis­cre­tion. The Principal author reserves the right to make alter­ations or dele­tions to the Con­tent at any time with­out notice.</p>
+<p>Opin­ions expressed in the Site are not nec­es­sar­ily those of the Principal author or team.  Any opin­ions of the Principal author have been con­sid­ered in the con­text of cer­tain con­di­tions and sub­ject to assump­tions that can­not nec­es­sar­ily be applied to an indi­vid­ual case or par­tic­u­lar cir­cum­stance.  The Con­tent may not and should not be used or relied upon for any other pur­pose, includ­ing, but not lim­ited to, use in or in con­nec­tion with any legal proceeding.</p>
+<p>From time to time, the Site may con­tain health– or medical-related infor­ma­tion that is sex­u­ally explicit. If you find this infor­ma­tion offen­sive, you may not want to use the Site.</p>
+<h3 id="disclaimer-regarding-third-party-links">DISCLAIMER REGARDING THIRD PARTY LINKS</h3>
+<p>The Site may, from time to time, con­tain links to other (“third party”) web sites. These links are pro­vided solely as a con­ve­nience and not as a guar­an­tee or rec­om­men­da­tion by the Principal author for the ser­vices, infor­ma­tion, opin­ion or any other con­tent on such third party web sites or as an indi­ca­tion of any affil­i­a­tion, spon­sor­ship or endorse­ment of such third party web sites.</p>
+<p>If you decide to access a linked web­site, you do so at your own risk.  Your use of other web­sites is sub­ject to the terms of use for such sites.</p>
+<p>The Principal author is not respon­si­ble for the con­tent of any linked or oth­er­wise con­nected web sites.  The Principal author does not make any rep­re­sen­ta­tions or guar­an­tees regard­ing the pri­vacy prac­tices of, or the con­tent or accu­racy of mate­ri­als included in, any linked or third party web­sites.  The inclu­sion of third party adver­tise­ments on the Site does not con­sti­tute an endorse­ment, guar­an­tee, or rec­om­men­da­tion.  The Principal author makes no rep­re­sen­ta­tions and/or guar­an­tees regard­ing any prod­uct or ser­vice con­tained therein.</p>
+<h3 id="disclaimer-of-all-warranties">DISCLAIMER OF ALL WARRANTIES</h3>
+<p>Con­tent made avail­able at the Site is pro­vided on an “as is” and “as avail­able” basis with­out war­ranties of any kind, either express or implied. Under no cir­cum­stances, as a result of your use of the Site, will the Principal author be liable to you or to any other per­son for any direct, indi­rect, inci­den­tal, con­se­quen­tial, spe­cial, exem­plary or other dam­ages under any legal the­ory, includ­ing, with­out lim­i­ta­tion, tort, con­tract, strict lia­bil­ity or oth­er­wise, even if advised of the pos­si­bil­ity of such damages.</p>
+<h3 id="age-restriction">AGE RESTRICTION</h3>
+<p>The Site is intended for per­sons eigh­teen (18) years or older. Per­sons under the age of eigh­teen (18) should not access, use and/or browse the Site.</p>
+<h3 id="indemnification">INDEMNIFICATION</h3>
+<p>You agree to indem­nify and hold the Author harm­less from any claim or demand, includ­ing attor­neys’ fees, made by any third party as a result of (1) any con­tent posted or made avail­able by you on this Site, (2) any vio­la­tion of law that occurs by you through the Site, and/or (3) any­thing you do using the Site and/or the Con­tent con­tained therein.</p>
+<h3 id="modification">MODIFICATION</h3>
+<p>The Author may mod­ify the terms and con­di­tions of this Agree­ment in whole or in party at any time for any rea­son with­out any notice to you, based on her dis­cre­tion.   Such mod­i­fied terms and con­di­tions shall super­sede these terms and con­di­tions and shall become bind­ing when pub­lished online on the Site.</p>
+<h3 id="entire-agreement">ENTIRE AGREEMENT</h3>
+<p>You accept that this Agree­ment rep­re­sents the entire under­stand­ing between you and the Author con­cern­ing use of the Site.</p></div>
+</div>
+</div>
+<footer class="col-md-12">
+<hr/>
+<p>Documentation built with <a href="https://www.mkdocs.org/">MkDocs</a>.</p>
+</footer>
+<script>
+            var base_url = "..",
+                shortcuts = {"help": 191, "next": 78, "previous": 80, "search": 83};
+        </script>
+<script defer="" src="../js/base.js"></script>
+<script defer="" src="../javascripts/mathjax.js"></script>
+<script defer="" src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script defer="" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+<script defer="" src="../search/main.js"></script>
+<div aria-hidden="true" aria-labelledby="searchModalLabel" class="modal" id="mkdocs_search_modal" role="dialog" tabindex="-1">
+<div class="modal-dialog modal-lg">
+<div class="modal-content">
+<div class="modal-header">
+<h4 class="modal-title" id="searchModalLabel">Search</h4>
+<button class="close" data-dismiss="modal" type="button"><span aria-hidden="true">×</span><span class="sr-only">Close</span></button>
+</div>
+<div class="modal-body">
+<p>From here you can search these documents. Enter your search terms below.</p>
+<form>
+<div class="form-group">
+<input class="form-control" id="mkdocs-search-query" placeholder="Search..." title="Type search term here" type="search"/>
+</div>
+</form>
+<div data-no-results-text="No results found" id="mkdocs-search-results"></div>
+</div>
+<div class="modal-footer">
+</div>
+</div>
+</div>
+</div><div aria-hidden="true" aria-labelledby="keyboardModalLabel" class="modal" id="mkdocs_keyboard_modal" role="dialog" tabindex="-1">
+<div class="modal-dialog">
+<div class="modal-content">
+<div class="modal-header">
+<h4 class="modal-title" id="keyboardModalLabel">Keyboard Shortcuts</h4>
+<button class="close" data-dismiss="modal" type="button"><span aria-hidden="true">×</span><span class="sr-only">Close</span></button>
+</div>
+<div class="modal-body">
+<table class="table">
+<thead>
+<tr>
+<th style="width: 20%;">Keys</th>
+<th>Action</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="help shortcut"><kbd>?</kbd></td>
+<td>Open this help</td>
+</tr>
+<tr>
+<td class="next shortcut"><kbd>n</kbd></td>
+<td>Next page</td>
+</tr>
+<tr>
+<td class="prev shortcut"><kbd>p</kbd></td>
+<td>Previous page</td>
+</tr>
+<tr>
+<td class="search shortcut"><kbd>s</kbd></td>
+<td>Search</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="modal-footer">
+</div>
+</div>
+</div>
+</div>
+</body>
+</html>
