@@ -411,6 +411,14 @@
 <ul class="nav flex-column">
 </ul>
 </li>
+<li class="nav-item" data-level="2"><a class="nav-link" href="#hypothesis-testing-in-the-coxph-model">Hypothesis testing in the CoxPH model</a>
+<ul class="nav flex-column">
+</ul>
+</li>
+<li class="nav-item" data-level="2"><a class="nav-link" href="#confidence-intervals">Confidence intervals</a>
+<ul class="nav flex-column">
+</ul>
+</li>
 </ul>
 </li>
 </ul>
@@ -420,11 +428,35 @@
 <h1 id="cox-proportional-hazards-model">Cox Proportional Hazards model</h1>
 <h2 id="background">Background</h2>
 <p>The Proportional hazards regression model is given as
-$$h_i(t) = h_0(t)e^{\beta_1x_{i1} + ... + \beta_px_{ip}}
-The hazard ratio is defined as follows
+<span class="arithmatex">\(<span class="arithmatex">\(h_i(t) = h_0(t)\times e^{\beta_1x_{i1} + ... + \beta_px_{ip}}\)</span>\)</span>
+In this mode:</p>
+<ul>
+<li><span class="arithmatex">\(h_0(t)\)</span> is the baseline hazard function</li>
+<li>Taking the log of this model we get a log linear model</li>
+</ul>
+<p>The hazard ratio is defined as follows
  <span class="arithmatex">\(<span class="arithmatex">\(HR(t) = \frac{h_2(t)}{h_1(t)}\)</span>\)</span></p>
 <h2 id="statistical-assumptions-of-the-cox-ph-model">Statistical assumptions of the Cox PH model</h2>
-<p>The Cox proportional hazards model assumes a constant hazard ratio.</p></div>
+<p>The Cox proportional hazards model assumes a constant hazard ratio.</p>
+<p>In the CoxPH model, the estimated coefficients have an approximately normal distribution when there are adequate numbers of events</p>
+<h2 id="hypothesis-testing-in-the-coxph-model">Hypothesis testing in the CoxPH model</h2>
+<p>Two hypothesis testing are available: </p>
+<ol>
+<li>Wald test</li>
+<li>Likelihood ratio test<ul>
+<li>This gives more accurate p-values when the dataset has fewer events</li>
+</ul>
+</li>
+</ol>
+<p>These two tests are asymptotically the same</p>
+<h2 id="confidence-intervals">Confidence intervals</h2>
+<ol>
+<li>Confidence interval  for <span class="arithmatex">\(\hat{\beta}\)</span>:<ul>
+<li><span class="arithmatex">\((1-\alpha)\times 100\% CI = \hat{\beta} \pm Z_{1-\alpha/2}\times \hat{se}(\hat{\beta})\)</span></li>
+</ul>
+</li>
+<li>Confidence interval for the HR:</li>
+</ol></div>
 </div>
 </div>
 <footer class="col-md-12">
