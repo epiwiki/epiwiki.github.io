@@ -139,7 +139,10 @@
 <a class="dropdown-item" href="../Cox%20Proportional%20Hazards%20model/">Cox Proportional Hazards model</a>
 </li>
 <li>
-<a class="dropdown-item" href="../Kaplan-Meier%20survival%20curve/">Kaplan-Meier survival curve</a>
+<a class="dropdown-item" href="../Exponential%20%28Weibull%29%20survival%20models/">Exponential (Weibull) survival models</a>
+</li>
+<li>
+<a class="dropdown-item" href="../Kaplan-Meier%20survival%20model/">Kaplan-Meier survival curve</a>
 </li>
 <li>
 <a class="dropdown-item" href="../Life%20Table/">Life Table (Survival Table)</a>
@@ -427,10 +430,6 @@
 <ul class="nav flex-column">
 </ul>
 </li>
-<li class="nav-item" data-level="2"><a class="nav-link" href="#multivariate-survival-analysis">Multivariate survival analysis</a>
-<ul class="nav flex-column">
-</ul>
-</li>
 </ul>
 </li>
 </ul>
@@ -466,28 +465,28 @@
 <h2 id="life-table">Life Table</h2>
 <p>After accumulating all the survival time points of the participants (And when they are censored), we can generate and calculate a <a href="../Life%20Table/">Life Table</a></p>
 <h2 id="survival-time-and-statistics">Survival time and statistics</h2>
-<p>The survival function is given by:</p>
+<p>The <strong>survival function</strong> is given by:</p>
 <p><span class="arithmatex">\(<span class="arithmatex">\(S(t) = P(T &gt; t)\)</span>\)</span>
-This </p>
-<p>Describing survival time:</p>
-<ul>
-<li>Probability distribution function <span class="arithmatex">\(f(t)\)</span></li>
-<li>Survival function <span class="arithmatex">\(S(t) = P(T \geq t)\)</span></li>
-<li>Hazard function <span class="arithmatex">\(h(t) = \frac{f(t)}{S(t)}\)</span></li>
-<li>Comparison of two hazard function with Hazard Ratio<ul>
-<li><span class="arithmatex">\(HR(t) = \frac{h_2(t)}{h_1(t)}\)</span></li>
-</ul>
-</li>
-</ul>
+This function consists of:
+- <span class="arithmatex">\(S(t)\)</span> - the survival time
+- <span class="arithmatex">\(P(T&gt;t)\)</span> - the probability of survival time <span class="arithmatex">\(T\)</span> beyond the defined time <span class="arithmatex">\(t\)</span></p>
+<p>The <strong>hazard function</strong> is given by
+<span class="arithmatex">\(<span class="arithmatex">\(h(t) = P(T &lt; t + \delta | T &gt; t)\)</span>\)</span>
+This means
+- Given that you are alive (<span class="arithmatex">\(T &gt; t\)</span>), what is the probability of you dying (<span class="arithmatex">\(T &lt; t\)</span>) in the next few seconds (<span class="arithmatex">\(+\delta\)</span>)</p>
+<p>The <strong>Hazard Ratio</strong> is given by
+$$ HR = \frac{h_1(t)}{h_0(t)}$$
+That is:
+- The ratio of hazard at x = 1 vs the hazard at x=0
+- E.g. if the HR = 2
+    -  That is exposure (x=1) has a 2x higher hazard compared to non exposure (x = 0)</p>
 <h2 id="models-in-survival-analysis">Models in survival analysis</h2>
 <p>There are three main models used in survivan analysis:</p>
 <ol>
-<li><a href="../Kaplan-Meier%20survival%20curve/">Kaplan-Meier models</a></li>
-<li>Exponential (Weibull) survival models</li>
-<li>Cox Proportional Hazards models</li>
-</ol>
-<h2 id="multivariate-survival-analysis">Multivariate survival analysis</h2>
-<p>In order to undertake multivariate analysis (in a similar fashion to multivariate linear or logistic regressions), we turn to <a href="../Cox%20Proportional%20Hazards%20model/">Cox Proportional Hazards model</a></p></div>
+<li><a href="../Kaplan-Meier%20survival%20model/">Kaplan-Meier models</a></li>
+<li><a href="../Exponential%20%28Weibull%29%20survival%20models/">Exponential (Weibull) survival models</a></li>
+<li><a href="../Cox%20Proportional%20Hazards%20model/">Cox Proportional Hazards model</a>Cox Proportional Hazards models</li>
+</ol></div>
 </div>
 </div>
 <footer class="col-md-12">
