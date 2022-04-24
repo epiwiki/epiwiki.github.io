@@ -136,6 +136,9 @@
 <a class="dropdown-item" href="#">Survival analysis</a>
 <ul class="dropdown-menu">
 <li>
+<a class="dropdown-item" href="../Cox%20Proportional%20Hazards%20model/">Cox Proportional Hazards model</a>
+</li>
+<li>
 <a class="dropdown-item" href="../Kaplan-Meier%20survival%20curve/">Kaplan-Meier survival curve</a>
 </li>
 <li>
@@ -416,6 +419,14 @@
 <ul class="nav flex-column">
 </ul>
 </li>
+<li class="nav-item" data-level="2"><a class="nav-link" href="#survival-time">Survival time</a>
+<ul class="nav flex-column">
+</ul>
+</li>
+<li class="nav-item" data-level="2"><a class="nav-link" href="#multivariate-survival-analysis">Multivariate survival analysis</a>
+<ul class="nav flex-column">
+</ul>
+</li>
 </ul>
 </li>
 </ul>
@@ -449,7 +460,20 @@
 - They withdraw from the study</p>
 <h2 id="truncation">Truncation</h2>
 <h2 id="life-table">Life Table</h2>
-<p>After accumulating all the survival time points of the participants (And when they are censored), we can generate and calculate a <a href="../Life%20Table/">Life Table</a></p></div>
+<p>After accumulating all the survival time points of the participants (And when they are censored), we can generate and calculate a <a href="../Life%20Table/">Life Table</a></p>
+<h2 id="survival-time">Survival time</h2>
+<p>Describing survival time:</p>
+<ul>
+<li>Probability distribution function <span class="arithmatex">\(f(t)\)</span></li>
+<li>Survival function <span class="arithmatex">\(S(t) = P(T \geq t)\)</span></li>
+<li>Hazard function <span class="arithmatex">\(h(t) = \frac{f(t)}{S(t)}\)</span></li>
+<li>Comparison of two hazard function with Hazard Ratio<ul>
+<li><span class="arithmatex">\(HR(t) = \frac{h_2(t)}{h_1(t)}\)</span></li>
+</ul>
+</li>
+</ul>
+<h2 id="multivariate-survival-analysis">Multivariate survival analysis</h2>
+<p>In order to undertake multivariate analysis (in a similar fashion to multivariate linear or logistic regressions), we turn to <a href="../Cox%20Proportional%20Hazards%20model/">Cox Proportional Hazards model</a></p></div>
 </div>
 </div>
 <footer class="col-md-12">
