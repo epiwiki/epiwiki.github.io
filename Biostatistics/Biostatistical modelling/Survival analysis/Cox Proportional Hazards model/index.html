@@ -139,7 +139,7 @@
 <a class="dropdown-item active" href="./">Cox Proportional Hazards model</a>
 </li>
 <li>
-<a class="dropdown-item" href="../Exponential%20%28Weibull%29%20survival%20models/">Exponential (Weibull) survival models</a>
+<a class="dropdown-item" href="../Exponential%20and%20Weibull%20survival%20models/">Exponential and Weibull survival models</a>
 </li>
 <li>
 <a class="dropdown-item" href="../Kaplan-Meier%20survival%20model/">Kaplan-Meier survival curve</a>
@@ -386,7 +386,7 @@
                                 </a>
 </li>
 <li class="nav-item">
-<a class="nav-link" href="../Exponential%20%28Weibull%29%20survival%20models/" rel="next">
+<a class="nav-link" href="../Exponential%20and%20Weibull%20survival%20models/" rel="next">
                                     Next <i class="fa fa-arrow-right"></i>
 </a>
 </li>
@@ -407,6 +407,10 @@
 <li class="nav-item" data-level="1"><a class="nav-link" href="#cox-proportional-hazards-model">Cox Proportional Hazards model</a>
 <ul class="nav flex-column">
 <li class="nav-item" data-level="2"><a class="nav-link" href="#background">Background</a>
+<ul class="nav flex-column">
+</ul>
+</li>
+<li class="nav-item" data-level="2"><a class="nav-link" href="#uses-of-the-cox-proportional-hazards-survival-model">Uses of the Cox Proportional Hazards survival model</a>
 <ul class="nav flex-column">
 </ul>
 </li>
@@ -439,8 +443,19 @@ In this mode:</p>
 </ul>
 <p>The hazard ratio is defined as follows
  <span class="arithmatex">\(<span class="arithmatex">\(HR(t) = \frac{h_2(t)}{h_1(t)}\)</span>\)</span></p>
+<h2 id="uses-of-the-cox-proportional-hazards-survival-model">Uses of the Cox Proportional Hazards survival model</h2>
+<p><strong>Benefits of the Cox Proportional Hazards survival model:</strong></p>
+<ul>
+<li>Allows for fluctuating hazards functions</li>
+<li>Can estimate hazard ratios</li>
+</ul>
+<p><strong>Disadvantages of the Cox Proportional Hazards survival model</strong></p>
+<ul>
+<li>Cannot estimate the survival function</li>
+</ul>
 <h2 id="statistical-assumptions-of-the-cox-ph-model">Statistical assumptions of the Cox PH model</h2>
-<p>The Cox proportional hazards model assumes a constant hazard ratio.</p>
+<p>This is a semi-parametric survival model.
+The Cox proportional hazards model assumes a constant hazard ratio. </p>
 <p>In the CoxPH model, the estimated coefficients have an approximately normal distribution when there are adequate numbers of events</p>
 <h2 id="hypothesis-testing-in-the-coxph-model">Hypothesis testing in the CoxPH model</h2>
 <p>Two hypothesis testing are available: </p>

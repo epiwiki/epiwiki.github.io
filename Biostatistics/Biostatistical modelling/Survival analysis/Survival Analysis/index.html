@@ -139,7 +139,7 @@
 <a class="dropdown-item" href="../Cox%20Proportional%20Hazards%20model/">Cox Proportional Hazards model</a>
 </li>
 <li>
-<a class="dropdown-item" href="../Exponential%20%28Weibull%29%20survival%20models/">Exponential (Weibull) survival models</a>
+<a class="dropdown-item" href="../Exponential%20and%20Weibull%20survival%20models/">Exponential and Weibull survival models</a>
 </li>
 <li>
 <a class="dropdown-item" href="../Kaplan-Meier%20survival%20model/">Kaplan-Meier survival curve</a>
@@ -467,25 +467,34 @@
 <h2 id="survival-time-and-statistics">Survival time and statistics</h2>
 <p>The <strong>survival function</strong> is given by:</p>
 <p><span class="arithmatex">\(<span class="arithmatex">\(S(t) = P(T &gt; t)\)</span>\)</span>
-This function consists of:
-- <span class="arithmatex">\(S(t)\)</span> - the survival time
-- <span class="arithmatex">\(P(T&gt;t)\)</span> - the probability of survival time <span class="arithmatex">\(T\)</span> beyond the defined time <span class="arithmatex">\(t\)</span></p>
+This function consists of:</p>
+<ul>
+<li><span class="arithmatex">\(S(t)\)</span> - the survival time</li>
+<li><span class="arithmatex">\(P(T&gt;t)\)</span> - the probability of survival time <span class="arithmatex">\(T\)</span> beyond the defined time <span class="arithmatex">\(t\)</span></li>
+</ul>
 <p>The <strong>hazard function</strong> is given by
 <span class="arithmatex">\(<span class="arithmatex">\(h(t) = P(T &lt; t + \delta | T &gt; t)\)</span>\)</span>
-This means
-- Given that you are alive (<span class="arithmatex">\(T &gt; t\)</span>), what is the probability of you dying (<span class="arithmatex">\(T &lt; t\)</span>) in the next few seconds (<span class="arithmatex">\(+\delta\)</span>)</p>
+This means</p>
+<ul>
+<li>Given that you are alive (<span class="arithmatex">\(T &gt; t\)</span>), what is the probability of you dying (<span class="arithmatex">\(T &lt; t\)</span>) in the next few seconds (<span class="arithmatex">\(+\delta\)</span>)</li>
+<li>Another way of thinking of the hazard function - it is the <strong>rate of decrease</strong> of the exponential survival curve</li>
+</ul>
 <p>The <strong>Hazard Ratio</strong> is given by
 $$ HR = \frac{h_1(t)}{h_0(t)}$$
-That is:
-- The ratio of hazard at x = 1 vs the hazard at x=0
-- E.g. if the HR = 2
-    -  That is exposure (x=1) has a 2x higher hazard compared to non exposure (x = 0)</p>
+That is:</p>
+<ul>
+<li>The ratio of hazard at x = 1 vs the hazard at x=0</li>
+<li>E.g. if the HR = 2<ul>
+<li>That is exposure (x=1) has a 2x higher hazard compared to non exposure (x = 0)</li>
+</ul>
+</li>
+</ul>
 <h2 id="models-in-survival-analysis">Models in survival analysis</h2>
-<p>There are three main models used in survivan analysis:</p>
+<p>There are three main models used in survival analysis:</p>
 <ol>
 <li><a href="../Kaplan-Meier%20survival%20model/">Kaplan-Meier models</a></li>
-<li><a href="../Exponential%20%28Weibull%29%20survival%20models/">Exponential (Weibull) survival models</a></li>
-<li><a href="../Cox%20Proportional%20Hazards%20model/">Cox Proportional Hazards model</a>Cox Proportional Hazards models</li>
+<li><a href="../Exponential%20and%20Weibull%20survival%20models/">Exponential and Weibull survival models</a></li>
+<li><a href="../Cox%20Proportional%20Hazards%20model/">Cox Proportional Hazards model</a></li>
 </ol></div>
 </div>
 </div>

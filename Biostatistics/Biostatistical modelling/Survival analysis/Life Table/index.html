@@ -139,7 +139,7 @@
 <a class="dropdown-item" href="../Cox%20Proportional%20Hazards%20model/">Cox Proportional Hazards model</a>
 </li>
 <li>
-<a class="dropdown-item" href="../Exponential%20%28Weibull%29%20survival%20models/">Exponential (Weibull) survival models</a>
+<a class="dropdown-item" href="../Exponential%20and%20Weibull%20survival%20models/">Exponential and Weibull survival models</a>
 </li>
 <li>
 <a class="dropdown-item" href="../Kaplan-Meier%20survival%20model/">Kaplan-Meier survival curve</a>
@@ -414,6 +414,10 @@
 <ul class="nav flex-column">
 </ul>
 </li>
+<li class="nav-item" data-level="2"><a class="nav-link" href="#example-of-how-to-build-a-life-table-by-hand">Example of how to build a life table by hand</a>
+<ul class="nav flex-column">
+</ul>
+</li>
 </ul>
 </li>
 </ul>
@@ -424,7 +428,85 @@
 <h2 id="background">Background</h2>
 <p>The life stable is a tool used to help calculate survival rates - it is not shown or published in research papers. We use it to calculate the probability of surviving to a certain point in time. </p>
 <h2 id="survival-curve">Survival curve</h2>
-<p>When plotting the survival table, you get the <a href="../Survival%20Curve/">Survival Curve</a>. When the specific time intervals in which the patients reach the endpoint are known, we have the <a href="../Kaplan-Meier%20survival%20model/">Kaplan-Meier survival model</a>.</p></div>
+<p>When plotting the survival table, you get the <a href="../Survival%20Curve/">Survival Curve</a>. When the specific time intervals in which the patients reach the endpoint are known, we have the <a href="../Kaplan-Meier%20survival%20model/">Kaplan-Meier survival model</a>.</p>
+<h2 id="example-of-how-to-build-a-life-table-by-hand">Example of how to build a life table by hand</h2>
+<p>Consider the following situation where we look at time-to-death following diagnosis. The initiall data looks as follows:
+|Time| Death?|Explanation|
+|----|----|----|
+|2|1|One person died at t=2|
+|3|0|One person left the study at t=3|
+|6|1|one person died at t=6|
+|6|1|another person died at t=6|
+|7|1|one person died at t=7|
+|10|0|one person left the study at t=10|
+|15|1| |
+|16|1| |
+|27|1| |
+|30|1| |
+|32|1| |</p>
+<p>Lets use this to build a survival table:</p>
+<table>
+<thead>
+<tr>
+<th>Time</th>
+<th>Number at Risk</th>
+<th>Number died</th>
+<th>Hazard</th>
+<th>1-Hazard</th>
+<th>Survival <span class="arithmatex">\(S(t)\)</span></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>0</td>
+<td>12</td>
+<td>0</td>
+<td>0/12</td>
+<td>12/12</td>
+<td>1 = 100%</td>
+</tr>
+<tr>
+<td>2</td>
+<td>12</td>
+<td>1</td>
+<td>1/12</td>
+<td>1-1/12=11/12</td>
+<td>11/12 = 0.917</td>
+</tr>
+<tr>
+<td>6</td>
+<td>12 - 1(death) - 1(loss to censoring) = 10</td>
+<td>2</td>
+<td>2/10</td>
+<td>0.917 (8/10)</td>
+<td>0.734</td>
+</tr>
+<tr>
+<td>7</td>
+<td>8</td>
+<td>1</td>
+<td>1/8</td>
+<td>7/8</td>
+<td>0.734 (7/8) = 0.642</td>
+</tr>
+<tr>
+<td>15</td>
+<td>6</td>
+<td>2</td>
+<td>2/6</td>
+<td>4/6</td>
+<td>0.642(4/6) = 0.428</td>
+</tr>
+<tr>
+<td>16</td>
+<td>4</td>
+<td>1</td>
+<td>1/4</td>
+<td>3/4</td>
+<td>0.428 (1/4) =</td>
+</tr>
+</tbody>
+</table></div>
 </div>
 </div>
 <footer class="col-md-12">
