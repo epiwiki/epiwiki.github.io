@@ -427,8 +427,21 @@
 That is, y (event occurence) per unit time (t)</p>
 <p>This gives rise to two distributions:</p>
 <ol>
-<li>Poisson distribution - Let <span class="arithmatex">\(y\)</span> = number of of occurences in time <span class="arithmatex">\(t\)</span><ul>
-<li>y </li>
+<li>
+<p>Poisson distribution - Let <span class="arithmatex">\(y\)</span> = number of occurences in time <span class="arithmatex">\(t\)</span></p>
+<ul>
+<li><span class="arithmatex">\(y\)</span> follows a poisson distribution with parameter <span class="arithmatex">\(\lambda\)</span></li>
+<li><span class="arithmatex">\(f(y) = P(Y = y) = \frac{e^{-y} \times \lambda^y}{y!}\)</span></li>
+<li>mean = <span class="arithmatex">\(\lambda\)</span></li>
+<li>variance = <span class="arithmatex">\(\lambda\)</span></li>
+</ul>
+</li>
+<li>
+<p>Exponential distribution - let <span class="arithmatex">\(t\)</span> = number of time until the next occurence (y = 1)</p>
+<ul>
+<li><span class="arithmatex">\(f(t) \approx P(T = t) =lambda \times e^{-\lambda t}\)</span></li>
+<li><span class="arithmatex">\(F(t) = P(T \leq t) = 1 - e^{-\lambda t}\)</span></li>
+<li>mean = <span class="arithmatex">\(\frac{1}{\lambda}\)</span></li>
 </ul>
 </li>
 </ol></div>
