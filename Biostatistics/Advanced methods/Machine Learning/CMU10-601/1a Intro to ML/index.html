@@ -1,0 +1,650 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="IE=edge" http-equiv="X-UA-Compatible"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<meta content="Weber Liu" name="author"/>
+<link href="../../../../../img/favicon.ico" rel="shortcut icon"/>
+<title>1a Intro to ML - ClinEpi Wiki</title>
+<link href="../../../../../css/bootstrap.min.css" rel="stylesheet"/>
+<link href="../../../../../css/font-awesome.min.css" rel="stylesheet"/>
+<link href="../../../../../css/base.css" rel="stylesheet"/>
+<link href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/styles/color-brewer.min.css" rel="stylesheet"/>
+<script defer="" src="../../../../../js/jquery-1.10.2.min.js"></script>
+<script defer="" src="../../../../../js/bootstrap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/highlight.min.js"></script>
+<script>hljs.initHighlightingOnLoad();</script>
+</head>
+<body>
+<div class="navbar fixed-top navbar-expand-lg navbar-dark bg-primary">
+<div class="container">
+<a class="navbar-brand" href="../../../../..">ClinEpi Wiki</a>
+<!-- Expander button -->
+<button class="navbar-toggler" data-target="#navbar-collapse" data-toggle="collapse" type="button">
+<span class="navbar-toggler-icon"></span>
+</button>
+<!-- Expanded navigation -->
+<div class="navbar-collapse collapse" id="navbar-collapse">
+<!-- Main navigation -->
+<ul class="nav navbar-nav">
+<li class="dropdown">
+<a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#">Clinical Epidemiology <b class="caret"></b></a>
+<ul class="dropdown-menu">
+<li>
+<a class="dropdown-item" href="../../../../../Clinical%20Epidemiology/">Introduction</a>
+</li>
+<li class="dropdown-submenu">
+<a class="dropdown-item" href="#">Research Design</a>
+<ul class="dropdown-menu">
+<li>
+<a class="dropdown-item" href="../../../../../Clinical%20Epidemiology/Research%20Design/">Research Design</a>
+</li>
+<li>
+<a class="dropdown-item" href="../../../../../Clinical%20Epidemiology/Research%20Design/Observational%20studies/">Observational studies</a>
+</li>
+<li class="dropdown-submenu">
+<a class="dropdown-item" href="#">Qualitative research</a>
+<ul class="dropdown-menu">
+<li>
+<a class="dropdown-item" href="../../../../../Clinical%20Epidemiology/Research%20Design/Qualitative%20research/Qualitative%20research/">Qualitative research</a>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="dropdown-submenu">
+<a class="dropdown-item" href="#">Research Appraisal</a>
+<ul class="dropdown-menu">
+<li>
+<a class="dropdown-item" href="../../../../../Clinical%20Epidemiology/Research%20Appraisal/">Research Appraisal</a>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="dropdown active">
+<a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#">Biostatistics <b class="caret"></b></a>
+<ul class="dropdown-menu">
+<li>
+<a class="dropdown-item" href="../../../../">Introduction</a>
+</li>
+<li class="dropdown-submenu">
+<a class="dropdown-item" href="#">Medical Statistics</a>
+<ul class="dropdown-menu">
+<li>
+<a class="dropdown-item" href="../../../../Medical%20Statistics/Binomial%20Distribution/">Binomial Distribution</a>
+</li>
+<li>
+<a class="dropdown-item" href="../../../../Medical%20Statistics/Central%20Limit%20Theorem/">Central Limit Theorem</a>
+</li>
+<li>
+<a class="dropdown-item" href="../../../../Medical%20Statistics/Confidence%20Intervals/">Confidence Intervals</a>
+</li>
+<li>
+<a class="dropdown-item" href="../../../../Medical%20Statistics/Confounders/">Confounders</a>
+</li>
+<li>
+<a class="dropdown-item" href="../../../../Medical%20Statistics/Data%20types/">Data types</a>
+</li>
+<li>
+<a class="dropdown-item" href="../../../../Medical%20Statistics/Descriptive%20statistics/">Descriptive statistics</a>
+</li>
+<li>
+<a class="dropdown-item" href="../../../../Medical%20Statistics/Hypothesis%20testing/">Hypothesis testing</a>
+</li>
+<li>
+<a class="dropdown-item" href="../../../../Medical%20Statistics/Kendall%27s%20rank%20correlation%20coefficient/">Kendall's rank correlation coefficient</a>
+</li>
+<li>
+<a class="dropdown-item" href="../../../../Medical%20Statistics/Mann-Whitney%20U%20test/">Mann-Whitney U test</a>
+</li>
+<li>
+<a class="dropdown-item" href="../../../../Medical%20Statistics/Medical%20Statistics/">Medical statistics</a>
+</li>
+<li>
+<a class="dropdown-item" href="../../../../Medical%20Statistics/Multivariable%20Models/">Multivariable Models</a>
+</li>
+<li>
+<a class="dropdown-item" href="../../../../Medical%20Statistics/Non-Parametric%20Tests/">Non-Parametric test</a>
+</li>
+<li>
+<a class="dropdown-item" href="../../../../Medical%20Statistics/Normal%20Distribution/">Normal (Gaussian) Distribution</a>
+</li>
+<li>
+<a class="dropdown-item" href="../../../../Medical%20Statistics/Probability/">Probability</a>
+</li>
+<li>
+<a class="dropdown-item" href="../../../../Medical%20Statistics/Sample%20Size%20and%20Power/">Sample size and power</a>
+</li>
+<li>
+<a class="dropdown-item" href="../../../../Medical%20Statistics/Small%20Sample%20Tests/">Small Sample Tests</a>
+</li>
+<li>
+<a class="dropdown-item" href="../../../../Medical%20Statistics/Spearman%27s%20rank%20correlation%20coefficient/">Spearman's rank correlation coefficient</a>
+</li>
+<li>
+<a class="dropdown-item" href="../../../../Medical%20Statistics/Wilcoxon%20matched%20pairs%20test/">Wilcoxon matched pairs test</a>
+</li>
+</ul>
+</li>
+<li class="dropdown-submenu">
+<a class="dropdown-item" href="#">Biostatistical modelling</a>
+<ul class="dropdown-menu">
+<li class="dropdown-submenu">
+<a class="dropdown-item" href="#">Epidemiological modelling</a>
+<ul class="dropdown-menu">
+<li>
+<a class="dropdown-item" href="../../../../Biostatistical%20modelling/Epidemiological%20modelling/Variable%20selection%20in%20epidemiological%20modelling/">Variable selection in epidemiological modelling</a>
+</li>
+</ul>
+</li>
+<li class="dropdown-submenu">
+<a class="dropdown-item" href="#">Exploratory modelling</a>
+<ul class="dropdown-menu">
+<li>
+<a class="dropdown-item" href="../../../../Biostatistical%20modelling/Exploratory%20modelling/Variable%20selection%20in%20exploratory%20models/">Variable selection in exploratory models</a>
+</li>
+</ul>
+</li>
+<li class="dropdown-submenu">
+<a class="dropdown-item" href="#">Prediction modelling</a>
+<ul class="dropdown-menu">
+<li>
+<a class="dropdown-item" href="../../../../Biostatistical%20modelling/Prediction%20modelling/Model%20overfitting/">Model overfitting</a>
+</li>
+<li>
+<a class="dropdown-item" href="../../../../Biostatistical%20modelling/Prediction%20modelling/Model%20underfitting/">Model underfitting</a>
+</li>
+<li>
+<a class="dropdown-item" href="../../../../Biostatistical%20modelling/Prediction%20modelling/Variable%20selection%20in%20prediction%20modelling/">Variable selection in prediction modelling</a>
+</li>
+</ul>
+</li>
+<li class="dropdown-submenu">
+<a class="dropdown-item" href="#">Regression models</a>
+<ul class="dropdown-menu">
+<li>
+<a class="dropdown-item" href="../../../../Biostatistical%20modelling/Regression%20models/Assumptions%20of%20regression%20models/">Assumptions of regression models</a>
+</li>
+<li>
+<a class="dropdown-item" href="../../../../Biostatistical%20modelling/Regression%20models/Effect%20modification/">Effect modification</a>
+</li>
+<li>
+<a class="dropdown-item" href="../../../../Biostatistical%20modelling/Regression%20models/Multiple%20Logistic%20Regression/">Multiple Logistic Regression</a>
+</li>
+<li>
+<a class="dropdown-item" href="../../../../Biostatistical%20modelling/Regression%20models/Multiple%20linear%20regression/">Multiple linear regression</a>
+</li>
+<li>
+<a class="dropdown-item" href="../../../../Biostatistical%20modelling/Regression%20models/Poisson%20Regression/">Poisson Regression</a>
+</li>
+<li>
+<a class="dropdown-item" href="../../../../Biostatistical%20modelling/Regression%20models/Regression%20models/">Regression models</a>
+</li>
+<li>
+<a class="dropdown-item" href="../../../../Biostatistical%20modelling/Regression%20models/Simple%20Linear%20Regression/">Simple Linear Regression</a>
+</li>
+<li>
+<a class="dropdown-item" href="../../../../Biostatistical%20modelling/Regression%20models/Simple%20Logistic%20Regression/">Simple Logistic Regression</a>
+</li>
+</ul>
+</li>
+<li class="dropdown-submenu">
+<a class="dropdown-item" href="#">Survival analysis</a>
+<ul class="dropdown-menu">
+<li>
+<a class="dropdown-item" href="../../../../Biostatistical%20modelling/Survival%20analysis/Cox%20Proportional%20Hazards%20model/">Cox Proportional Hazards model</a>
+</li>
+<li>
+<a class="dropdown-item" href="../../../../Biostatistical%20modelling/Survival%20analysis/Exponential%20and%20Weibull%20survival%20models/">Exponential and Weibull survival models</a>
+</li>
+<li>
+<a class="dropdown-item" href="../../../../Biostatistical%20modelling/Survival%20analysis/Kaplan-Meier%20survival%20model/">Kaplan-Meier survival curve</a>
+</li>
+<li>
+<a class="dropdown-item" href="../../../../Biostatistical%20modelling/Survival%20analysis/Life%20Table/">Life Table (Survival Table)</a>
+</li>
+<li>
+<a class="dropdown-item" href="../../../../Biostatistical%20modelling/Survival%20analysis/Logrank%20test/">Logrank test</a>
+</li>
+<li>
+<a class="dropdown-item" href="../../../../Biostatistical%20modelling/Survival%20analysis/Poisson%20Process/">Poisson process</a>
+</li>
+<li>
+<a class="dropdown-item" href="../../../../Biostatistical%20modelling/Survival%20analysis/Survival%20Analysis/">Survival Analysis</a>
+</li>
+<li>
+<a class="dropdown-item" href="../../../../Biostatistical%20modelling/Survival%20analysis/Survival%20Curve/">Survival Curve</a>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="dropdown-submenu">
+<a class="dropdown-item" href="#">Advanced methods</a>
+<ul class="dropdown-menu">
+<li>
+<a class="dropdown-item" href="../../../">Index</a>
+</li>
+<li>
+<a class="dropdown-item" href="../../../Data%20imputation/">Data imputation</a>
+</li>
+<li>
+<a class="dropdown-item" href="../../../Missing%20Data/">Missing Data</a>
+</li>
+<li>
+<a class="dropdown-item" href="../../../Missing%20values/">Missing values</a>
+</li>
+<li class="dropdown-submenu">
+<a class="dropdown-item" href="#">Advanced biostatistical modelling</a>
+<ul class="dropdown-menu">
+<li>
+<a class="dropdown-item" href="../../../Advanced%20biostatistical%20modelling/Advanced%20Biostatistical%20Modelling/">Advanced Biostatistical Modelling</a>
+</li>
+</ul>
+</li>
+<li class="dropdown-submenu">
+<a class="dropdown-item" href="#">Advanced meta analysis</a>
+<ul class="dropdown-menu">
+<li>
+<a class="dropdown-item" href="../../../Advanced%20meta-analysis/Advanced%20methods%20in%20meta-analysis/">Advanced methods in meta-analysis</a>
+</li>
+<li>
+<a class="dropdown-item" href="../../../Advanced%20meta-analysis/Individual%20Participant%20Data%20Meta-analysis/">Individual Participant Data Meta analysis</a>
+</li>
+<li>
+<a class="dropdown-item" href="../../../Advanced%20meta-analysis/Living%20meta-analysis/">Living meta analysis</a>
+</li>
+<li>
+<a class="dropdown-item" href="../../../Advanced%20meta-analysis/Meta-Regression/">Meta Regression</a>
+</li>
+<li>
+<a class="dropdown-item" href="../../../Advanced%20meta-analysis/Network%20meta-analysis/">Network meta-analysis</a>
+</li>
+</ul>
+</li>
+<li class="dropdown-submenu">
+<a class="dropdown-item" href="#">Data simulation</a>
+<ul class="dropdown-menu">
+<li>
+<a class="dropdown-item" href="../../../Data%20simulation/Data%20Simulation/">Data Simulation</a>
+</li>
+</ul>
+</li>
+<li class="dropdown-submenu">
+<a class="dropdown-item" href="#">Forecasting methods</a>
+<ul class="dropdown-menu">
+<li class="dropdown-submenu">
+<a class="dropdown-item" href="#">Time Series Analysis</a>
+<ul class="dropdown-menu">
+<li>
+<a class="dropdown-item" href="../../../Forecasting%20methods/Time%20Series%20Analysis/Introduction%20to%20Time%20Series%20Analysis/">Introduction to Time Series Analysis</a>
+</li>
+<li>
+<a class="dropdown-item" href="../../../Forecasting%20methods/Time%20Series%20Analysis/AutoRegressive%20Models/">AutoRegressive models</a>
+</li>
+<li>
+<a class="dropdown-item" href="../../../Forecasting%20methods/Time%20Series%20Analysis/Moving%20Average%20Models/">Moving Average Models</a>
+</li>
+<li>
+<a class="dropdown-item" href="../../../Forecasting%20methods/Time%20Series%20Analysis/References%20for%20TSA/">References for TSA</a>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="dropdown-submenu">
+<a class="dropdown-item" href="#">Machine Learning</a>
+<ul class="dropdown-menu">
+<li>
+<a class="dropdown-item" href="../../">Machine Learning methods</a>
+</li>
+<li>
+<a class="dropdown-item" href="../../Big%20Data/">Big Data</a>
+</li>
+<li>
+<a class="dropdown-item" href="../../Decision%20Trees/">Decision Trees</a>
+</li>
+<li>
+<a class="dropdown-item" href="../../Generalised%20Additive%20Models/">Generalised Additive Models</a>
+</li>
+<li>
+<a class="dropdown-item" href="../../K%20Nearest%20Neighbours/">K Nearest Neighbours</a>
+</li>
+<li>
+<a class="dropdown-item" href="../../Linear%20Discriminant%20Analysis/">Linear Discriminant Analysis</a>
+</li>
+<li>
+<a class="dropdown-item" href="../../Neural%20Networks/">Neural Networks</a>
+</li>
+<li>
+<a class="dropdown-item" href="../../Principal%20Components%20Analysis/">Principal Components Analysis</a>
+</li>
+<li>
+<a class="dropdown-item" href="../../Quadratic%20Discriminant%20Analysis/">Quadratic Discriminant Analysis</a>
+</li>
+<li>
+<a class="dropdown-item" href="../../Support%20Vector%20Machines/">Support Vector Machines</a>
+</li>
+<li class="dropdown-submenu">
+<a class="dropdown-item" href="#">CMU10 601</a>
+<ul class="dropdown-menu">
+<li>
+<a class="dropdown-item active" href="./">1a Intro to ML</a>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="dropdown-submenu">
+<a class="dropdown-item" href="#">Data Visualisation</a>
+<ul class="dropdown-menu">
+<li>
+<a class="dropdown-item" href="../../../../Data%20Visualisation/Frequency%20tables/">Frequency tables</a>
+</li>
+<li>
+<a class="dropdown-item" href="../../../../Data%20Visualisation/Plots/">Plots</a>
+</li>
+<li>
+<a class="dropdown-item" href="../../../../Data%20Visualisation/References%20for%20Data%20Visualisation/">References for Data Visualisation</a>
+</li>
+</ul>
+</li>
+<li class="dropdown-submenu">
+<a class="dropdown-item" href="#">Practical Biostatistics</a>
+<ul class="dropdown-menu">
+<li class="dropdown-submenu">
+<a class="dropdown-item" href="#">Basic R</a>
+<ul class="dropdown-menu">
+<li>
+<a class="dropdown-item" href="../../../../Practical%20Biostatistics/Basic%20R/For%20loop/">For loop</a>
+</li>
+<li>
+<a class="dropdown-item" href="../../../../Practical%20Biostatistics/Basic%20R/If-else%20statement/">If-statement</a>
+</li>
+<li>
+<a class="dropdown-item" href="../../../../Practical%20Biostatistics/Basic%20R/Logical%20operators/">Logical operators</a>
+</li>
+<li>
+<a class="dropdown-item" href="../../../../Practical%20Biostatistics/Basic%20R/Quick%20Intro%20to%20R/">Quick intro to R and R-studio</a>
+</li>
+<li>
+<a class="dropdown-item" href="../../../../Practical%20Biostatistics/Basic%20R/R%20functions/">R functions</a>
+</li>
+<li>
+<a class="dropdown-item" href="../../../../Practical%20Biostatistics/Basic%20R/Saving%20serialised%20data/">Saving serialised data</a>
+</li>
+<li>
+<a class="dropdown-item" href="../../../../Practical%20Biostatistics/Basic%20R/Vector%20operations/">Vector operations</a>
+</li>
+</ul>
+</li>
+<li class="dropdown-submenu">
+<a class="dropdown-item" href="#">Basic Skills</a>
+<ul class="dropdown-menu">
+<li>
+<a class="dropdown-item" href="../../../../Practical%20Biostatistics/Basic%20Skills/Assessing%20missingness/">Assessing missingness</a>
+</li>
+<li>
+<a class="dropdown-item" href="../../../../Practical%20Biostatistics/Basic%20Skills/Data%20checking/">Data checking</a>
+</li>
+<li>
+<a class="dropdown-item" href="../../../../Practical%20Biostatistics/Basic%20Skills/Exploratory%20data%20analysis/">Exploratory data analysis</a>
+</li>
+</ul>
+</li>
+<li class="dropdown-submenu">
+<a class="dropdown-item" href="#">Cleaning data</a>
+<ul class="dropdown-menu">
+<li>
+<a class="dropdown-item" href="../../../../Practical%20Biostatistics/Cleaning%20data/Approach%20to%20missing%20values/">Approach to missing values</a>
+</li>
+<li>
+<a class="dropdown-item" href="../../../../Practical%20Biostatistics/Cleaning%20data/Reasonable%20variable%20ranges/">Reasonable variable ranges</a>
+</li>
+</ul>
+</li>
+<li class="dropdown-submenu">
+<a class="dropdown-item" href="#">Tables and figures</a>
+<ul class="dropdown-menu">
+<li>
+<a class="dropdown-item" href="../../../../Practical%20Biostatistics/Tables%20and%20figures/Causal%20diagrams/">Causal diagrams</a>
+</li>
+<li>
+<a class="dropdown-item" href="../../../../Practical%20Biostatistics/Tables%20and%20figures/Table%201/">Table 1</a>
+</li>
+<li>
+<a class="dropdown-item" href="../../../../Practical%20Biostatistics/Tables%20and%20figures/Table%202%20Fallacy/">Table 2 Fallacy</a>
+</li>
+<li>
+<a class="dropdown-item" href="../../../../Practical%20Biostatistics/Tables%20and%20figures/Table%202/">Table 2</a>
+</li>
+<li>
+<a class="dropdown-item" href="../../../../Practical%20Biostatistics/Tables%20and%20figures/Tables%20and%20Figures/">Tables and Figures</a>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="dropdown">
+<a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#">Health Economics <b class="caret"></b></a>
+<ul class="dropdown-menu">
+<li>
+<a class="dropdown-item" href="../../../../../Health%20Economics/Hospital%20Funding/">Hospital funding</a>
+</li>
+<li>
+<a class="dropdown-item" href="../../../../../Health%20Economics/Statistical%20methods%20in%20healthcare%20economics/">Statistical methods in healthcare economics</a>
+</li>
+</ul>
+</li>
+<li class="dropdown">
+<a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#">Public Health <b class="caret"></b></a>
+<ul class="dropdown-menu">
+<li class="dropdown-submenu">
+<a class="dropdown-item" href="#">Public Health Surveillance</a>
+<ul class="dropdown-menu">
+<li>
+<a class="dropdown-item" href="../../../../../Public%20Health/Public%20Health%20Surveillance/Evalulating%20a%20surveillance%20system/">Evaluating a surveillance system</a>
+</li>
+<li>
+<a class="dropdown-item" href="../../../../../Public%20Health/Public%20Health%20Surveillance/Healthcare%20associated%20infections/">Healthcare Associated Infections (HAI)</a>
+</li>
+<li>
+<a class="dropdown-item" href="../../../../../Public%20Health/Public%20Health%20Surveillance/Potential%20limitations%20of%20notifiable%20disease%20surveillance/">Potential Limitations of Notifiable Disease surveillance</a>
+</li>
+<li>
+<a class="dropdown-item" href="../../../../../Public%20Health/Public%20Health%20Surveillance/Public%20Health%20Surveillance/">Public Health Surveillance</a>
+</li>
+<li>
+<a class="dropdown-item" href="../../../../../Public%20Health/Public%20Health%20Surveillance/Ways%20to%20improve%20surveillance%20systems/">Ways to improve Surveillance Systems</a>
+</li>
+<li class="dropdown-submenu">
+<a class="dropdown-item" href="#">Surveillance and Surveillance systems</a>
+<ul class="dropdown-menu">
+<li>
+<a class="dropdown-item" href="../../../../../Public%20Health/Public%20Health%20Surveillance/Surveillance%20and%20Surveillance%20systems/Analysing%20Surveillance%20Data/">Analysing Surveillance Data</a>
+</li>
+<li>
+<a class="dropdown-item" href="../../../../../Public%20Health/Public%20Health%20Surveillance/Surveillance%20and%20Surveillance%20systems/Collecting%20Surveillance%20Data/">Collecting Surveillance Data</a>
+</li>
+<li>
+<a class="dropdown-item" href="../../../../../Public%20Health/Public%20Health%20Surveillance/Surveillance%20and%20Surveillance%20systems/Conducting%20surveillance/">Conducting surveillance</a>
+</li>
+<li>
+<a class="dropdown-item" href="../../../../../Public%20Health/Public%20Health%20Surveillance/Surveillance%20and%20Surveillance%20systems/Disseminating%20surveillance%20data/">Disseminating surveillance data</a>
+</li>
+<li>
+<a class="dropdown-item" href="../../../../../Public%20Health/Public%20Health%20Surveillance/Surveillance%20and%20Surveillance%20systems/Interpreting%20Surveillance%20Data/">Interpreting Surveillance Data</a>
+</li>
+<li>
+<a class="dropdown-item" href="../../../../../Public%20Health/Public%20Health%20Surveillance/Surveillance%20and%20Surveillance%20systems/Introduction%20to%20Public%20Health%20Surveillance/">Introduction to Public Health Surveillance</a>
+</li>
+<li>
+<a class="dropdown-item" href="../../../../../Public%20Health/Public%20Health%20Surveillance/Surveillance%20and%20Surveillance%20systems/Pandemic%20surveillance/">Pandemic Surveillance</a>
+</li>
+<li>
+<a class="dropdown-item" href="../../../../../Public%20Health/Public%20Health%20Surveillance/Surveillance%20and%20Surveillance%20systems/Purposes%20and%20uses%20of%20surveillance/">Purposes and uses of surveillance</a>
+</li>
+<li>
+<a class="dropdown-item" href="../../../../../Public%20Health/Public%20Health%20Surveillance/Surveillance%20and%20Surveillance%20systems/Surveillance%20data%20sources/">Surveillance data sources</a>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="dropdown">
+<a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#">EBM podcast <b class="caret"></b></a>
+<ul class="dropdown-menu">
+<li>
+<a class="dropdown-item" href="../../../../../EBM%20podcast/">Index</a>
+</li>
+</ul>
+</li>
+<li class="navitem">
+<a class="nav-link" href="../../../../../about/">About</a>
+</li>
+</ul>
+<ul class="nav navbar-nav ml-auto">
+<li class="nav-item">
+<a class="nav-link" data-target="#mkdocs_search_modal" data-toggle="modal" href="#">
+<i class="fa fa-search"></i> Search
+                            </a>
+</li>
+<li class="nav-item">
+<a class="nav-link" href="../../Support%20Vector%20Machines/" rel="prev">
+<i class="fa fa-arrow-left"></i> Previous
+                                </a>
+</li>
+<li class="nav-item">
+<a class="nav-link" href="../../../../Data%20Visualisation/Frequency%20tables/" rel="next">
+                                    Next <i class="fa fa-arrow-right"></i>
+</a>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="container">
+<div class="row">
+<div class="col-md-3"><div class="navbar-light navbar-expand-md bs-sidebar hidden-print affix" role="complementary">
+<div class="navbar-header">
+<button class="navbar-toggler collapsed" data-target="#toc-collapse" data-toggle="collapse" title="Table of Contents" type="button">
+<span class="fa fa-angle-down"></span>
+</button>
+</div>
+<div class="navbar-collapse collapse card bg-secondary" id="toc-collapse">
+<ul class="nav flex-column">
+</ul>
+</div>
+</div></div>
+<div class="col-md-9" role="main">
+<p><img alt="" src="../../../../../images/Pasted%20image%2020221201180846.png"/>
+- Spam vs ham
+    - P = match program to label emails as close to as your assigned labels as possible
+        - can be changed - ?focused vs unfocused emails</p>
+<p><img alt="" src="../../../../../images/Pasted%20image%2020221202104427.png"/>
+- Learning of databases
+    - using database of babies being born
+    - using 9 month leadup of mother to birth and birth by c-section
+    - used to predict future c-sections</p>
+<p><img alt="" src="../../../../../images/Pasted%20image%2020221202104704.png"/>
+<img alt="" src="../../../../../images/Pasted%20image%2020221202104726.png"/>
+- cameras can now automatically find faces in images
+    - input = image
+    - output = face or not face
+<img alt="" src="../../../../../images/Pasted%20image%2020221202104823.png"/>
+- fMRI scan while person reads a word over 15s
+    - train classifier to determine if word is a noun or a verb</p>
+<p><img alt="" src="../../../../../images/Pasted%20image%2020221202104915.png"/>
+<img alt="" src="../../../../../images/Pasted%20image%2020221202105204.png"/>
+- If i have a learning system, is there anything fundamental that relates learning strategy success with training data properties?</p>
+<p><img alt="" src="../../../../../images/Pasted%20image%2020221202105659.png"/>
+- green regions - hard to write a program by hand
+    - e.g. hard to write speech recognition algorithm by hand
+    - what is our internal algorithm for this?
+- </p></div>
+</div>
+</div>
+<footer class="col-md-12">
+<hr/>
+<p>Weber Liu 2022</p>
+</footer>
+<script>
+            var base_url = "../../../../..",
+                shortcuts = {"help": 191, "next": 78, "previous": 80, "search": 83};
+        </script>
+<script defer="" src="../../../../../js/base.js"></script>
+<script defer="" src="../../../../../javascripts/mathjax.js"></script>
+<script defer="" src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script defer="" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+<script defer="" src="../../../../../search/main.js"></script>
+<div aria-hidden="true" aria-labelledby="searchModalLabel" class="modal" id="mkdocs_search_modal" role="dialog" tabindex="-1">
+<div class="modal-dialog modal-lg">
+<div class="modal-content">
+<div class="modal-header">
+<h4 class="modal-title" id="searchModalLabel">Search</h4>
+<button class="close" data-dismiss="modal" type="button"><span aria-hidden="true">×</span><span class="sr-only">Close</span></button>
+</div>
+<div class="modal-body">
+<p>From here you can search these documents. Enter your search terms below.</p>
+<form>
+<div class="form-group">
+<input class="form-control" id="mkdocs-search-query" placeholder="Search..." title="Type search term here" type="search"/>
+</div>
+</form>
+<div data-no-results-text="No results found" id="mkdocs-search-results"></div>
+</div>
+<div class="modal-footer">
+</div>
+</div>
+</div>
+</div><div aria-hidden="true" aria-labelledby="keyboardModalLabel" class="modal" id="mkdocs_keyboard_modal" role="dialog" tabindex="-1">
+<div class="modal-dialog">
+<div class="modal-content">
+<div class="modal-header">
+<h4 class="modal-title" id="keyboardModalLabel">Keyboard Shortcuts</h4>
+<button class="close" data-dismiss="modal" type="button"><span aria-hidden="true">×</span><span class="sr-only">Close</span></button>
+</div>
+<div class="modal-body">
+<table class="table">
+<thead>
+<tr>
+<th style="width: 20%;">Keys</th>
+<th>Action</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="help shortcut"><kbd>?</kbd></td>
+<td>Open this help</td>
+</tr>
+<tr>
+<td class="next shortcut"><kbd>n</kbd></td>
+<td>Next page</td>
+</tr>
+<tr>
+<td class="prev shortcut"><kbd>p</kbd></td>
+<td>Previous page</td>
+</tr>
+<tr>
+<td class="search shortcut"><kbd>s</kbd></td>
+<td>Search</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="modal-footer">
+</div>
+</div>
+</div>
+</div>
+</body>
+</html>
