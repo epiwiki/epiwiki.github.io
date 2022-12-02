@@ -577,7 +577,31 @@
 - set of hypotheses = set of all decision trees</p>
 <p><img alt="" src="../../../../../images/Pasted%20image%2020221202112803.png"/>
 - it is the decision tree learning algorithm's job to output a hypothesis that approximates the target function, indirectly communicated to us by the training examples</p>
-<p><img alt="" src="../../../../../images/Pasted%20image%2020221202112855.png"/></p></div>
+<p><img alt="" src="../../../../../images/Pasted%20image%2020221202112855.png"/>
+<img alt="" src="../../../../../images/Pasted%20image%2020221202114314.png"/>
+- Y = X2 AND X5
+- Y = X2 OR X5
+- we can represent any boolean function with a decision tree</p>
+<p><img alt="" src="../../../../../images/Pasted%20image%2020221202114453.png"/>
+- probabilities can be attached to the labels at each point
+    - practical decision tree
+<img alt="" src="../../../../../images/Pasted%20image%2020221202114608.png"/>
+- decision tree algorithm grows at the root
+    - until all classifications are made
+    - then decision tree stops growing
+- root node = best decision attribute for the node
+    - each value the root node can take on, create a new descendent
+- For the best attribute to use, we currently use entropy</p>
+<p><img alt="" src="../../../../../images/Pasted%20image%2020221202114832.png"/>
+- if all positive or all negative, entropy is 0
+- if there is a 50/50 split, entropy is max</p>
+<p><img alt="" src="../../../../../images/Pasted%20image%2020221202114941.png"/>
+- negative of sum of all possible values X can take on times the log base 2 of this probability
+<img alt="" src="../../../../../images/Pasted%20image%2020221202115316.png"/>
+- we then sort based on entropy and determine how much the entropy is changed as a result of sorting
+- our attribute - the information gain is the highest (i.e. the case with the smallest conditional entropy)
+<img alt="" src="../../../../../images/Pasted%20image%2020221202115529.png"/>
+<img alt="" src="../../../../../images/Pasted%20image%2020221202115823.png"/></p></div>
 </div>
 </div>
 <footer class="col-md-12">
