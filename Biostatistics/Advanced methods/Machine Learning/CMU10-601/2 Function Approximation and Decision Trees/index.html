@@ -638,7 +638,28 @@
     - number of teachable function is 2^{x} = 2^2^20
     - number of functions decision trees can represent = 2^2^20
 - in supervised learning - trainer labels positive and negative examples 
-- there will be a set of </x1,></p></div>
+- there will be a set of decision trees which will label the seen data correctly but may not label unseen correctly
+    - how do we pick the right hypothesis?
+- we need to use ALL examples to determine the most correct final function
+- <strong>There is no free lunch</strong>
+    - to have a fully expressive learner, the only way we can reliably estimate the function is to see ALL the examples
+- How do we build practically useful algorithms?
+    - we build in assumptions 
+    - e.g. in our decision tree algorithm - we build our tree from zero nodes to just enough to label all assumptions, and then we stop growing our tree
+        - our assumption is that shorter trees are better than longer trees
+        - why is this reasonable?</x1,></p>
+<p><img alt="" src="../../../../../images/Pasted%20image%2020221207150803.png"/>
+- many trees are consistent with the training data - <strong>Occam's razor</strong>
+<img alt="" src="../../../../../images/Pasted%20image%2020221207151259.png"/>
+- Overfitting
+    - sometimes algorithm fits training data well, but does not do well on future examples
+    - noise in data exacerbates tendency to overfitting </p>
+<p><img alt="" src="../../../../../images/Pasted%20image%2020221207152431.png"/>
+- difference between error rate of decision tree hypothesis on training set compared to its true error</p>
+<p><img alt="" src="../../../../../images/Pasted%20image%2020221207152450.png"/>
+- every plot is a different decision tree with different numbers of nodes
+    - top plot is accuracy on training data
+    - bottom plot is accuracy on t</p></div>
 </div>
 </div>
 <footer class="col-md-12">
