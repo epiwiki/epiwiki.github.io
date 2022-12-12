@@ -760,14 +760,14 @@
 - Learn the HMM representation (model)
 - Learn how to do prediction and filtering using HMMs</p>
 <hr/>
-<p><img alt="" src="../../../../../images/l6-03.png"/>
+<p><img alt="" src="https://raw.githubusercontent.com/ouibaa/epiwiki-assets/master/l6-03.png"/>
 - unknown variable is the 'state'
     - in this case - happy or sad
 - Y are the observations - 'w'atching 's'leeping 'c'rying 'f'acebook
 - we have to determine probabilities such as
     - probability of happy given you are on facebook, etc. </p>
 <hr/>
-<p><img alt="" src="../../../../../images/l6-04.png"/>
+<p><img alt="" src="https://raw.githubusercontent.com/ouibaa/epiwiki-assets/master/l6-04.png"/>
 - graphical model - (X) → (Y - observations)
 - to compute P(x | y) we will need a prior
     - Prior - P(x)
@@ -781,13 +781,13 @@
 </li>
 </ul>
 <hr/>
-<p><img alt="" src="../../../../../images/l6-05.png"/>
+<p><img alt="" src="https://raw.githubusercontent.com/ouibaa/epiwiki-assets/master/l6-05.png"/>
 - consider that the robot shouldnt be calculating the odds of being happy/sad every hour
 - if someone starts off sad, they are likely to remain sad
 - if someone starts off happy, they are likely to remain happy
 - given a sequence of observations, we gain more information on the next prediction</p>
 <hr/>
-<p><img alt="" src="../../../../../images/l6-06.png"/>
+<p><img alt="" src="https://raw.githubusercontent.com/ouibaa/epiwiki-assets/master/l6-06.png"/>
 - our model consists of an initial model
 - consists of a table with evolution over time 
 - observation model which we have come up with
@@ -797,20 +797,20 @@
     - we have P(x0) and observation values P(y1|x1) and P(y2|x2)
     - the only numbers we need to represent are P(x1|x0) and P(x2|x1)</p>
 <hr/>
-<p><img alt="" src="../../../../../images/l6-07.png"/>
+<p><img alt="" src="https://raw.githubusercontent.com/ouibaa/epiwiki-assets/master/l6-07.png"/>
 - New notation
     - every time we get a new observation, we recompute posterior probability</p>
 <hr/>
-<p><img alt="" src="../../../../../images/l6-08.png"/>
+<p><img alt="" src="https://raw.githubusercontent.com/ouibaa/epiwiki-assets/master/l6-08.png"/>
 - deriving a recursion</p>
 <hr/>
-<p><img alt="" src="../../../../../images/l6-09.png"/></p>
-<p><img alt="" src="../../../../../images/l6-10.png"/></p>
-<p><img alt="" src="../../../../../images/l6-11.png"/></p>
-<p><img alt="" src="../../../../../images/l6-12.png"/></p>
-<p><img alt="" src="../../../../../images/l6-13.png"/></p>
-<p><img alt="" src="../../../../../images/l6-14.png"/></p>
-<p><img alt="" src="../../../../../images/l6-15.png"/></p></div>
+<p><img alt="" src="https://raw.githubusercontent.com/ouibaa/epiwiki-assets/master/l6-09.png"/></p>
+<p><img alt="" src="https://raw.githubusercontent.com/ouibaa/epiwiki-assets/master/l6-10.png"/></p>
+<p><img alt="" src="https://raw.githubusercontent.com/ouibaa/epiwiki-assets/master/l6-11.png"/></p>
+<p><img alt="" src="https://raw.githubusercontent.com/ouibaa/epiwiki-assets/master/l6-12.png"/></p>
+<p><img alt="" src="https://raw.githubusercontent.com/ouibaa/epiwiki-assets/master/l6-13.png"/></p>
+<p><img alt="" src="https://raw.githubusercontent.com/ouibaa/epiwiki-assets/master/l6-14.png"/></p>
+<p><img alt="" src="https://raw.githubusercontent.com/ouibaa/epiwiki-assets/master/l6-15.png"/></p></div>
 </div>
 </div>
 <footer class="col-md-12">
