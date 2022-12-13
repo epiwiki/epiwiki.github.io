@@ -750,38 +750,60 @@
 </div>
 <div class="navbar-collapse collapse card bg-secondary" id="toc-collapse">
 <ul class="nav flex-column">
+<li class="nav-item" data-level="2"><a class="nav-link" href="#outline">Outline</a>
+<ul class="nav flex-column">
+</ul>
+</li>
 </ul>
 </div>
 </div></div>
 <div class="col-md-9" role="main">
-<p><img alt="" src="../../../../../images/l17-01%201.png"/></p>
-<p><img alt="" src="../../../../../images/l17-02.png"/></p>
-<p><img alt="" src="../../../../../images/l17-03.png"/></p>
-<p><img alt="" src="../../../../../images/l17-04.png"/></p>
-<p><img alt="" src="../../../../../images/l17-05.png"/></p>
-<p><img alt="" src="../../../../../images/l17-06.png"/></p>
-<p><img alt="" src="../../../../../images/l17-07.png"/></p>
-<p><img alt="" src="../../../../../images/l17-08.png"/></p>
-<p><img alt="" src="../../../../../images/l17-09.png"/></p>
-<p><img alt="" src="../../../../../images/l17-10.png"/></p>
-<p><img alt="" src="../../../../../images/l17-11.png"/></p>
-<p><img alt="" src="../../../../../images/l17-12.png"/></p>
-<p><img alt="" src="../../../../../images/l17-13.png"/></p>
-<p><img alt="" src="../../../../../images/l17b-01.png"/></p>
+<h2 id="outline">Outline</h2>
+<hr/>
 <p><img alt="" src="../../../../../images/l17b-02.png"/></p>
 <p><img alt="" src="../../../../../images/l17b-03.png"/></p>
 <p><img alt="" src="../../../../../images/l17b-04.png"/></p>
 <p><img alt="" src="../../../../../images/l17b-05.png"/></p>
-<p><img alt="" src="../../../../../images/l17b-06.png"/></p>
+<p><img alt="" src="../../../../../images/l17-06.png"/></p>
 <p><img alt="" src="../../../../../images/l17b-07.png"/></p>
 <p><img alt="" src="../../../../../images/l17b-08.png"/></p>
-<p><img alt="" src="../../../../../images/l17b-09.png"/></p>
+<p><img alt="" src="../../../../../images/l17b-09.png"/>
+- How to choose the <span class="arithmatex">\(\delta^2\)</span>
+    - simplest form, you have training data (x1, y1), (x2, y2), ..., (xn, yn)
+        - learn with the training data
+    - also have test data (x n+1, y n+1), ..., (x n+k, y n+k)
+        - NEVER look at the test data
+- Procedure
+    - choose <span class="arithmatex">\(\delta\)</span>, say = 2
+    - compute the theta ridge = <span class="arithmatex">\((x^Tx+2^2I)^{-1}x^Ty\)</span>
+    - Compute the y train <span class="arithmatex">\(X\hat{\Theta_r}\)</span>
+    - compute the y test <span class="arithmatex">\(X^*\hat{\Theta_r}}\)</span>
+    - sum error for each point in test and training sets
+    - pick delta using [decision theory]
+        - pessimistic view - assume worse case (min/max) - minimise worse that can happen
+            - dealing with worst case, choose delta = 1
+        - average case - take the average between training and test error and choose minimum </p>
 <p><img alt="" src="../../../../../images/l17b-10.png"/></p>
-<p><img alt="" src="../../../../../images/l17b-11.png"/></p>
-<p><img alt="" src="../../../../../images/l17b-12.png"/></p>
-<p><img alt="" src="../../../../../images/l17b-13.png"/></p>
-<p><img alt="" src="../../../../../images/l17b-14.png"/></p>
-<p><img alt="" src="../../../../../images/l17b-15.png"/></p></div>
+<p><img alt="" src="../../../../../images/l17b-11.png"/>
+- need to analyse data
+    - increase regulariser, training error gets worse
+    - test error will go down though
+    - use cross validation to find sweet spot between test and training error
+    - minimise error in future = 'good generalisation'</p>
+<p><img alt="" src="../../../../../images/l17b-12.png"/>
+- for each x evaluate first quadratic (green underline)
+- for each x, apply to formula to give you height
+- always a minimal error due to noise
+    - if error is 0, you might be doing something wrong!</p>
+<p><img alt="" src="../../../../../images/l17b-13.png"/>
+- errors are similar height, not really changing
+    - model is too simple</p>
+<p><img alt="" src="../../../../../images/l17b-14.png"/>
+- overfit model
+    - can stop model from overfitting with more data
+    - the fit is within bounds - not necessarily fit outside of bounds
+    - cost is more data</p>
+<p><img alt="" src="../../../../../images/l17-12.png"/></p></div>
 </div>
 </div>
 <footer class="col-md-12">
