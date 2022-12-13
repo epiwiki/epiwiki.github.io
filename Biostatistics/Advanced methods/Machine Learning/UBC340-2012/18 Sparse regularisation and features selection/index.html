@@ -755,18 +755,30 @@
 </div></div>
 <div class="col-md-9" role="main">
 <p><img alt="" src="../../../../../images/l18-02.png"/></p>
-<p><img alt="" src="../../../../../images/l18-03.png"/></p>
-<p><img alt="" src="../../../../../images/l18-04.png"/></p>
-<p><img alt="" src="../../../../../images/l18-05.png"/>
+<p><img alt="" src="../../../../../images/l18-03.png"/>
+- consider this model
+    - each xi gets multiplied by a value theta i
+    - you get a y(hat)
+    - say some variables are annoying/expensive to measure - we would like the theta to go to 0
+        - say x1 is expensive and x1 does not controbute to good predictions of y
+        - then we want theta 1 to go to 0
+<img alt="" src="../../../../../images/l18-04.png"/>
+- say we increase delta squared
+    - as delta squared becomes very large
+    - if delta is huge, the only way to get cost function to go down is to make theta small
+    - ridge regression will make the value small but will never make theta 0
+        - ridge is already better than maximum likelihood
+- lasso will however make the theta 0
+<img alt="" src="../../../../../images/l18-05.png"/>
 - interception is minimum
 - any deviation from intersection will result in increasing either increase value of circle or increase value of diamond
+- instead of adding theta squared, we add the absolute value of the thetas
+    - the tw
 <img alt="" src="../../../../../images/l18-06.png"/></p>
-<p><img alt="" src="../../../../../images/l18-07.png"/></p>
 <p><img alt="" src="../../../../../images/l18-08.png"/></p>
 <p><img alt="" src="../../../../../images/l18-09.png"/></p>
 <p><img alt="" src="../../../../../images/l18-10.png"/></p>
-<p><img alt="" src="../../../../../images/l18-11.png"/></p>
-<p><img alt="" src="../../../../../images/l18-12.png"/></p></div>
+<p><img alt="" src="../../../../../images/l18-11.png"/></p></div>
 </div>
 </div>
 <footer class="col-md-12">
