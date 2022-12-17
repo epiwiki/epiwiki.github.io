@@ -757,13 +757,13 @@
 </div>
 </div></div>
 <div class="col-md-9" role="main">
-<p><img alt="" src="../../../../../images/Pasted%20image%2020221207154155.png"/>
+<p><img alt="" src="https://raw.githubusercontent.com/ouibaa/epiwiki-assets/master/Pasted%20image%2020221207154155.png"/>
 - we imagine an underlying source/distribution of data
     - we use existing data to find the algorithm which uses new examples to guess the outcome
 - we see a small sample with labels from the same distribution
 - goal of algorithm is to come up with hypothesis function(h) 
     - error = probability out hypothesis predicts differently from underlying truth)</p>
-<p><img alt="" src="../../../../../images/Pasted%20image%2020221207154310.png"/>
+<p><img alt="" src="https://raw.githubusercontent.com/ouibaa/epiwiki-assets/master/Pasted%20image%2020221207154310.png"/>
 - First question - computation
     - how can we automatically generate hypotheses on the training set
     - can we have fast algorithms that do well on observed data
@@ -775,21 +775,21 @@
 - these generalisation bounds (Occams, VC, etc.) imply:
     - if the target function is a small decision tree, and if we are able to find the small decision tree that explains the data well, then good generalisation guaranteed
     - the question of finding the smallest decision tree is very hard (i.e. it is NP-hard)</p>
-<p><img alt="" src="../../../../../images/Pasted%20image%2020221207154714.png"/>
+<p><img alt="" src="https://raw.githubusercontent.com/ouibaa/epiwiki-assets/master/Pasted%20image%2020221207154714.png"/>
 - ID3 - top down approach for decision tree learning - greedy approach for pruning
     - splitting criterion = split leaf that decreases entropy the most (most information gain)
     - why split according to information gain, and not another criteria?
         - at the end of the day if we're trying to reduce error rate, why not split according to error rate?
         - because we can get stuck in local minima</p>
-<p><img alt="" src="../../../../../images/Pasted%20image%2020221207154901.png"/>
+<p><img alt="" src="https://raw.githubusercontent.com/ouibaa/epiwiki-assets/master/Pasted%20image%2020221207154901.png"/>
 - error rate may not decrease - we can get stuck in local minima
-<img alt="" src="../../../../../images/Pasted%20image%2020221207154930.png"/>
+<img alt="" src="https://raw.githubusercontent.com/ouibaa/epiwiki-assets/master/Pasted%20image%2020221207154930.png"/>
 - entropy always decreases
-<img alt="" src="../../../../../images/Pasted%20image%2020221207154957.png"/>
+<img alt="" src="https://raw.githubusercontent.com/ouibaa/epiwiki-assets/master/Pasted%20image%2020221207154957.png"/>
 - can show for a broad class of problems, entropy as a broad measure is a good idea
     - can always guarantee algorithm success between splits and target function if we use entropy
 - important point - entropy is good measure of progress globally for a large set of problems
-<img alt="" src="../../../../../images/Pasted%20image%2020221207155105.png"/>
+<img alt="" src="https://raw.githubusercontent.com/ouibaa/epiwiki-assets/master/Pasted%20image%2020221207155105.png"/>
 - entropy is a strong concave function whereas error rate is a linear function
     - this allows us to guarantee a good split if weak learning assumption is satisfied</p></div>
 </div>

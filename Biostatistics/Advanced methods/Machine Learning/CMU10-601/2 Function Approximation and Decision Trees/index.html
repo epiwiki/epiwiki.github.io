@@ -757,7 +757,7 @@
 </div>
 </div></div>
 <div class="col-md-9" role="main">
-<p><img alt="" src="../../../../../images/Pasted%20image%2020221202111630.png"/>
+<p><img alt="" src="https://raw.githubusercontent.com/ouibaa/epiwiki-assets/master/Pasted%20image%2020221202111630.png"/>
 - Most tasks are some function (from X → Y)
     - ML tasks tend to be function approximations
     - unknown target function that we want our model to learn
@@ -765,11 +765,11 @@
     - its job is to determine the <strong>best</strong> function to match the target function
 - Supervised learning comes in pairs <x, y="">
     - e.g. <email, spam=""> and <email, ham=""></email,></email,></x,></p>
-<p><img alt="" src="../../../../../images/Pasted%20image%2020221202111853.png"/>
+<p><img alt="" src="https://raw.githubusercontent.com/ouibaa/epiwiki-assets/master/Pasted%20image%2020221202111853.png"/>
 - Consdering the following data set where each row describes a day by some number of features
     - final column determines if friend plays tennis that day or not
 - train system to determine if friend wants to play tennis or not that day</p>
-<p><img alt="" src="../../../../../images/Pasted%20image%2020221202112425.png"/>
+<p><img alt="" src="https://raw.githubusercontent.com/ouibaa/epiwiki-assets/master/Pasted%20image%2020221202112425.png"/>
 - Decision tree for the hypothesis H for the problem above (plays tennis)
     - DT represents function from features to output
     - given the inputs
@@ -778,48 +778,48 @@
         - H = normal 
         - W = strong
     - output is that playTennis = yes</p>
-<p><img alt="" src="../../../../../images/Pasted%20image%2020221202112625.png"/>
+<p><img alt="" src="https://raw.githubusercontent.com/ouibaa/epiwiki-assets/master/Pasted%20image%2020221202112625.png"/>
 - for decision trees, Y has to be a discrete value
     - must have a finite number of values to be represented in a decision tree
     - infinite values = infinitely large tree
 - set of hypotheses = set of all decision trees</p>
-<p><img alt="" src="../../../../../images/Pasted%20image%2020221202112803.png"/>
+<p><img alt="" src="https://raw.githubusercontent.com/ouibaa/epiwiki-assets/master/Pasted%20image%2020221202112803.png"/>
 - it is the decision tree learning algorithm's job to output a hypothesis that approximates the target function, indirectly communicated to us by the training examples</p>
-<p><img alt="" src="../../../../../images/Pasted%20image%2020221202112855.png"/>
-<img alt="" src="../../../../../images/Pasted%20image%2020221202114314.png"/>
+<p><img alt="" src="https://raw.githubusercontent.com/ouibaa/epiwiki-assets/master/Pasted%20image%2020221202112855.png"/>
+<img alt="" src="https://raw.githubusercontent.com/ouibaa/epiwiki-assets/master/Pasted%20image%2020221202114314.png"/>
 - Y = X2 AND X5
 - Y = X2 OR X5
 - we can represent any boolean function with a decision tree</p>
-<p><img alt="" src="../../../../../images/Pasted%20image%2020221202114453.png"/>
+<p><img alt="" src="https://raw.githubusercontent.com/ouibaa/epiwiki-assets/master/Pasted%20image%2020221202114453.png"/>
 - probabilities can be attached to the labels at each point
     - practical decision tree
-<img alt="" src="../../../../../images/Pasted%20image%2020221202114608.png"/>
+<img alt="" src="https://raw.githubusercontent.com/ouibaa/epiwiki-assets/master/Pasted%20image%2020221202114608.png"/>
 - decision tree algorithm grows at the root
     - until all classifications are made
     - then decision tree stops growing
 - root node = best decision attribute for the node
     - each value the root node can take on, create a new descendent
 - For the best attribute to use, we currently use entropy</p>
-<p><img alt="" src="../../../../../images/Pasted%20image%2020221202114832.png"/>
+<p><img alt="" src="https://raw.githubusercontent.com/ouibaa/epiwiki-assets/master/Pasted%20image%2020221202114832.png"/>
 - if all positive or all negative, entropy is 0
 - if there is a 50/50 split, entropy is max</p>
-<p><img alt="" src="../../../../../images/Pasted%20image%2020221202114941.png"/>
+<p><img alt="" src="https://raw.githubusercontent.com/ouibaa/epiwiki-assets/master/Pasted%20image%2020221202114941.png"/>
 - negative of sum of all possible values X can take on times the log base 2 of this probability
-<img alt="" src="../../../../../images/Pasted%20image%2020221202115316.png"/>
+<img alt="" src="https://raw.githubusercontent.com/ouibaa/epiwiki-assets/master/Pasted%20image%2020221202115316.png"/>
 - we then sort based on entropy and determine how much the entropy is changed as a result of sorting
 - our attribute - the information gain is the highest (i.e. the case with the smallest conditional entropy)
-<img alt="" src="../../../../../images/Pasted%20image%2020221202115529.png"/>
-<img alt="" src="../../../../../images/Pasted%20image%2020221202115823.png"/></p>
-<p><img alt="" src="../../../../../images/Pasted%20image%2020221202120026.png"/>
+<img alt="" src="https://raw.githubusercontent.com/ouibaa/epiwiki-assets/master/Pasted%20image%2020221202115529.png"/>
+<img alt="" src="https://raw.githubusercontent.com/ouibaa/epiwiki-assets/master/Pasted%20image%2020221202115823.png"/></p>
+<p><img alt="" src="https://raw.githubusercontent.com/ouibaa/epiwiki-assets/master/Pasted%20image%2020221202120026.png"/>
 - when entropy is 0, it becomes a leaf node
-<img alt="" src="../../../../../images/Pasted%20image%2020221202120119.png"/></p>
+<img alt="" src="https://raw.githubusercontent.com/ouibaa/epiwiki-assets/master/Pasted%20image%2020221202120119.png"/></p>
 <hr/>
-<p><img alt="" src="../../../../../images/Pasted%20image%2020221207143433.png"/>
+<p><img alt="" src="https://raw.githubusercontent.com/ouibaa/epiwiki-assets/master/Pasted%20image%2020221207143433.png"/>
 - some instances the function can take as input
 - leader can represent hypotheses (which itself are functions from X -&gt; Y)
 - input are training examples (E.g. humidity, etc.) and truths (?play tennis)
 - output is the best hypothesis that best fits the data/sample</p>
-<p><img alt="" src="../../../../../images/Pasted%20image%2020221207143550.png"/>
+<p><img alt="" src="https://raw.githubusercontent.com/ouibaa/epiwiki-assets/master/Pasted%20image%2020221207143550.png"/>
 - decision trees defined over inputs that are features vectors
     - features with discrete values - e.g. humidity (low, normal, high), etc.
     - output must also be a discrete value too (E.g. plays tennis, yes/no)
@@ -827,8 +827,8 @@
         - extensions to the decision tree CAN handle continuous values
     - each hypothesis is a decision tree
     - decision trees sufficient to represent any value we wish to teach it</p>
-<p><img alt="" src="../../../../../images/Pasted%20image%2020221207155730.png"/>
-<img alt="" src="../../../../../images/Pasted%20image%2020221207143718.png"/>
+<p><img alt="" src="https://raw.githubusercontent.com/ouibaa/epiwiki-assets/master/Pasted%20image%2020221207155730.png"/>
+<img alt="" src="https://raw.githubusercontent.com/ouibaa/epiwiki-assets/master/Pasted%20image%2020221207143718.png"/>
 - decision tree learning algorithm grows tree 
 - entropy based mutual information statistic chooses the best attribute at root, then sort training examples from here
     - mixture of positive nad negative examples, then we recursively add more attribute tests to further divide examples below that point
@@ -836,7 +836,7 @@
 - i.e. algorithm doing a search across space of all possible decision trees - each step, add one more node, with many choices as to what could be added
     - each decision tree is a separate hypothesis
     - we are performing a search through space of possible hypothese for best one</p>
-<p><img alt="" src="../../../../../images/Pasted%20image%2020221207144001.png"/>
+<p><img alt="" src="https://raw.githubusercontent.com/ouibaa/epiwiki-assets/master/Pasted%20image%2020221207144001.png"/>
 - learning f: X-&gt;Y
     - x = <x1, ...,="" x2,="" xn="">  are our values of x
 - consider the space of all hypotheses H:{h | h: x -&gt; y}
@@ -857,34 +857,34 @@
     - e.g. in our decision tree algorithm - we build our tree from zero nodes to just enough to label all assumptions, and then we stop growing our tree
         - our assumption is that shorter trees are better than longer trees
         - why is this reasonable?</x1,></p>
-<p><img alt="" src="../../../../../images/Pasted%20image%2020221207150803.png"/>
+<p><img alt="" src="https://raw.githubusercontent.com/ouibaa/epiwiki-assets/master/Pasted%20image%2020221207150803.png"/>
 - many trees are consistent with the training data - <strong>Occam's razor</strong></p>
-<p><img alt="" src="../../../../../images/Pasted%20image%2020221207155752.png"/>
-<img alt="" src="../../../../../images/Pasted%20image%2020221207151259.png"/>
+<p><img alt="" src="https://raw.githubusercontent.com/ouibaa/epiwiki-assets/master/Pasted%20image%2020221207155752.png"/>
+<img alt="" src="https://raw.githubusercontent.com/ouibaa/epiwiki-assets/master/Pasted%20image%2020221207151259.png"/>
 - Overfitting
     - sometimes algorithm fits training data well, but does not do well on future examples
     - noise in data exacerbates tendency to overfitting </p>
-<p><img alt="" src="../../../../../images/Pasted%20image%2020221207152431.png"/>
+<p><img alt="" src="https://raw.githubusercontent.com/ouibaa/epiwiki-assets/master/Pasted%20image%2020221207152431.png"/>
 - difference between error rate of decision tree hypothesis on training set compared to its true error</p>
-<p><img alt="" src="../../../../../images/Pasted%20image%2020221207152450.png"/>
+<p><img alt="" src="https://raw.githubusercontent.com/ouibaa/epiwiki-assets/master/Pasted%20image%2020221207152450.png"/>
 - every plot is a different decision tree with different numbers of nodes
     - top plot is accuracy on training data
     - bottom plot is accuracy on test data</p>
-<p><img alt="" src="../../../../../images/Pasted%20image%2020221207153444.png"/>
+<p><img alt="" src="https://raw.githubusercontent.com/ouibaa/epiwiki-assets/master/Pasted%20image%2020221207153444.png"/>
 - let the training occur
     - then cut back the tree that has been grown
     - look through until further pruning is harmful on the validation set
     - this will produce the smallest version of the most accurate subtree
-<img alt="" src="../../../../../images/Pasted%20image%2020221207155456.png"/></p>
+<img alt="" src="https://raw.githubusercontent.com/ouibaa/epiwiki-assets/master/Pasted%20image%2020221207155456.png"/></p>
 <hr/>
-<p><img alt="" src="../../../../../images/Pasted%20image%2020221207155822.png"/><img alt="" src="../../../../../images/Pasted%20image%2020221207155827.png"/>
-<img alt="" src="../../../../../images/Pasted%20image%2020221207155837.png"/>
-<img alt="" src="../../../../../images/Pasted%20image%2020221207155843.png"/>
-<img alt="" src="../../../../../images/Pasted%20image%2020221207155850.png"/>
-<img alt="" src="../../../../../images/Pasted%20image%2020221207155856.png"/>
-<img alt="" src="../../../../../images/Pasted%20image%2020221207155901.png"/>
-<img alt="" src="../../../../../images/Pasted%20image%2020221207155905.png"/>
-<img alt="" src="../../../../../images/Pasted%20image%2020221207155910.png"/></p></div>
+<p><img alt="" src="https://raw.githubusercontent.com/ouibaa/epiwiki-assets/master/Pasted%20image%2020221207155822.png"/><img alt="" src="https://raw.githubusercontent.com/ouibaa/epiwiki-assets/master/Pasted%20image%2020221207155827.png"/>
+<img alt="" src="https://raw.githubusercontent.com/ouibaa/epiwiki-assets/master/Pasted%20image%2020221207155837.png"/>
+<img alt="" src="https://raw.githubusercontent.com/ouibaa/epiwiki-assets/master/Pasted%20image%2020221207155843.png"/>
+<img alt="" src="https://raw.githubusercontent.com/ouibaa/epiwiki-assets/master/Pasted%20image%2020221207155850.png"/>
+<img alt="" src="https://raw.githubusercontent.com/ouibaa/epiwiki-assets/master/Pasted%20image%2020221207155856.png"/>
+<img alt="" src="https://raw.githubusercontent.com/ouibaa/epiwiki-assets/master/Pasted%20image%2020221207155901.png"/>
+<img alt="" src="https://raw.githubusercontent.com/ouibaa/epiwiki-assets/master/Pasted%20image%2020221207155905.png"/>
+<img alt="" src="https://raw.githubusercontent.com/ouibaa/epiwiki-assets/master/Pasted%20image%2020221207155910.png"/></p></div>
 </div>
 </div>
 <footer class="col-md-12">
