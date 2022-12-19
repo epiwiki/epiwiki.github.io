@@ -7,7 +7,7 @@
 <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
 <meta content="Weber Liu" name="author"/>
 <link href="../../../../img/favicon.ico" rel="shortcut icon"/>
-<title>Principal Components Analysis - ClinEpi Wiki</title>
+<title>Principal Component Analysis (PCA) - ClinEpi Wiki</title>
 <link href="../../../../css/bootstrap.min.css" rel="stylesheet"/>
 <link href="../../../../css/font-awesome.min.css" rel="stylesheet"/>
 <link href="../../../../css/base.css" rel="stylesheet"/>
@@ -302,10 +302,28 @@
 <a class="dropdown-item" href="../">Machine Learning methods</a>
 </li>
 <li>
+<a class="dropdown-item" href="../Bagging%20and%20pasting/">Bagging and pasting</a>
+</li>
+<li>
 <a class="dropdown-item" href="../Big%20Data/">Big Data</a>
 </li>
 <li>
-<a class="dropdown-item" href="../Decision%20Trees/">Decision Trees</a>
+<a class="dropdown-item" href="../Boosting/">Boosting</a>
+</li>
+<li>
+<a class="dropdown-item" href="../Decision%20Trees/">Decision trees</a>
+</li>
+<li>
+<a class="dropdown-item" href="../Dimensionality%20Reduction/">Dimensionality Reduction</a>
+</li>
+<li>
+<a class="dropdown-item" href="../Ensemble%20Learning/">Ensemble Learning</a>
+</li>
+<li>
+<a class="dropdown-item" href="../Extremely%20Randomised%20Trees%20%28Extra-Trees%29/">Extra trees</a>
+</li>
+<li>
+<a class="dropdown-item" href="../Feature%20importance%20in%20tree%20based%20classifiers/">Feature importance</a>
 </li>
 <li>
 <a class="dropdown-item" href="../Generalised%20Additive%20Models/">Generalised Additive Models</a>
@@ -314,19 +332,51 @@
 <a class="dropdown-item" href="../K%20Nearest%20Neighbours/">K Nearest Neighbours</a>
 </li>
 <li>
+<a class="dropdown-item" href="../K%20means%20clustering/">K means clustering</a>
+</li>
+<li>
 <a class="dropdown-item" href="../Linear%20Discriminant%20Analysis/">Linear Discriminant Analysis</a>
+</li>
+<li>
+<a class="dropdown-item" href="../Manifold%20learning/">Manifold learning</a>
+</li>
+<li>
+<a class="dropdown-item" href="../Mean%20squared%20error%20%28MSE%29/">Mean squared error</a>
 </li>
 <li>
 <a class="dropdown-item" href="../Neural%20Networks/">Neural Networks</a>
 </li>
 <li>
-<a class="dropdown-item active" href="./">Principal Components Analysis</a>
+<a class="dropdown-item active" href="./">Principal Component Analysis (PCA)</a>
+</li>
+<li>
+<a class="dropdown-item" href="../Projection/">Projection</a>
 </li>
 <li>
 <a class="dropdown-item" href="../Quadratic%20Discriminant%20Analysis/">Quadratic Discriminant Analysis</a>
 </li>
 <li>
-<a class="dropdown-item" href="../Support%20Vector%20Machines/">Support Vector Machines</a>
+<a class="dropdown-item" href="../Random%20Forests/">Random Forests</a>
+</li>
+<li>
+<a class="dropdown-item" href="../Random%20patches%20and%20Random%20Subspaces/">Random patches</a>
+</li>
+<li>
+<a class="dropdown-item" href="../Stacking/">Stacking</a>
+</li>
+<li>
+<a class="dropdown-item" href="../Support%20Vector%20Machines%20%28SVM%29/">Support vector machines</a>
+</li>
+<li class="dropdown-submenu">
+<a class="dropdown-item" href="#">Analysis</a>
+<ul class="dropdown-menu">
+<li>
+<a class="dropdown-item" href="../Analysis/Entropy/">Entropy</a>
+</li>
+<li>
+<a class="dropdown-item" href="../Analysis/Gini%20impurity/">Gini impurity</a>
+</li>
+</ul>
 </li>
 <li class="dropdown-submenu">
 <a class="dropdown-item" href="#">CMU10 601</a>
@@ -735,7 +785,7 @@
                                 </a>
 </li>
 <li class="nav-item">
-<a class="nav-link" href="../Quadratic%20Discriminant%20Analysis/" rel="next">
+<a class="nav-link" href="../Projection/" rel="next">
                                     Next <i class="fa fa-arrow-right"></i>
 </a>
 </li>
@@ -753,11 +803,125 @@
 </div>
 <div class="navbar-collapse collapse card bg-secondary" id="toc-collapse">
 <ul class="nav flex-column">
+<li class="nav-item" data-level="1"><a class="nav-link" href="#principal-component-analysis-pca">Principal Component Analysis (PCA)</a>
+<ul class="nav flex-column">
+<li class="nav-item" data-level="2"><a class="nav-link" href="#background">Background</a>
+<ul class="nav flex-column">
+</ul>
+</li>
+<li class="nav-item" data-level="2"><a class="nav-link" href="#process">Process</a>
+<ul class="nav flex-column">
+</ul>
+</li>
+<li class="nav-item" data-level="2"><a class="nav-link" href="#code-for-signular-value-decomposition">Code for Signular Value Decomposition</a>
+<ul class="nav flex-column">
+</ul>
+</li>
+<li class="nav-item" data-level="2"><a class="nav-link" href="#code-for-pca">Code for PCA</a>
+<ul class="nav flex-column">
+</ul>
+</li>
+<li class="nav-item" data-level="2"><a class="nav-link" href="#analysis">Analysis</a>
+<ul class="nav flex-column">
+</ul>
+</li>
+</ul>
+</li>
 </ul>
 </div>
 </div></div>
 <div class="col-md-9" role="main">
-</div>
+<h1 id="principal-component-analysis-pca">Principal Component Analysis (PCA)</h1>
+<h2 id="background">Background</h2>
+<ul>
+<li>the most popular dimensionality reudction algorithm</li>
+<li>Process<ol>
+<li>Identifies the hyperplane that lies closest to the data</li>
+<li>Projects data onto it</li>
+</ol>
+</li>
+</ul>
+<h2 id="process">Process</h2>
+<ol>
+<li>Choosing the correct hyperplane<ol>
+<li>need to choose the hyperplane that presenves the maximum amount of variance<ul>
+<li>this will result in less information loss compared to other projections</li>
+<li>the second axis will be orthogonal to the first one and accounts for largest amount of remaining variance</li>
+<li>the unit vector defining the <span class="arithmatex">\(i^{th}\)</span> axis is the <span class="arithmatex">\(i^{ith}\)</span> principal component (PC). </li>
+<li>note that the principal component direction is <strong>unstable</strong> and is dependent on the training sets. </li>
+</ul>
+</li>
+</ol>
+</li>
+<li>
+<p>PCAs are defined by standard matrix factorization - called <strong>Singular Value Decomposition (SVD)</strong></p>
+<ul>
+<li>SVD decomposes the training set of matrix S into the dot produce of three matrices: <ul>
+<li>
+<div class="arithmatex">\[X = U \times \Sigma \times V^{T}\]</div>
+</li>
+<li>Where<ul>
+<li><span class="arithmatex">\(V^T\)</span> contains all the principal components that we are looking for<ul>
+<li><span class="arithmatex">\(V^T = \begin{pmatrix} \vert  &amp; \vert &amp; &amp; \vert \\ c_1 &amp; c_2 &amp; \dots  &amp; c_n \\ \vert  &amp; \vert &amp; &amp; \vert  \end{pmatrix}\)</span></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<p>Project down to <span class="arithmatex">\(d\)</span> dimensions</p>
+<ul>
+<li>
+<div class="arithmatex">\[X_{d-proj} = X \cdot W_d\]</div>
+</li>
+<li>Where<ul>
+<li><span class="arithmatex">\(X\)</span> is the training set matrix</li>
+<li><span class="arithmatex">\(W_d\)</span> is the matrix containing the first <span class="arithmatex">\(d\)</span> principal components (<span class="arithmatex">\(d\)</span> columns) of <span class="arithmatex">\(V^T\)</span> </li>
+</ul>
+</li>
+</ul>
+</li>
+<li>Choosing the right number of dimensions<ul>
+<li>You need to choose the right number of dimensions to adequately explain your variance</li>
+<li>generally preferrable to choose enough dimensions to add up to a minimum variance (e.g. 95%) for research purposes</li>
+<li>when data visualising, lower variacne is acceptable as you are not using the numbers for any calculations</li>
+<li></li>
+</ul>
+</li>
+</ol>
+<h2 id="code-for-signular-value-decomposition">Code for Signular Value Decomposition</h2>
+<div class="highlight"><pre><span></span><code>X_centered = X - X.mean(axis = 0) //SVD assumes data is centered around the origin
+U, s, V = np.linalg.svd(X_centered)
+c1 = V.T[:, 0]
+c2 = V.T[:, 1]
+</code></pre></div>
+<h2 id="code-for-pca">Code for PCA</h2>
+<div class="highlight"><pre><span></span><code>from sklearn.decomposition import PCA
+pca = PCA(n_components=2)
+X2D = pca.fit_transform(X) // PCA class will automatically  centre data
+
+// calculating number of components to preserve 95% variance
+pca = PCA()
+pca.fit(X)
+cumsum = np.cumsum(pca.explained_variance_ratio_)
+d=  np.argmax(cumsum &gt;= 0.95) + 1
+
+// alternative approach
+pca = PCA(n_components = 0.95)
+X_reduced = pca.fit_transform(X)
+</code></pre></div>
+<h2 id="analysis">Analysis</h2>
+<ul>
+<li>Explained variance ratio<ul>
+<li>for each principal copmonent we can access how much of the dataset's variance lies along each axis of the principal copmonent</li>
+<li><code>print(pca.explained_variance_ratio_)</code></li>
+<li></li>
+</ul>
+</li>
+</ul></div>
 </div>
 </div>
 <footer class="col-md-12">

@@ -7,7 +7,7 @@
 <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
 <meta content="Weber Liu" name="author"/>
 <link href="../../../../img/favicon.ico" rel="shortcut icon"/>
-<title>Decision Trees - ClinEpi Wiki</title>
+<title>Decision trees - ClinEpi Wiki</title>
 <link href="../../../../css/bootstrap.min.css" rel="stylesheet"/>
 <link href="../../../../css/font-awesome.min.css" rel="stylesheet"/>
 <link href="../../../../css/base.css" rel="stylesheet"/>
@@ -302,10 +302,28 @@
 <a class="dropdown-item" href="../">Machine Learning methods</a>
 </li>
 <li>
+<a class="dropdown-item" href="../Bagging%20and%20pasting/">Bagging and pasting</a>
+</li>
+<li>
 <a class="dropdown-item" href="../Big%20Data/">Big Data</a>
 </li>
 <li>
-<a class="dropdown-item active" href="./">Decision Trees</a>
+<a class="dropdown-item" href="../Boosting/">Boosting</a>
+</li>
+<li>
+<a class="dropdown-item active" href="./">Decision trees</a>
+</li>
+<li>
+<a class="dropdown-item" href="../Dimensionality%20Reduction/">Dimensionality Reduction</a>
+</li>
+<li>
+<a class="dropdown-item" href="../Ensemble%20Learning/">Ensemble Learning</a>
+</li>
+<li>
+<a class="dropdown-item" href="../Extremely%20Randomised%20Trees%20%28Extra-Trees%29/">Extra trees</a>
+</li>
+<li>
+<a class="dropdown-item" href="../Feature%20importance%20in%20tree%20based%20classifiers/">Feature importance</a>
 </li>
 <li>
 <a class="dropdown-item" href="../Generalised%20Additive%20Models/">Generalised Additive Models</a>
@@ -314,19 +332,51 @@
 <a class="dropdown-item" href="../K%20Nearest%20Neighbours/">K Nearest Neighbours</a>
 </li>
 <li>
+<a class="dropdown-item" href="../K%20means%20clustering/">K means clustering</a>
+</li>
+<li>
 <a class="dropdown-item" href="../Linear%20Discriminant%20Analysis/">Linear Discriminant Analysis</a>
+</li>
+<li>
+<a class="dropdown-item" href="../Manifold%20learning/">Manifold learning</a>
+</li>
+<li>
+<a class="dropdown-item" href="../Mean%20squared%20error%20%28MSE%29/">Mean squared error</a>
 </li>
 <li>
 <a class="dropdown-item" href="../Neural%20Networks/">Neural Networks</a>
 </li>
 <li>
-<a class="dropdown-item" href="../Principal%20Components%20Analysis/">Principal Components Analysis</a>
+<a class="dropdown-item" href="../Principal%20Components%20Analysis/">Principal Component Analysis (PCA)</a>
+</li>
+<li>
+<a class="dropdown-item" href="../Projection/">Projection</a>
 </li>
 <li>
 <a class="dropdown-item" href="../Quadratic%20Discriminant%20Analysis/">Quadratic Discriminant Analysis</a>
 </li>
 <li>
-<a class="dropdown-item" href="../Support%20Vector%20Machines/">Support Vector Machines</a>
+<a class="dropdown-item" href="../Random%20Forests/">Random Forests</a>
+</li>
+<li>
+<a class="dropdown-item" href="../Random%20patches%20and%20Random%20Subspaces/">Random patches</a>
+</li>
+<li>
+<a class="dropdown-item" href="../Stacking/">Stacking</a>
+</li>
+<li>
+<a class="dropdown-item" href="../Support%20Vector%20Machines%20%28SVM%29/">Support vector machines</a>
+</li>
+<li class="dropdown-submenu">
+<a class="dropdown-item" href="#">Analysis</a>
+<ul class="dropdown-menu">
+<li>
+<a class="dropdown-item" href="../Analysis/Entropy/">Entropy</a>
+</li>
+<li>
+<a class="dropdown-item" href="../Analysis/Gini%20impurity/">Gini impurity</a>
+</li>
+</ul>
 </li>
 <li class="dropdown-submenu">
 <a class="dropdown-item" href="#">CMU10 601</a>
@@ -730,12 +780,12 @@
                             </a>
 </li>
 <li class="nav-item">
-<a class="nav-link" href="../Big%20Data/" rel="prev">
+<a class="nav-link" href="../Boosting/" rel="prev">
 <i class="fa fa-arrow-left"></i> Previous
                                 </a>
 </li>
 <li class="nav-item">
-<a class="nav-link" href="../Generalised%20Additive%20Models/" rel="next">
+<a class="nav-link" href="../Dimensionality%20Reduction/" rel="next">
                                     Next <i class="fa fa-arrow-right"></i>
 </a>
 </li>
@@ -753,11 +803,257 @@
 </div>
 <div class="navbar-collapse collapse card bg-secondary" id="toc-collapse">
 <ul class="nav flex-column">
+<li class="nav-item" data-level="1"><a class="nav-link" href="#decision-trees">Decision trees</a>
+<ul class="nav flex-column">
+<li class="nav-item" data-level="2"><a class="nav-link" href="#background">Background</a>
+<ul class="nav flex-column">
+</ul>
+</li>
+<li class="nav-item" data-level="2"><a class="nav-link" href="#use-cases">Use cases</a>
+<ul class="nav flex-column">
+</ul>
+</li>
+<li class="nav-item" data-level="2"><a class="nav-link" href="#pseudocode">Pseudocode</a>
+<ul class="nav flex-column">
+</ul>
+</li>
+<li class="nav-item" data-level="2"><a class="nav-link" href="#mathematics">Mathematics</a>
+<ul class="nav flex-column">
+</ul>
+</li>
+<li class="nav-item" data-level="2"><a class="nav-link" href="#analysis">Analysis</a>
+<ul class="nav flex-column">
+</ul>
+</li>
+<li class="nav-item" data-level="2"><a class="nav-link" href="#intuition-on-model-fitting">Intuition on model fitting</a>
+<ul class="nav flex-column">
+</ul>
+</li>
+<li class="nav-item" data-level="2"><a class="nav-link" href="#explanations">Explanations</a>
+<ul class="nav flex-column">
+</ul>
+</li>
+<li class="nav-item" data-level="2"><a class="nav-link" href="#code">Code</a>
+<ul class="nav flex-column">
+</ul>
+</li>
+<li class="nav-item" data-level="2"><a class="nav-link" href="#references">References</a>
+<ul class="nav flex-column">
+</ul>
+</li>
+</ul>
+</li>
 </ul>
 </div>
 </div></div>
 <div class="col-md-9" role="main">
-</div>
+<h1 id="decision-trees">Decision trees</h1>
+<h2 id="background">Background</h2>
+<ul>
+<li>
+<p>developed from a series of questions (generally binary yes/no questions)</p>
+</li>
+<li>
+<p>Form the basis of Ensemble learning: <a href="../Random%20Forests/">Random Forests</a> and <a href="../Bagging%20and%20pasting/">Bagging and pasting</a> and <a href="../Boosting/">Boosting</a></p>
+<ul>
+<li>Bagging - idea is similar to bootstrapping, where multiple trees are built using subsets of data with replacement</li>
+<li>Random forests - multiple trees are built using subsets of the features</li>
+<li>Boosting - place different weights on different samples in each iteration (resulting in different shaped trees)</li>
+</ul>
+</li>
+<li>Benefits of the decision tree<ul>
+<li>Requires very little data preparation (including feature scaling or centreing)</li>
+<li>Each node can be split<ul>
+<li>into binary outcomes: using the CART algorithm</li>
+<li>into &gt;2 children: using ID3 algorithm (and others)</li>
+</ul>
+</li>
+<li>prediction only takes O(log2(m)) - it is very fast to predict even with large training sets</li>
+<li>non-parametric model</li>
+<li>highly explainable model</li>
+</ul>
+</li>
+<li>Disadvantages<ul>
+<li>Finding the optimal tree is an NP-Complete problem (i.e. a very hard problem to solve)</li>
+<li>this algorithm is very expensive to train - O(n * m  * log(m))</li>
+<li>being nonparametric it is at risk of overfitting</li>
+<li>Dscision trees are unstable<ul>
+<li>orthogonal decision boundaries (i.e. x1 &lt; 1 | x1 &gt;= 1) due to decisions made on a single variable<ul>
+<li>if the decision boundary is anything but horizontal or vertical, the split will suffer</li>
+<li>this can be improved using PCA (Which can reorient the data)</li>
+</ul>
+</li>
+<li>very dependent on training data</li>
+<li>training algorithm may be stochastic (as in Scikit-learn) - i.e. the feature selected to evaluate at each node is random - this can result in different models trained even on the same training data<ul>
+<li>this can be minimised by averaging predictions over many trees</li>
+</ul>
+</li>
+<li>reaches homogonous nodes (or runs out of attributes) so datasets will continue to split nodes (unless regularised) until the very end → heavily contributes to overfitting<ul>
+<li>e.g. predicting gender; given height, weight, last book read, colour of rice eaten<ul>
+<li>the last 2 questions will be irrelevant to classification however given we have no further questions to ask, they will be used if they can split the data at all</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h2 id="use-cases">Use cases</h2>
+<ul>
+<li>Classification and regression (and multioutput)</li>
+</ul>
+<h2 id="pseudocode">Pseudocode</h2>
+<div class="highlight"><pre><span></span><code>Function BuildTree(n, A) // n: samples (rows), A: attributes
+    If empty(A) or all n(L) are the same
+        status = leaf
+        class = most common class in n(L)
+    else
+        status = internal
+        a &lt;= bestAttribute(n, A)
+        LeftNode = BuildTree(n(a=1), A \ {a}) // remove the attribute {a} after this
+        RightNode = BuildTree(n(a=0), A \ {a})
+    end
+end
+</code></pre></div>
+<h2 id="mathematics">Mathematics</h2>
+<h3 id="classification-and-regression-tree-cart-algorithm">Classification and Regression Tree (CART) algorithm</h3>
+<ol>
+<li>Algorithm splits training set into two subsets using a single feature <span class="arithmatex">\(k\)</span> and threshold <span class="arithmatex">\(t_k\)</span><ul>
+<li><span class="arithmatex">\(k\)</span> and <span class="arithmatex">\(t_k\)</span> are determined by finding the pair which produces the purest subsets</li>
+</ul>
+</li>
+<li>The algorithm recursively splits the subsets using the same logic</li>
+<li>it will stop when it reaches the maximum depth or if it cannot find a split which reduces impurity</li>
+</ol>
+<h4 id="issues-with-cart">Issues with CART</h4>
+<ul>
+<li>CART is a greedy algorithm and is not guaranteed to produce an optimal solution</li>
+</ul>
+<h4 id="cart-cost-function">CART cost function</h4>
+<div class="arithmatex">\[
+J(k, t_k) = \frac{m_{left}}{m}\times G_{left} + \frac{m_{right}}{m} \times G_{right}
+\]</div>
+<p>Where:</p>
+<ul>
+<li><span class="arithmatex">\(G\)</span> measures the impurity of the left/right subset <strong>in classification trees</strong><ul>
+<li>in a regression trees, G is replaced with the <a href="../Mean%20squared%20error%20%28MSE%29/">Mean squared error (MSE)</a></li>
+</ul>
+</li>
+<li><span class="arithmatex">\(m\)</span> measures the number of instances in the left/right subset</li>
+</ul>
+<h4 id="hyperparameters">Hyperparameters</h4>
+<ul>
+<li>Increase to regularise:<ul>
+<li>Minimum depth of the Decision Tree</li>
+<li>Minimum number of samples a node must have before it can be split (to prevent a large number of leaf nodes)</li>
+<li>Minimum number of samples a leaf node must have</li>
+</ul>
+</li>
+<li>Decrease to regularise:<ul>
+<li>Maximum number of leaf nodes</li>
+<li>Maximum features evaluated for splitting at each node</li>
+</ul>
+</li>
+</ul>
+<h3 id="pruning-algorithm">Pruning algorithm</h3>
+<ul>
+<li>Decision trees are trained without restrictions</li>
+<li>effectively removing bad questions out of the tree</li>
+<li>The tree is then pruned (deleted) according to a statistical test (such as the <span class="arithmatex">\(\chi^2\)</span> test) with a threshold (e.g. p &lt; 0.05)<ul>
+<li>if the purity improvement is not statistically significant due to the node, the node and its leafs are deleted</li>
+</ul>
+</li>
+<li>Procedure<ul>
+<li>start with test set</li>
+<li>starting at the root/internal nodes</li>
+<li>calculate the test set initial error<ul>
+<li>remove subtree rooted at node</li>
+<li>assign class to be the most common among training set</li>
+<li>check test data error<ul>
+<li>if error is lower, keep change</li>
+<li>otherwise restore subtree, repeat for all nodes in subtree</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>Rough pruning methods<ul>
+<li>set a max tree length</li>
+<li>typically used when combining decision trees (E.g. used in boosting)</li>
+</ul>
+</li>
+</ul>
+<h2 id="analysis">Analysis</h2>
+<ul>
+<li>Impurity / best attribute (for classification tree)<ul>
+<li><a href="../Analysis/Gini%20impurity/">Gini impurity</a><ul>
+<li>faster algorithm</li>
+</ul>
+</li>
+<li><a href="../Analysis/Entropy/">Entropy</a> and <a href="../Analysis/Entropy/#Information%20gain">Information gain</a><ul>
+<li>more balanced trees</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a href="../Mean%20squared%20error%20%28MSE%29/">Mean squared error (MSE)</a> (for regression trees)</li>
+<li>F<a href="../Feature%20importance%20in%20tree%20based%20classifiers/">Feature importance in tree based classifiers</a></li>
+</ul>
+<h2 id="intuition-on-model-fitting">Intuition on model fitting</h2>
+<ul>
+<li>A tree consists of internal nodes corresponding to attributes (Features)<ul>
+<li>can have n layers/questions</li>
+</ul>
+</li>
+<li>it also consists of leafs (a.k.a. terminal nodes) - corresponding to classification outcomes</li>
+<li>edges denote assignments of each node</li>
+</ul>
+<h2 id="explanations">Explanations</h2>
+<h3 id="model-prediction">Model prediction</h3>
+<p>Suppose you want to classify an item given some set of features which was used to fit the decision tree model. </p>
+<ul>
+<li>Starting at the first split (i.e. the root node), you determine whether the feature of interest in this root node  results in you moving to whichever child</li>
+<li>at each child node you repeat this process</li>
+<li>this occurs until you hit a leaf node (i.e. one with no further children)</li>
+</ul>
+<h2 id="code">Code</h2>
+<h3 id="classification-tree">Classification tree</h3>
+<div class="highlight"><pre><span></span><code>from sklearn.datasets import  load_iris
+from sklearn.tree import DecisionTreeClassifier
+
+iris = load_iris()
+X = iris.data[:, 2:] # petal length and width
+y = iris.target
+
+tree_clf = DecisionTreeClassifier(max_depth=2)
+tree_clf.fit(X, y)
+
+from sklearn.tree import export_graphviz
+
+export_graphviz(
+    tree_clf,
+    out_file = "iris_tree.dot",
+    feature_names = iris.feature_names[2:],
+    class_names = iris.target_names,
+    rounded=True,
+    filled=True
+)
+</code></pre></div>
+<h3 id="regression-tree">Regression tree</h3>
+<div class="highlight"><pre><span></span><code>from sklearn.tree import DecisionTreeRegressor
+
+tree_Reg = DecisionTreeRegressor(max_depth = 2)
+tree_reg.fit(X, y)
+</code></pre></div>
+<h2 id="references">References</h2>
+<ul>
+<li>Tom Mitchell - Machine Learning</li>
+<li>Aurelien Geron - Hands-On Machine Learning with Scikit-Learn and TensorFlow</li>
+<li>https://www.youtube.com/watch?v=g_a0c1ZUVKQ&amp;list=PLsWN0V-b507g7dbQTUvFkKZEqdHR5Fh4P&amp;index=6&amp;ab_channel=DanielBird</li>
+</ul></div>
 </div>
 </div>
 <footer class="col-md-12">
