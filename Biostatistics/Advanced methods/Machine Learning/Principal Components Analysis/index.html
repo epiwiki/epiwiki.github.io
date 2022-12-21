@@ -299,16 +299,22 @@
 <a class="dropdown-item" href="#">Machine Learning</a>
 <ul class="dropdown-menu">
 <li>
-<a class="dropdown-item" href="../">Machine Learning methods</a>
+<a class="dropdown-item" href="../BP%20Management%20in%20elderly/">BP Management in Elderly</a>
 </li>
 <li>
 <a class="dropdown-item" href="../Bagging%20and%20pasting/">Bagging and pasting</a>
+</li>
+<li>
+<a class="dropdown-item" href="../Bayesian%20learning/">Bayesian learning</a>
 </li>
 <li>
 <a class="dropdown-item" href="../Big%20Data/">Big Data</a>
 </li>
 <li>
 <a class="dropdown-item" href="../Boosting/">Boosting</a>
+</li>
+<li>
+<a class="dropdown-item" href="../Clustering/">Clustering</a>
 </li>
 <li>
 <a class="dropdown-item" href="../Decision%20Trees/">Decision trees</a>
@@ -332,10 +338,19 @@
 <a class="dropdown-item" href="../K%20Nearest%20Neighbours/">K Nearest Neighbours</a>
 </li>
 <li>
-<a class="dropdown-item" href="../K%20means%20clustering/">K means clustering</a>
+<a class="dropdown-item" href="../K%20means%20clustering/">K-means clustering</a>
 </li>
 <li>
 <a class="dropdown-item" href="../Linear%20Discriminant%20Analysis/">Linear Discriminant Analysis</a>
+</li>
+<li>
+<a class="dropdown-item" href="../Locally%20Linear%20Embedding%20%28LLE%29/">Locally Linear Embedding</a>
+</li>
+<li>
+<a class="dropdown-item" href="../Machine%20Learning%20Model%20evaluation/">Machine Learning model evaluation</a>
+</li>
+<li>
+<a class="dropdown-item" href="../Machine%20Learning/">Machine Learning methods</a>
 </li>
 <li>
 <a class="dropdown-item" href="../Manifold%20learning/">Manifold learning</a>
@@ -360,6 +375,9 @@
 </li>
 <li>
 <a class="dropdown-item" href="../Random%20patches%20and%20Random%20Subspaces/">Random patches</a>
+</li>
+<li>
+<a class="dropdown-item" href="../Regression/">Regression</a>
 </li>
 <li>
 <a class="dropdown-item" href="../Stacking/">Stacking</a>
@@ -821,7 +839,23 @@
 <ul class="nav flex-column">
 </ul>
 </li>
+<li class="nav-item" data-level="2"><a class="nav-link" href="#code-to-reverse-the-pca-projection-into-the-original-dataset">Code to reverse the PCA projection into the original dataset</a>
+<ul class="nav flex-column">
+</ul>
+</li>
 <li class="nav-item" data-level="2"><a class="nav-link" href="#analysis">Analysis</a>
+<ul class="nav flex-column">
+</ul>
+</li>
+<li class="nav-item" data-level="2"><a class="nav-link" href="#practical-features-incremental-pca">Practical features - Incremental PCA</a>
+<ul class="nav flex-column">
+</ul>
+</li>
+<li class="nav-item" data-level="2"><a class="nav-link" href="#randomised-pca">Randomised PCA</a>
+<ul class="nav flex-column">
+</ul>
+</li>
+<li class="nav-item" data-level="2"><a class="nav-link" href="#pca-for-manifold-learning-kernel-pca">PCA for manifold learning (Kernel PCA)</a>
 <ul class="nav flex-column">
 </ul>
 </li>
@@ -888,7 +922,6 @@
 <li>You need to choose the right number of dimensions to adequately explain your variance</li>
 <li>generally preferrable to choose enough dimensions to add up to a minimum variance (e.g. 95%) for research purposes</li>
 <li>when data visualising, lower variacne is acceptable as you are not using the numbers for any calculations</li>
-<li></li>
 </ul>
 </li>
 </ol>
@@ -913,15 +946,95 @@ d=  np.argmax(cumsum &gt;= 0.95) + 1
 pca = PCA(n_components = 0.95)
 X_reduced = pca.fit_transform(X)
 </code></pre></div>
+<h2 id="code-to-reverse-the-pca-projection-into-the-original-dataset">Code to reverse the PCA projection into the original dataset</h2>
+<div class="highlight"><pre><span></span><code>pca = PCA(n_components = 154)
+X_mnist_reduced = pca.fit_transform(X_mnist) // uses PCA to dimension reduce mnist datasets from 784 to 154 dimensions
+X_mnist_recovered = PCA.inverse_transform(X_mnist_reduced) // recoveres the MNIST dataset from the 154 dimensions produced above
+</code></pre></div>
 <h2 id="analysis">Analysis</h2>
 <ul>
 <li>Explained variance ratio<ul>
 <li>for each principal copmonent we can access how much of the dataset's variance lies along each axis of the principal copmonent</li>
 <li><code>print(pca.explained_variance_ratio_)</code></li>
-<li></li>
 </ul>
 </li>
-</ul></div>
+</ul>
+<hr/>
+<h2 id="practical-features-incremental-pca">Practical features - Incremental PCA</h2>
+<ul>
+<li>On large datasets, PCA might not be able to run on the whole dataset at once (as the whole dataset needs to be placed into memory for SVD to run)</li>
+<li>a solution is to minibatch the dataset and then split training into minibatches</li>
+</ul>
+<div class="highlight"><pre><span></span><code>from sklearn.decomposition import IncrementalPCA
+
+n_batches = 100 //100 minibatches
+inc_pca = IncrementalPCA(n_components = 154)
+for X_batch in np.array_split(X_mnist, n_batches):
+    inc_pca.partial_fit(X_batch)
+
+X_mnist_reduced = inc_pca.transform(X_mnist)
+
+//alternatively use the numpy memmap
+
+X_mm = np.memmap(filename, dtye="float32", mode="readonly", shape=(m, n))
+
+batch_size = m //n_batches
+inc_pca = IncrementalPCA(n_components = 154, batch_size = batch_size)
+inc_pca.fit(X_mm)
+</code></pre></div>
+<h2 id="randomised-pca">Randomised PCA</h2>
+<ul>
+<li>A stochastic algorithm that approximates the first d principal components</li>
+<li>computationally less complex than a full PCA</li>
+</ul>
+<div class="highlight"><pre><span></span><code>rnd_pca = PCA(n_components = 154, svd_solver = "randomised")
+X_reduced = rnd_pca.fit_transform(X_mnist)
+</code></pre></div>
+<hr/>
+<h2 id="pca-for-manifold-learning-kernel-pca">PCA for manifold learning (Kernel PCA)</h2>
+<ul>
+<li>A linear decision boundary in higher dimensional space may result in a complex nonlinear boundary in the <em>original space</em></li>
+<li>Kernel PCA introduces the data into a higher dimensional space (the feature space) and then determines its decision boundaries there<ul>
+<li>this allows datasets to be unrolled closer to a twisted manifold
+<div class="highlight"><pre><span></span><code>from sklearn.decomposition import KernelPCA
+
+rbf_pca = KernelPCA(n_components = 2, kernel = "rbf", gamma = 0.04)
+X_reduced = rbf_pca.fit_transform(X)
+</code></pre></div></li>
+</ul>
+</li>
+</ul>
+<h3 id="selection-of-a-pca-kernel">Selection of a PCA kernel</h3>
+<ul>
+<li>Done using a grid search to select the kernel and hyperparameters leading to the best performance on the task at hand
+<div class="highlight"><pre><span></span><code>from sklearn.model_selection import GridSearchCV
+from sklearn.linear_model import LogisticRegression
+from sklearn.pipeline import Pipeline
+
+clf = Pipeline([
+    ("kpca", KernelPCA(n_components=2)),
+    ("log_reg", LogisticRegression())
+])
+
+param_grid = [{
+    "pkca__gamma": np.linespace(0.03, 0.05, 10),
+    "kpca__kernel": ["rbf", "sigmoid"]
+}]
+
+grid_search = GridSearchCV(clf, param_grid, cv=3)
+grid_search.fit(X, y)
+
+print(grid_search.best_params_)
+</code></pre></div></li>
+</ul>
+<p>Calculating reconstruction error
+<div class="highlight"><pre><span></span><code>rbf_pca = KernelPCA(n_components = 2, kernel = "rbf", gamma = 0.0433, fit_inverse_transform = True)
+X_reduced = rbf_pca.fit_transform(X)
+X_preimage = rbf_pca.inverse_transform(X_reduced)
+
+from sklearn.metrics import mean_squared_error
+mean_squared_error(X, X_preimage)
+</code></pre></div></p></div>
 </div>
 </div>
 <footer class="col-md-12">

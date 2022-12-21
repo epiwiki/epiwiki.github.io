@@ -299,16 +299,22 @@
 <a class="dropdown-item" href="#">Machine Learning</a>
 <ul class="dropdown-menu">
 <li>
-<a class="dropdown-item" href="../">Machine Learning methods</a>
+<a class="dropdown-item" href="../BP%20Management%20in%20elderly/">BP Management in Elderly</a>
 </li>
 <li>
 <a class="dropdown-item" href="../Bagging%20and%20pasting/">Bagging and pasting</a>
+</li>
+<li>
+<a class="dropdown-item" href="../Bayesian%20learning/">Bayesian learning</a>
 </li>
 <li>
 <a class="dropdown-item" href="../Big%20Data/">Big Data</a>
 </li>
 <li>
 <a class="dropdown-item" href="../Boosting/">Boosting</a>
+</li>
+<li>
+<a class="dropdown-item" href="../Clustering/">Clustering</a>
 </li>
 <li>
 <a class="dropdown-item" href="../Decision%20Trees/">Decision trees</a>
@@ -332,10 +338,19 @@
 <a class="dropdown-item" href="../K%20Nearest%20Neighbours/">K Nearest Neighbours</a>
 </li>
 <li>
-<a class="dropdown-item" href="../K%20means%20clustering/">K means clustering</a>
+<a class="dropdown-item" href="../K%20means%20clustering/">K-means clustering</a>
 </li>
 <li>
 <a class="dropdown-item" href="../Linear%20Discriminant%20Analysis/">Linear Discriminant Analysis</a>
+</li>
+<li>
+<a class="dropdown-item" href="../Locally%20Linear%20Embedding%20%28LLE%29/">Locally Linear Embedding</a>
+</li>
+<li>
+<a class="dropdown-item" href="../Machine%20Learning%20Model%20evaluation/">Machine Learning model evaluation</a>
+</li>
+<li>
+<a class="dropdown-item" href="../Machine%20Learning/">Machine Learning methods</a>
 </li>
 <li>
 <a class="dropdown-item" href="../Manifold%20learning/">Manifold learning</a>
@@ -360,6 +375,9 @@
 </li>
 <li>
 <a class="dropdown-item" href="../Random%20patches%20and%20Random%20Subspaces/">Random patches</a>
+</li>
+<li>
+<a class="dropdown-item" href="../Regression/">Regression</a>
 </li>
 <li>
 <a class="dropdown-item" href="../Stacking/">Stacking</a>
@@ -805,13 +823,115 @@
 <ul class="nav flex-column">
 <li class="nav-item" data-level="1"><a class="nav-link" href="#support-vector-machines">Support vector machines</a>
 <ul class="nav flex-column">
+<li class="nav-item" data-level="2"><a class="nav-link" href="#background">Background</a>
+<ul class="nav flex-column">
+</ul>
+</li>
+<li class="nav-item" data-level="2"><a class="nav-link" href="#subtypes">Subtypes</a>
+<ul class="nav flex-column">
+</ul>
+</li>
+<li class="nav-item" data-level="2"><a class="nav-link" href="#hyperparameters">Hyperparameters</a>
+<ul class="nav flex-column">
+</ul>
+</li>
+<li class="nav-item" data-level="2"><a class="nav-link" href="#mercers-theorem">Mercer's theorem</a>
+<ul class="nav flex-column">
+</ul>
+</li>
+</ul>
+</li>
+<li class="nav-item" data-level="1"><a class="nav-link" href="#linear-svm">Linear SVM</a>
+<ul class="nav flex-column">
+<li class="nav-item" data-level="2"><a class="nav-link" href="#background_1">Background</a>
+<ul class="nav flex-column">
+</ul>
+</li>
+<li class="nav-item" data-level="2"><a class="nav-link" href="#code">Code</a>
+<ul class="nav flex-column">
+</ul>
+</li>
+</ul>
+</li>
+<li class="nav-item" data-level="1"><a class="nav-link" href="#nonlinear-svm">Nonlinear SVM</a>
+<ul class="nav flex-column">
 </ul>
 </li>
 </ul>
 </div>
 </div></div>
 <div class="col-md-9" role="main">
-<h1 id="support-vector-machines">Support vector machines</h1></div>
+<h1 id="support-vector-machines">Support vector machines</h1>
+<h2 id="background">Background</h2>
+<ul>
+<li>Powerful and versatile ML model capable of linear or nonlinear classification, regression and outlier detection</li>
+<li>well suited for classification of complex but small- or medium-sized datasets</li>
+</ul>
+<h2 id="subtypes">Subtypes</h2>
+<ol>
+<li>Linear SVM</li>
+<li>Nonlinear SVM<ol>
+<li>Polynomial kernel</li>
+<li>Gausseian RBF Kernel</li>
+</ol>
+</li>
+<li>SVM regression</li>
+<li>Online SVM</li>
+</ol>
+<h2 id="hyperparameters">Hyperparameters</h2>
+<ul>
+<li>Hard vs. soft margin classification</li>
+<li>Similarity functions</li>
+</ul>
+<h2 id="mercers-theorem">Mercer's theorem</h2>
+<hr/>
+<h1 id="linear-svm">Linear SVM</h1>
+<h2 id="background_1">Background</h2>
+<ul>
+<li>Large margin classification: like fitting the 'widest possible street' between the classes<ul>
+<li>the boundaries of the decision boundary is supported/determined by instances located on the edge of the street (the <em>support vectors</em>)</li>
+<li>changing the position of the support vectors or adding new instances within the street (i.e. changing the support vector) will change the decision boundary</li>
+<li>as a result feature scaling will change the SVM position (As you are changing the value of the support vectors)<ul>
+<li>SciKitLearn uses the <code>StandardScaler</code> to fit the SVM appropriately if the data is inappropriately scaled</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>Classification of SVM can be done using Hard or Soft margins<ul>
+<li>Hard margin requires linearly separable data - indicates anything off the street and to one side is of one class, and vice versa for the other side of the boundary</li>
+<li>this means an outlier which becomes a support vector will have a large impact on the Hard Magin classifier</li>
+<li>Soft margin classification aims to limit <em>margin violations</em> (i.e. outliers)</li>
+<li>controlled with the hyperparameter <code>C</code> <ul>
+<li>smaller <code>C</code> → wider street (but more margin violations)</li>
+</ul>
+</li>
+<li>reducing the value of <code>C</code> will regularise an overfitted SVM</li>
+</ul>
+</li>
+</ul>
+<h2 id="code">Code</h2>
+<div class="highlight"><pre><span></span><code>import numpy as np
+from sklearn import dataests
+from sklearn.pipline import Pipeline
+from sklearn.preprocessing import StandardScaler
+from sklean.svm import LinearSVC
+
+iris = dataests.load_iris()
+X = iris["data"][:, (2, 3)] # petal length, petal width
+y = (iris["target"] == 2).astype(np.float64)
+
+svm_clf = Pipeline((
+    ("scaler", "StandardScaler()),
+    ("LinearSVC", LinearSVC(C=1, loss="hinge")),
+))
+
+svm_clf.fit(X_scaled, y)
+svm_clf.predict([[5.5, 1.7]])
+</code></pre></div>
+<p>Note that the <code>SGDClassifier(loss = "hinge", alpha = 1/(m*C))</code> uses stochastic gradient descent to train the linearSVM and is beneficial for large datasets or online classification tasks</p>
+<hr/>
+<h1 id="nonlinear-svm">Nonlinear SVM</h1>
+<p>C</p></div>
 </div>
 </div>
 <footer class="col-md-12">

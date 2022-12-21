@@ -7,7 +7,7 @@
 <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
 <meta content="Weber Liu" name="author"/>
 <link href="../../../../img/favicon.ico" rel="shortcut icon"/>
-<title>K means clustering - ClinEpi Wiki</title>
+<title>K-means clustering - ClinEpi Wiki</title>
 <link href="../../../../css/bootstrap.min.css" rel="stylesheet"/>
 <link href="../../../../css/font-awesome.min.css" rel="stylesheet"/>
 <link href="../../../../css/base.css" rel="stylesheet"/>
@@ -299,16 +299,22 @@
 <a class="dropdown-item" href="#">Machine Learning</a>
 <ul class="dropdown-menu">
 <li>
-<a class="dropdown-item" href="../">Machine Learning methods</a>
+<a class="dropdown-item" href="../BP%20Management%20in%20elderly/">BP Management in Elderly</a>
 </li>
 <li>
 <a class="dropdown-item" href="../Bagging%20and%20pasting/">Bagging and pasting</a>
+</li>
+<li>
+<a class="dropdown-item" href="../Bayesian%20learning/">Bayesian learning</a>
 </li>
 <li>
 <a class="dropdown-item" href="../Big%20Data/">Big Data</a>
 </li>
 <li>
 <a class="dropdown-item" href="../Boosting/">Boosting</a>
+</li>
+<li>
+<a class="dropdown-item" href="../Clustering/">Clustering</a>
 </li>
 <li>
 <a class="dropdown-item" href="../Decision%20Trees/">Decision trees</a>
@@ -332,10 +338,19 @@
 <a class="dropdown-item" href="../K%20Nearest%20Neighbours/">K Nearest Neighbours</a>
 </li>
 <li>
-<a class="dropdown-item active" href="./">K means clustering</a>
+<a class="dropdown-item active" href="./">K-means clustering</a>
 </li>
 <li>
 <a class="dropdown-item" href="../Linear%20Discriminant%20Analysis/">Linear Discriminant Analysis</a>
+</li>
+<li>
+<a class="dropdown-item" href="../Locally%20Linear%20Embedding%20%28LLE%29/">Locally Linear Embedding</a>
+</li>
+<li>
+<a class="dropdown-item" href="../Machine%20Learning%20Model%20evaluation/">Machine Learning model evaluation</a>
+</li>
+<li>
+<a class="dropdown-item" href="../Machine%20Learning/">Machine Learning methods</a>
 </li>
 <li>
 <a class="dropdown-item" href="../Manifold%20learning/">Manifold learning</a>
@@ -360,6 +375,9 @@
 </li>
 <li>
 <a class="dropdown-item" href="../Random%20patches%20and%20Random%20Subspaces/">Random patches</a>
+</li>
+<li>
+<a class="dropdown-item" href="../Regression/">Regression</a>
 </li>
 <li>
 <a class="dropdown-item" href="../Stacking/">Stacking</a>
@@ -803,11 +821,77 @@
 </div>
 <div class="navbar-collapse collapse card bg-secondary" id="toc-collapse">
 <ul class="nav flex-column">
+<li class="nav-item" data-level="1"><a class="nav-link" href="#k-means-clustering">K-means clustering</a>
+<ul class="nav flex-column">
+<li class="nav-item" data-level="2"><a class="nav-link" href="#background">Background</a>
+<ul class="nav flex-column">
+</ul>
+</li>
+<li class="nav-item" data-level="2"><a class="nav-link" href="#disadvantages">Disadvantages</a>
+<ul class="nav flex-column">
+</ul>
+</li>
+<li class="nav-item" data-level="2"><a class="nav-link" href="#code">Code</a>
+<ul class="nav flex-column">
+</ul>
+</li>
+<li class="nav-item" data-level="2"><a class="nav-link" href="#cluster-interpretation">Cluster interpretation</a>
+<ul class="nav flex-column">
+</ul>
+</li>
+</ul>
+</li>
 </ul>
 </div>
 </div></div>
 <div class="col-md-9" role="main">
-</div>
+<h1 id="k-means-clustering">K-means clustering</h1>
+<h2 id="background">Background</h2>
+<ul>
+<li>Simplest and most commonly used clustering algorithms</li>
+<li>a vector quantization technique<ul>
+<li>i.e. each point is represented using a single component (the cluster centre)</li>
+</ul>
+</li>
+<li>Intuition<ul>
+<li>attempts to find 'cluster centres' representative of certain regions of the data</li>
+<li>assigns each data point to the closest clustering centre</li>
+<li>setting each cluster centre. asthe mean of the data points assigned to it </li>
+<li>repeat until the clusters no longer change</li>
+</ul>
+</li>
+<li>Note you must specify number of clusters you are looking for prior to running the algorithm<ul>
+<li>initialisation of the algorithm requires randomly assigning 3 data points as a cluster centre</li>
+</ul>
+</li>
+</ul>
+<h2 id="disadvantages">Disadvantages</h2>
+<ul>
+<li>k-means assumes all directions are equally important for each cluster<ul>
+<li>as k-means considers the distance to the nearest cluster centre, it cannot handle stretched data</li>
+</ul>
+</li>
+<li>k-means performs poorly on clusters with complex shapes</li>
+</ul>
+<h2 id="code">Code</h2>
+<div class="highlight"><pre><span></span><code>from sklearn.datasets import make_blobs
+from sklearn.cluster import KMeans
+
+X, y = make_blobs(random_state = 1)
+kmeans = KMeans(n_clusters = 3)
+kmeans.fit(X)
+
+// to identify which cluster each point in X is assigned to:
+kmeans.labels_
+kmeans.predict(X)
+</code></pre></div>
+<h2 id="cluster-interpretation">Cluster interpretation</h2>
+<ul>
+<li>as this is unsupervisied learning, there is no ground truth</li>
+<li>the labels have no a priori meaning </li>
+<li>each cluster is defined sulely by its centre, which means each cluster is a convex shape</li>
+<li>k-means assumes that all clusters have the same 'diameter' - decision boundaries are drawn exactly between clusters at the midpoint between cluster centres</li>
+</ul></div>
 </div>
 </div>
 <footer class="col-md-12">
